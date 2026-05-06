@@ -12,4 +12,4 @@ Disallow: /package-lock.json
 
 Crawl-delay: 10
 
-Sitemap: https://fabiowlademir.github.io/caed/sitemap.xml
+Sitemap: https://caedunisinos.com.br/sitemap.xml

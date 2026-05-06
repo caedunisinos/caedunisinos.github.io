@@ -2,17 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://fabiowlademir.github.io/caed/</loc>
-    <lastmod>2026-04-23T12:00:00+00:00</lastmod>
+    <loc>https://caedunisinos.com.br/</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://fabiowlademir.github.io/caed/patrocinadores.html</loc>
-    <lastmod>2026-04-23T12:00:00+00:00</lastmod>
+    <loc>https://caedunisinos.com.br/patrocinadores.html</loc>
+    <lastmod>2026-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/prestacao-de-contas.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/gestoes-anteriores.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Opcional: se quiser incluir a página 404 (não obrigatório, mas não atrapalha) -->
+  <url>
+    <loc>https://caedunisinos.com.br/404.html</loc>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.1</priority>
   </url>
 
 </urlset>
