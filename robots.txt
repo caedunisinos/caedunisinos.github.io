@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Disallow: /.git
+Disallow: /.github
+Disallow: /.gitignore
+Disallow: /README.md
+Disallow: /LICENSE
+Disallow: /node_modules
+Disallow: /package.json
+Disallow: /package-lock.json
+
+Crawl-delay: 10
+
+Sitemap: https://fabiowlademir.github.io/caed/sitemap.xml
