@@ -75,24 +75,56 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Páginas institucionais -->
+  <!-- Páginas institucionais – no menu principal (dropdown CAED) -->
   <url>
     <loc>https://caedunisinos.com.br/sobre.html</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://caedunisinos.com.br/politica-de-privacidade.html</loc>
+    <loc>https://caedunisinos.com.br/transparencia.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://caedunisinos.com.br/regulamentos.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal & Suporte – apenas no rodapé -->
+  <url>
+    <loc>https://caedunisinos.com.br/privacidade.html</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://caedunisinos.com.br/termos-de-uso.html</loc>
+    <loc>https://caedunisinos.com.br/termos.html</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://caedunisinos.com.br/cookies.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://caedunisinos.com.br/trocas-e-devolucoes.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://caedunisinos.com.br/faq.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
