@@ -11,11 +11,11 @@ Disallow: /node_modules
 Disallow: /package.json
 Disallow: /package-lock.json
 
-# Evitar indexação da página de erro personalizada
+# Não indexar página de erro personalizada
 Disallow: /404.html
 
-# Delay respeitoso para crawlers
+# Crawl-delay respeitoso para robôs
 Crawl-delay: 10
 
-# Sitemap atualizado
+# Sitemap
 Sitemap: https://caedunisinos.com.br/sitemap.xml
