@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 
+# Bloquear arquivos de desenvolvimento e controle de versão
 Disallow: /.git
 Disallow: /.github
 Disallow: /.gitignore
@@ -10,6 +11,11 @@ Disallow: /node_modules
 Disallow: /package.json
 Disallow: /package-lock.json
 
+# Evitar indexação da página de erro personalizada
+Disallow: /404.html
+
+# Delay respeitoso para crawlers
 Crawl-delay: 10
 
+# Sitemap atualizado
 Sitemap: https://caedunisinos.com.br/sitemap.xml
