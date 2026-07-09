@@ -173,16 +173,79 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .filme-card-body .filme-area{font-family:'Montserrat',sans-serif;font-size:.55rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(201,168,76,.5);margin-bottom:0.5rem}
 .filme-card-body .filme-desc{font-size:.88rem;color:var(--cream-dk);line-height:1.5;flex:1}
 .filme-section-title{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--gold);margin:2.5rem 0 1rem;border-bottom:1px solid rgba(201,168,76,.2);padding-bottom:0.5rem}
-@media(max-width:600px){.filmes-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:400px){.filmes-grid{grid-template-columns:1fr}}
+/* ========== RESPONSIVIDADE ========== */
+@media(max-width:900px){
+  .nav-links,.nav-loja-btn{display:none}
+  .nav-toggle{display:flex}
+  .page-hero{padding:6rem 1.5rem 3rem}
+  .page-hero h1{font-size:clamp(1.5rem,4vw,2.2rem)}
+  .article-title{font-size:clamp(1.5rem,4vw,2.2rem)}
+  .article-content{font-size:0.98rem}
+  .article-content h2{font-size:1.4rem}
+  .article-content h3{font-size:1.1rem}
+}
+@media(max-width:768px){
+  .container{padding:0 1.2rem}
+  .article-container{margin:1rem auto 2rem}
+  .filmes-grid{grid-template-columns:1fr 1fr;gap:1.2rem}
+  .filme-card-img{height:180px}
+  .filme-card-body{padding:0.8rem 1rem 1.2rem}
+  .filme-card-body h3{font-size:1rem}
+  .filme-card-body .filme-desc{font-size:0.82rem}
+  .filme-section-title{font-size:1.5rem}
+  .highlight-box{padding:1rem}
+  .share-buttons{gap:0.6rem}
+  .share-btn{font-size:0.6rem;padding:0.3rem 0.6rem}
+  .article-meta{font-size:0.6rem;gap:0.8rem}
+}
+@media(max-width:600px){
+  .page-hero{padding:5rem 1rem 2.5rem}
+  .page-hero .page-hero-desc{font-size:0.95rem}
+  .filmes-grid{grid-template-columns:1fr 1fr;gap:1rem}
+  .filme-card-img{height:160px}
+  .filme-card-body{padding:0.6rem 0.8rem 1rem}
+  .filme-card-body h3{font-size:0.95rem}
+  .filme-card-body .filme-desc{font-size:0.78rem}
+  .article-content{font-size:0.95rem}
+  .article-content h2{font-size:1.3rem}
+  .article-content h3{font-size:1rem}
+  .breadcrumb{font-size:0.5rem}
+  .instagram-link{font-size:0.65rem;padding:0.5rem 1rem}
+}
+@media(max-width:480px){
+  .container{padding:0 0.8rem}
+  .page-hero{padding:4.5rem 0.8rem 2rem}
+  .page-hero h1{font-size:clamp(1.3rem,4vw,1.8rem)}
+  .article-title{font-size:clamp(1.3rem,4vw,1.8rem)}
+  .filmes-grid{grid-template-columns:1fr;gap:1rem}
+  .filme-card-img{height:200px}
+  .filme-card-body{padding:0.8rem 1rem 1.2rem}
+  .filme-card-body h3{font-size:1rem}
+  .filme-card-body .filme-desc{font-size:0.85rem}
+  .filme-card-body .filme-area{font-size:0.5rem}
+  .filme-section-title{font-size:1.3rem;margin:1.5rem 0 0.8rem}
+  .article-content{font-size:0.92rem;line-height:1.6}
+  .article-content h2{font-size:1.2rem;margin:1.5rem 0 0.8rem}
+  .article-content h3{font-size:1rem;margin:1rem 0 0.6rem}
+  .article-meta{font-size:0.55rem;flex-direction:column;gap:0.3rem;padding-bottom:0.8rem}
+  .breadcrumb{font-size:0.45rem;margin-bottom:1rem}
+  .highlight-box{padding:0.8rem;margin:1rem 0}
+  .share-buttons{flex-wrap:wrap;gap:0.5rem}
+  .share-btn{font-size:0.55rem;padding:0.25rem 0.5rem}
+  .instagram-link{font-size:0.6rem;padding:0.4rem 0.8rem}
+  .ornament-line{margin:1.5rem 0}
+}
+/* ========== RODAPÉ CORRIGIDO (FLEXBOX) ========== */
 footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);padding:4rem 2rem 2rem}
-.footer-inner{max-width:1100px;margin:0 auto}
-.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(201,168,76,.1)}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;gap:2rem}
+.footer-top{display:flex !important;flex-wrap:wrap;gap:2rem 3rem;justify-content:space-between}
+.footer-top > *{flex:1 1 200px;min-width:180px}
+.footer-brand{flex:2 1 280px}
 .footer-brand strong{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:var(--gold);display:block;margin-bottom:.3rem}
 .footer-sub{font-family:'Montserrat',sans-serif;font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(201,168,76,.4);display:block;margin-bottom:1rem}
 .footer-brand p{font-size:.95rem;color:rgba(224,208,176,.55);line-height:1.7}
 .footer-col h4{font-family:'Montserrat',sans-serif;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
-.footer-col ul{list-style:none}
+.footer-col ul{list-style:none;padding:0}
 .footer-col ul li{margin-bottom:.6rem}
 .footer-col ul li a{font-size:.9rem;color:rgba(224,208,176,.5);transition:color .2s}
 .footer-col ul li a:hover{color:var(--gold)}
@@ -195,10 +258,17 @@ footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);paddin
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:'Montserrat',sans-serif;font-size:.62rem;letter-spacing:.1em;color:rgba(201,168,76,.3)}
 .footer-bottom a{color:rgba(201,168,76,.5);transition:color .2s}
 .footer-bottom a:hover{color:var(--gold)}
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
-.reveal.visible{opacity:1;transform:none}
-@media(max-width:900px){.nav-links,.nav-loja-btn{display:none}.nav-toggle{display:flex}.footer-top{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.footer-top{grid-template-columns:1fr}}
+
+/* Responsividade do rodapé */
+@media(max-width:768px){
+  .footer-top{flex-direction:column !important;gap:2rem}
+  .footer-top > *{flex:1 1 auto;min-width:0}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+@media(max-width:600px){
+  footer{padding:3rem 1rem 1.5rem}
+  .footer-dev-strip{flex-direction:column;gap:0.5rem;text-align:center}
+}
 </style>
 </head>
 <body>
@@ -583,15 +653,60 @@ footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);paddin
   </div>
 </main>
 
+<!-- RODAPÉ CORRIGIDO -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
-      <div class="footer-brand"><strong>CAED</strong><span class="footer-sub">Centro Acadêmico · Direito Unisinos</span><p>Representando os estudantes de Direito da UNISINOS nos campi de São Leopoldo e Porto Alegre, Rio Grande do Sul.</p></div>
-      <div class="footer-col"><h4>Navegação</h4><ul><li><a href="../index.html">Início</a></li><li><a href="../index.html#sobre">Sobre o CAED</a></li><li><a href="../index.html#gestao">Gestão 2026/1</a></li><li><a href="../gestoes-anteriores.html">Gestões Anteriores</a></li><li><a href="../prestacao-de-contas.html">Prestação de Contas</a></li><li><a href="../noticias.html" style="color:var(--gold);">📰 Notícias</a></li><li><a href="https://fabiowlademir.github.io/simuladosdireito/" target="_blank">Simulados ↗</a></li><li><a href="../loja.html" style="color:var(--gold);">🛍 Loja Oficial</a></li><li><a href="../patrocinadores.html" style="color:var(--gold-lt);">⭐ Patrocinadores</a></li><li><a href="../index.html#contato">Contato</a></li></ul></div>
-      <div class="footer-col"><h4>Contato Rápido</h4><ul><li><a href="https://www.instagram.com/caed_unisinos/" target="_blank">📷 @caed_unisinos</a></li><li><a href="https://wa.me/5551997311502" target="_blank">💬 (51) 99731-1502</a></li><li><a href="mailto:contato@caedunisinos.com.br">✉️ contato@caedunisinos.com.br</a></li><li><a href="https://linktr.ee/caed" target="_blank">🔗 linktr.ee/caed</a></li><li><a href="https://www.unisinos.br" target="_blank">🎓 UNISINOS</a></li></ul></div>
+      <div class="footer-brand">
+        <strong>CAED</strong>
+        <span class="footer-sub">Centro Acadêmico · Direito Unisinos</span>
+        <p>Representando os estudantes de Direito da UNISINOS nos campi de São Leopoldo e Porto Alegre, Rio Grande do Sul.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="../index.html#sobre">Sobre o CAED</a></li>
+          <li><a href="../index.html#gestao">Gestão 2026/1</a></li>
+          <li><a href="../gestoes-anteriores.html">Gestões Anteriores</a></li>
+          <li><a href="../prestacao-de-contas.html">Prestação de Contas</a></li>
+          <li><a href="../noticias.html" style="color:var(--gold);">📰 Notícias</a></li>
+          <li><a href="https://fabiowlademir.github.io/simuladosdireito/" target="_blank">Simulados ↗</a></li>
+          <li><a href="../loja.html" style="color:var(--gold);">🛍 Loja Oficial</a></li>
+          <li><a href="../patrocinadores.html" style="color:var(--gold-lt);">⭐ Patrocinadores</a></li>
+          <li><a href="../index.html#contato">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato Rápido</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/caed_unisinos/" target="_blank">📷 @caed_unisinos</a></li>
+          <li><a href="https://wa.me/5551997311502" target="_blank">💬 (51) 99731-1502</a></li>
+          <li><a href="mailto:contato@caedunisinos.com.br">✉️ contato@caedunisinos.com.br</a></li>
+          <li><a href="https://linktr.ee/caed" target="_blank">🔗 linktr.ee/caed</a></li>
+          <li><a href="https://www.unisinos.br" target="_blank">🎓 UNISINOS</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-dev-strip"><span class="footer-dev-label">⚡ Design &amp; Desenvolvimento</span><div class="footer-dev-links"><a href="https://f2suporte.blogspot.com/2025/07/fabio-wlademir-especialista-em-ti-noc.html" target="_blank">💻 Fábio Wlademir</a><span class="footer-dev-sep">·</span><a href="https://www.linkedin.com/in/fabiowlademir/" target="_blank">🔗 LinkedIn</a><span class="footer-dev-sep">·</span><a href="https://www.instagram.com/fabiowlademirrs/" target="_blank">📷 Instagram</a></div></div>
-    <div class="footer-bottom"><span>© 2026 CAED – Direito UNISINOS · Todos os direitos reservados</span><span><a href="../sobre.html">Sobre</a> · <a href="../politica-de-privacidade.html">Privacidade</a> · <a href="../termos-de-uso.html">Termos de Uso</a> · <a href="https://www.instagram.com/caed_unisinos/" target="_blank">@caed_unisinos</a></span></div>
+    <div class="footer-dev-strip">
+      <span class="footer-dev-label">⚡ Design &amp; Desenvolvimento</span>
+      <div class="footer-dev-links">
+        <a href="https://f2suporte.blogspot.com/2025/07/fabio-wlademir-especialista-em-ti-noc.html" target="_blank">💻 Fábio Wlademir</a>
+        <span class="footer-dev-sep">·</span>
+        <a href="https://www.linkedin.com/in/fabiowlademir/" target="_blank">🔗 LinkedIn</a>
+        <span class="footer-dev-sep">·</span>
+        <a href="https://www.instagram.com/fabiowlademirrs/" target="_blank">📷 Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CAED – Direito UNISINOS · Todos os direitos reservados</span>
+      <span>
+        <a href="../sobre.html">Sobre</a> · 
+        <a href="../politica-de-privacidade.html">Privacidade</a> · 
+        <a href="../termos-de-uso.html">Termos de Uso</a> · 
+        <a href="https://www.instagram.com/caed_unisinos/" target="_blank">@caed_unisinos</a>
+      </span>
+    </div>
   </div>
 </footer>
 
