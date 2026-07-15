@@ -26,8 +26,8 @@
   "@type": "Article",
   "headline": "Literatura e Direito: 30 livros que todo estudante de Direito deveria ler",
   "description": "Seleção especial de 30 livros de literatura para estudantes de Direito. Clássicos como 'Crime e Castigo', 'O Processo', 'O Sol é para Todos' e muito mais.",
-  "datePublished": "2026-07-14",
-  "dateModified": "2026-07-14",
+  "datePublished": "2026-07-15",
+  "dateModified": "2026-07-15",
   "author": {
     "@type": "Organization",
     "name": "CAED – Centro Acadêmico de Estudantes de Direito da UNISINOS"
@@ -270,6 +270,16 @@ footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);paddin
   footer{padding:3rem 1rem 1.5rem}
   .footer-dev-strip{flex-direction:column;gap:0.5rem;text-align:center}
 }
+
+/* ===== IMAGEM DE DESTAQUE REDIMENSIONADA ===== */
+.news-img {
+  max-height: 400px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+  border: 1px solid rgba(201,168,76,.2);
+}
 </style>
 </head>
 <body>
@@ -310,11 +320,11 @@ footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);paddin
     <article>
       <div class="article-header">
         <span class="article-category">📚 Literatura e Direito</span>
-        <div class="article-meta"><span>📅 14 de julho de 2026</span><span>🎓 CAED – Indicações</span><span>📢 #LeituraJurídica</span></div>
+        <div class="article-meta"><span>📅 15 de julho de 2026</span><span>🎓 CAED – Indicações</span><span>📢 #LeituraJurídica</span></div>
       </div>
 
       <div class="article-content reveal">
-        <!-- IMAGEM PRINCIPAL: literatura_e_direito.png -->
+        <!-- IMAGEM PRINCIPAL REDIMENSIONADA -->
         <img class="news-img" src="noticias_imagens/literatura_e_direito.png" alt="Literatura e Direito: 30 livros que todo estudante de Direito deveria ler">
 
         <p>Assim como o cinema, a <strong>literatura</strong> é uma ferramenta poderosa para desenvolver o senso crítico, a argumentação e a compreensão das complexidades humanas por trás das leis. Uma boa história nos ensina a questionar, a ter empatia e a enxergar além da técnica jurídica.</p>
@@ -331,7 +341,7 @@ footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);paddin
         <div class="livros-grid">
           <!-- 1. Crime e Castigo -->
           <div class="livro-card reveal">
-            <div class="livro-card-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Crime_and_Punishment_%281st_edition_cover%29.jpg/220px-Crime_and_Punishment_%281st_edition_cover%29.jpg" alt="Crime e Castigo" loading="lazy" referrerpolicy="no-referrer"></div>
+            <div class="livro-card-img"><img src="https://covers.openlibrary.org/b/id/8233730-L.jpg" alt="Crime e Castigo" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.parentElement.innerHTML='<span style=\'font-size:3rem;color:var(--gold);\'>📖</span>'"></div>
             <div class="livro-card-body">
               <h3>1. Crime e Castigo</h3>
               <div class="livro-autor">Fiódor Dostoiévski</div>
@@ -342,7 +352,7 @@ footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);paddin
 
           <!-- 2. O Processo -->
           <div class="livro-card reveal">
-            <div class="livro-card-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Der_Prozess_Erstausgabe_1925.jpg/220px-Der_Prozess_Erstausgabe_1925.jpg" alt="O Processo" loading="lazy" referrerpolicy="no-referrer"></div>
+            <div class="livro-card-img"><img src="https://covers.openlibrary.org/b/id/8211480-L.jpg" alt="O Processo" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.parentElement.innerHTML='<span style=\'font-size:3rem;color:var(--gold);\'>📖</span>'"></div>
             <div class="livro-card-body">
               <h3>2. O Processo</h3>
               <div class="livro-autor">Franz Kafka</div>
@@ -353,7 +363,7 @@ footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);paddin
 
           <!-- 3. O Sol é para Todos -->
           <div class="livro-card reveal">
-            <div class="livro-card-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/220px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg" alt="O Sol é para Todos" loading="lazy" referrerpolicy="no-referrer"></div>
+            <div class="livro-card-img"><img src="https://covers.openlibrary.org/b/id/8225786-L.jpg" alt="O Sol é para Todos" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.parentElement.innerHTML='<span style=\'font-size:3rem;color:var(--gold);\'>📖</span>'"></div>
             <div class="livro-card-body">
               <h3>3. O Sol é para Todos</h3>
               <div class="livro-autor">Harper Lee</div>
@@ -364,7 +374,7 @@ footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);paddin
 
           <!-- 4. 1984 -->
           <div class="livro-card reveal">
-            <div class="livro-card-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nineteen_Eighty-Four_%281st_edition_cover%29.jpg/220px-Nineteen_Eighty-Four_%281st_edition_cover%29.jpg" alt="1984" loading="lazy" referrerpolicy="no-referrer"></div>
+            <div class="livro-card-img"><img src="https://covers.openlibrary.org/b/id/8211080-L.jpg" alt="1984" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.parentElement.innerHTML='<span style=\'font-size:3rem;color:var(--gold);\'>📖</span>'"></div>
             <div class="livro-card-body">
               <h3>4. 1984</h3>
               <div class="livro-autor">George Orwell</div>
@@ -375,7 +385,7 @@ footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);paddin
 
           <!-- 5. A Revolução dos Bichos -->
           <div class="livro-card reveal">
-            <div class="livro-card-img"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Animal_Farm_-_1st_edition_cover.jpg/220px-Animal_Farm_-_1st_edition_cover.jpg" alt="A Revolução dos Bichos" loading="lazy" referrerpolicy="no-referrer"></div>
+            <div class="livro-card-img"><img src="https://covers.openlibrary.org/b/id/8233726-L.jpg" alt="A Revolução dos Bichos" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.parentElement.innerHTML='<span style=\'font-size:3rem;color:var(--gold);\'>📖</span>'"></div>
             <div class="livro-card-body">
               <h3>5. A Revolução dos Bichos</h3>
               <div class="livro-autor">George Orwell</div>
@@ -386,7 +396,7 @@ footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);paddin
 
           <!-- 6. A Firma -->
           <div class="livro-card reveal">
-            <div class="livro-card-img"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e0/The_firm_movie_poster.jpg/220px-The_firm_movie_poster.jpg" alt="A Firma" loading="lazy" referrerpolicy="no-referrer"></div>
+            <div class="livro-card-img"><img src="https://covers.openlibrary.org/b/id/8225242-L.jpg" alt="A Firma" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.parentElement.innerHTML='<span style=\'font-size:3rem;color:var(--gold);\'>📖</span>'"></div>
             <div class="livro-card-body">
               <h3>6. A Firma</h3>
               <div class="livro-autor">John Grisham</div>
@@ -397,7 +407,7 @@ footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);paddin
 
           <!-- 7. O Primeiro Ano -->
           <div class="livro-card reveal">
-            <div class="livro-card-img"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7f/1L_%28book%29.jpg/220px-1L_%28book%29.jpg" alt="O Primeiro Ano" loading="lazy" referrerpolicy="no-referrer"></div>
+            <div class="livro-card-img"><img src="https://covers.openlibrary.org/b/id/8333153-L.jpg" alt="O Primeiro Ano" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.parentElement.innerHTML='<span style=\'font-size:3rem;color:var(--gold);\'>📖</span>'"></div>
             <div class="livro-card-body">
               <h3>7. O Primeiro Ano: Como se faz um advogado</h3>
               <div class="livro-autor">Scott Turow</div>
