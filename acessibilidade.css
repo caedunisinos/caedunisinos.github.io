@@ -1,0 +1,143 @@
+/* ===== ACESSIBILIDADE GLOBAL ===== */
+
+/* ---- TOOLBAR ---- */
+#accessibility-toggle {
+  position:fixed; bottom:90px; left:20px; width:56px; height:56px;
+  border-radius:50%; background:#0b251e; color:#c5a880;
+  border:2px solid #c5a880; font-size:1.8rem; cursor:pointer;
+  z-index:9998; box-shadow:0 4px 15px rgba(0,0,0,0.3);
+  display:flex; align-items:center; justify-content:center;
+  transition:background 0.2s;
+}
+#accessibility-toggle:hover { background:#c5a880; color:#0b251e; }
+
+#accessibility-toolbar {
+  position:fixed; bottom:160px; left:20px;
+  background:rgba(11,37,30,0.97); backdrop-filter:blur(12px);
+  padding:20px 16px; border-radius:12px; border:1px solid #c5a880;
+  box-shadow:0 8px 30px rgba(0,0,0,0.5); z-index:9997;
+  display:none; flex-direction:column; gap:12px;
+  min-width:200px; max-width:220px;
+}
+#accessibility-toolbar .btn-group {
+  display:flex; flex-wrap:wrap; gap:8px; justify-content:center;
+}
+#accessibility-toolbar button {
+  background:transparent; border:1px solid #cbd5e1;
+  border-radius:6px; color:#e2e8f0; padding:6px 10px;
+  font-size:0.8rem; cursor:pointer; transition:background 0.2s;
+}
+#accessibility-toolbar button:hover { background:rgba(255,255,255,0.1); }
+#accessibility-toolbar .toolbar-footer {
+  text-align:center; font-size:0.65rem; color:#94a3b8;
+  border-top:1px solid rgba(255,255,255,0.1); padding-top:8px; margin-top:4px;
+}
+
+/* ---- BOTÕES DE VOZ E LEITURA ---- */
+.voice-controls {
+  position:fixed; bottom:152px; left:82px; z-index:9998;
+  display:flex; gap:8px; flex-wrap:wrap;
+}
+.voice-btn {
+  border:none; border-radius:50px; padding:8px 18px;
+  font-weight:700; font-size:0.75rem; cursor:pointer;
+  box-shadow:0 4px 15px rgba(0,0,0,0.15);
+  transition:all 0.2s; display:flex; align-items:center; gap:8px;
+  font-family:'Montserrat',sans-serif;
+}
+.voice-btn:hover { transform:scale(1.05); }
+.voice-btn-audio { background:#c5a880; color:#0b251e; }
+.voice-btn-audio.listening { background:#f59e0b; color:#fff; animation:pulse-voice 1.5s infinite; }
+.voice-btn-stop { background:#6B0F1A; color:white; display:none; }
+.voice-status {
+  font-size:0.85rem; color:#e2e8f0; margin-top:4px;
+  background:rgba(0,0,0,0.6); padding:4px 12px; border-radius:4px;
+  display:none;
+}
+@keyframes pulse-voice {
+  0% { box-shadow:0 0 0 0 rgba(245,158,11,0.5); }
+  70% { box-shadow:0 0 0 10px rgba(245,158,11,0); }
+  100% { box-shadow:0 0 0 0 rgba(245,158,11,0); }
+}
+
+/* ---- BANNER LGPD ---- */
+#cookie-consent-banner {
+  position:fixed; bottom:20px; left:50%; transform:translateX(-50%);
+  width:90%; max-width:900px;
+  background:rgba(11,37,30,0.95); backdrop-filter:blur(10px);
+  padding:18px 25px; border-radius:12px;
+  box-shadow:0 8px 40px rgba(0,0,0,0.6);
+  border:1px solid #c5a880; z-index:9999;
+  display:flex; flex-wrap:wrap; align-items:center;
+  justify-content:center; gap:15px;
+  font-family:'Inter',sans-serif;
+  transition:opacity 0.4s ease, transform 0.4s ease;
+}
+#cookie-consent-banner .banner-text {
+  flex:1 1 100%; text-align:center; color:#e2e8f0;
+  font-size:0.9rem; line-height:1.5;
+}
+#cookie-consent-banner .banner-text a {
+  color:#c5a880; text-decoration:underline; font-weight:500;
+}
+#cookie-consent-banner .banner-text a:hover { color:#e4c87a; }
+#cookie-consent-banner .banner-actions {
+  display:flex; flex-wrap:wrap; gap:10px; justify-content:center;
+}
+#cookie-consent-banner .btn-recusar {
+  background:transparent; color:#cbd5e1;
+  border:1px solid #64748b; padding:8px 20px;
+  border-radius:6px; font-weight:600; font-size:0.85rem;
+  cursor:pointer; transition:background 0.2s;
+}
+#cookie-consent-banner .btn-recusar:hover { background:rgba(255,255,255,0.05); }
+#cookie-consent-banner .btn-aceitar {
+  background:#c5a880; color:#0b251e; border:none;
+  padding:8px 28px; border-radius:6px; font-weight:700;
+  font-size:0.85rem; cursor:pointer; transition:background 0.2s;
+}
+#cookie-consent-banner .btn-aceitar:hover { background:#b39369; }
+
+/* ---- MODOS DE EXIBIÇÃO ---- */
+body.alto-contraste { background:#000 !important; color:#fff !important; }
+body.alto-contraste * { background:#000 !important; color:#fff !important; border-color:#fff !important; }
+body.alto-contraste a { color:#ffdd57 !important; }
+body.alto-contraste button, body.alto-contraste input, body.alto-contraste textarea {
+  background:#222 !important; color:#fff !important; border-color:#fff !important;
+}
+
+body.modo-escuro { background:#1a1a2e !important; color:#e2e8f0 !important; }
+body.modo-escuro header, body.modo-escuro footer, body.modo-escuro section {
+  background:#16213e !important; color:#e2e8f0 !important;
+}
+body.modo-escuro a { color:#c5a880 !important; }
+
+body.tamanho-fonte-1 { font-size:110% !important; }
+body.tamanho-fonte-2 { font-size:125% !important; }
+body.tamanho-fonte-3 { font-size:150% !important; }
+
+body.fonte-dislexia { font-family:'OpenDyslexic','EB Garamond',serif !important; }
+
+body.animacoes-reduzidas * {
+  animation-duration:0.01ms !important;
+  transition-duration:0.01ms !important;
+}
+
+:focus-visible { outline:3px solid #c5a880 !important; outline-offset:2px !important; }
+
+/* ---- VLIBRAS ---- */
+.vw-access-button { bottom:120px !important; right:20px !important; }
+
+/* ---- RESPONSIVO ---- */
+@media (max-width: 640px) {
+  #accessibility-toolbar {
+    left:10px !important; right:10px !important;
+    max-width:none !important; width:auto !important;
+    bottom:150px !important;
+  }
+  #accessibility-toolbar button { font-size:0.7rem !important; padding:4px 8px !important; }
+  .voice-controls { left:10px !important; bottom:140px !important; }
+  .voice-btn { font-size:0.7rem !important; padding:6px 12px !important; }
+  #cookie-consent-banner { padding:14px 16px !important; }
+  #cookie-consent-banner .banner-text { font-size:0.8rem !important; }
+}
