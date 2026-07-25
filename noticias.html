@@ -861,57 +861,7 @@ filterBtns.forEach(btn=>{
     <button onclick="acceptCookies()" class="btn-aceitar">Aceitar</button>
   </div>
 </div>
-<!-- ===== TOOLBAR DE ACESSIBILIDADE ===== -->
-<button id="accessibility-toggle" aria-label="Abrir ferramentas de acessibilidade">♿</button>
 
-<div id="accessibility-toolbar" role="dialog" aria-label="Ferramentas de acessibilidade">
-  <div class="btn-group">
-    <button data-acao="contraste" title="Alto Contraste">🔲 Contraste</button>
-    <button data-acao="modo" title="Modo Escuro/Claro">🌙 Escuro</button>
-    <button data-acao="fonte" data-nivel="1" title="Diminuir fonte">A-</button>
-    <button data-acao="fonte" data-nivel="0" title="Fonte padrão">A</button>
-    <button data-acao="fonte" data-nivel="2" title="Aumentar fonte">A+</button>
-    <button data-acao="fonte" data-nivel="3" title="Aumentar muito">A++</button>
-    <button data-acao="dislexia" title="Fonte para Dislexia">📖 Dislexia</button>
-    <button data-acao="animacoes" title="Reduzir animações">🎬 Reduzir</button>
-  </div>
-  <div class="toolbar-footer">Preferências salvas automaticamente</div>
-</div>
-
-<!-- ===== BOTÕES DE VOZ E LEITURA ===== -->
-<div class="voice-controls">
-  <button id="voice-btn" class="voice-btn voice-btn-audio" aria-label="Ativar comandos de voz">
-    <i class="fas fa-microphone"></i> Ativar Comandos de Voz
-  </button>
-  <button id="audio-reader-btn" class="voice-btn voice-btn-audio" onclick="readPageAloud()">
-    <i class="fas fa-volume-up"></i> Ouvir Página
-  </button>
-  <button id="audio-stop-btn" class="voice-btn voice-btn-stop" onclick="stopReading()">
-    <i class="fas fa-stop"></i> Parar
-  </button>
-  <p id="voice-status" class="voice-status">Clique no microfone e fale um comando.</p>
-</div>
-
-<!-- ===== VLIBRAS ===== -->
-<div vw class="enabled">
-  <div vw-access-button class="active"></div>
-  <div vw-plugin-wrapper>
-    <div class="vw-plugin-top-wrapper"></div>
-  </div>
-</div>
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-<script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
-
-<!-- ===== BANNER LGPD ===== -->
-<div id="cookie-consent-banner">
-  <div class="banner-text">
-    <i class="fas fa-shield-alt" style="color:#c5a880; margin-right:8px; font-size:1.1rem;"></i>
-    <span>Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. <a href="/politica-de-privacidade.html">Política de Privacidade</a> <span style="color:#94a3b8; margin:0 6px;">|</span> <a href="/termos-de-uso.html">Configurar</a></span>
-  </div>
-  <div class="banner-actions">
-    <button onclick="rejectCookies()" class="btn-recusar">Recusar</button>
-    <button onclick="acceptCookies()" class="btn-aceitar">Aceitar</button>
-  </div>
-</div>
+<script src="/acessibilidade.js"></script>
 </body>
 </html>
