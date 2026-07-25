@@ -492,6 +492,101 @@
   </div>
 </footer>
 
+<!-- ===== TOOLBAR DE ACESSIBILIDADE ===== -->
+<button id="accessibility-toggle" aria-label="Abrir ferramentas de acessibilidade" 
+        style="position:fixed; bottom:300px; left:20px; width:56px; height:56px; border-radius:50%; background:#0b251e; color:#c5a880; border:2px solid #c5a880; font-size:1.8rem; cursor:pointer; z-index:9998; box-shadow:0 4px 15px rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center; transition:background 0.2s;">♿</button>
+
+<div id="accessibility-toolbar" role="dialog" aria-label="Ferramentas de acessibilidade" 
+     style="position:fixed; bottom:370px; left:20px; background:rgba(11,37,30,0.97); backdrop-filter:blur(12px); padding:20px 16px; border-radius:12px; border:1px solid #c5a880; box-shadow:0 8px 30px rgba(0,0,0,0.5); z-index:9997; display:none; flex-direction:column; gap:12px; min-width:200px; max-width:220px; transition:opacity 0.3s ease;">
+  <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
+    <button data-acao="contraste" title="Alto Contraste" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">🔲 Contraste</button>
+    <button data-acao="modo" title="Modo Escuro/Claro" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">🌙 Escuro</button>
+    <button data-acao="fonte" data-nivel="1" title="Diminuir fonte" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">A-</button>
+    <button data-acao="fonte" data-nivel="0" title="Fonte padrão" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">A</button>
+    <button data-acao="fonte" data-nivel="2" title="Aumentar fonte" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">A+</button>
+    <button data-acao="fonte" data-nivel="3" title="Aumentar muito" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">A++</button>
+    <button data-acao="dislexia" title="Fonte para Dislexia" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">📖 Dislexia</button>
+    <button data-acao="animacoes" title="Reduzir animações" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">🎬 Reduzir</button>
+  </div>
+  <div style="text-align:center; font-size:0.65rem; color:#94a3b8; border-top:1px solid rgba(255,255,255,0.1); padding-top:8px; margin-top:4px;">Preferências salvas automaticamente</div>
+</div>
+
+<!-- ===== BOTÕES DE VOZ, LEITURA E COMANDOS ===== -->
+<div id="action-buttons" style="position:fixed; bottom:140px; left:20px; z-index:9998; display:flex; flex-direction:column; gap:16px; align-items:flex-start;">
+  
+  <!-- Ouvir Página -->
+  <button id="audio-reader-btn" onclick="readPageAloud()" 
+          style="background:#c5a880; color:#0b251e; border:none; border-radius:50px; padding:12px 24px; font-weight:700; font-size:0.9rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.15); transition:all 0.2s; display:flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; width:auto; white-space:nowrap;">
+    <i class="fas fa-volume-up"></i> Ouvir Página
+  </button>
+
+  <!-- Parar Leitura (oculto inicialmente) -->
+  <button id="audio-stop-btn" onclick="stopReading()" 
+          style="background:#6B0F1A; color:white; border:none; border-radius:50px; padding:12px 24px; font-weight:700; font-size:0.9rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.15); transition:all 0.2s; display:none; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; width:auto; white-space:nowrap;">
+    <i class="fas fa-stop"></i> Parar
+  </button>
+
+  <!-- Comandos de Voz (microfone) -->
+  <button id="voice-btn" 
+          style="background:#1e3a3a; color:#c5a880; border:1px solid #c5a880; border-radius:50px; padding:12px 24px; font-weight:700; font-size:0.9rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.15); transition:all 0.2s; display:flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; width:auto; white-space:nowrap;">
+    <i class="fas fa-microphone"></i> Ativar Comandos de Voz
+  </button>
+
+  <!-- Status do reconhecimento de voz (opcional) -->
+  <span id="voice-status" style="color:#e2e8f0; font-size:0.8rem; padding-left:8px; min-height:1.4em; font-family:'Inter',sans-serif; max-width:220px; word-break:break-word;"></span>
+</div>
+
+<!-- ===== VLIBRAS ===== -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+<!-- ===== BANNER LGPD ===== -->
+<div id="cookie-consent-banner" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:900px; background:rgba(11,37,30,0.95); backdrop-filter:blur(10px); padding:18px 25px; border-radius:12px; box-shadow:0 8px 40px rgba(0,0,0,0.6); border:1px solid #c5a880; z-index:9999; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:15px; font-family:'Inter',sans-serif; transition:opacity 0.4s ease, transform 0.4s ease;">
+  <div style="flex:1 1 100%; text-align:center; color:#e2e8f0; font-size:0.9rem; line-height:1.5;">
+    <i class="fas fa-shield-alt" style="color:#c5a880; margin-right:8px; font-size:1.1rem;"></i>
+    <span style="font-weight:300;">Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. <a href="/politica-de-privacidade.html" style="color:#c5a880; text-decoration:underline; font-weight:500;">Política de Privacidade</a><span style="color:#94a3b8; margin:0 6px;">|</span><a href="/termos-de-uso.html" style="color:#cbd5e1; text-decoration:underline;">Configurar</a></span>
+  </div>
+  <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+    <button onclick="rejectCookies()" style="background:transparent; color:#cbd5e1; border:1px solid #64748b; padding:8px 20px; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer; transition:background 0.2s, border-color 0.2s;">Recusar</button>
+    <button onclick="acceptCookies()" style="background:#c5a880; color:#0b251e; border:none; padding:8px 28px; border-radius:6px; font-weight:700; font-size:0.85rem; cursor:pointer; transition:background 0.2s;">Aceitar</button>
+  </div>
+</div>
+
+<style>
+  /* Ajustes para telas pequenas (mobile) */
+  @media (max-width: 600px) {
+    #accessibility-toggle {
+      bottom: 250px !important; /* sobe um pouco menos para não ficar muito alto */
+    }
+    #accessibility-toolbar {
+      bottom: 320px !important;
+      left: 10px !important;
+      min-width: 160px !important;
+      max-width: 180px !important;
+    }
+    #action-buttons {
+      bottom: 100px !important;
+      left: 10px !important;
+      gap: 12px !important;
+    }
+    #action-buttons button {
+      padding: 10px 16px !important;
+      font-size: 0.8rem !important;
+      white-space: normal !important; /* permite quebra de linha se necessário */
+    }
+    #voice-status {
+      font-size: 0.7rem !important;
+      max-width: 160px !important;
+    }
+  }
+</style>
+
 <!-- ===== SCRIPTS GLOBAIS (Acessibilidade + LGPD + Voz + Leitura) ===== -->
 <script>
 // ===== TOOLBAR DE ACESSIBILIDADE =====
