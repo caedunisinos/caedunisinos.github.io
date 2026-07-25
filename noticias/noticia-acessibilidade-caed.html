@@ -916,6 +916,18 @@ function salvarPreferencia(chave, valor) {
   prefs[chave] = valor;
   localStorage.setItem('acessibilidadePrefs', JSON.stringify(prefs));
 }
+  // ===== FUNÇÃO PARA ROLAR ATÉ O BOTÃO DE VOZ CENTRAL =====
+function scrollToVoiceButton() {
+  const target = document.getElementById('voice-btn');
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    // Destaque temporário para indicar onde está o botão
+    target.style.boxShadow = '0 0 0 4px #f59e0b';
+    setTimeout(() => { target.style.boxShadow = ''; }, 2000);
+  } else {
+    alert('Botão de voz não encontrado. Recarregue a página.');
+  }
+}
 </script>
 
 </body>
