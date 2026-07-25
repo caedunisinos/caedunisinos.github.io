@@ -527,9 +527,10 @@
   </button>
 
   <!-- Comandos de Voz (microfone) -->
-  <button class="voice-btn" style="background:#1e3a3a; color:#c5a880; border:1px solid #c5a880; border-radius:50px; padding:12px 24px; font-weight:700; font-size:0.9rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.15); transition:all 0.2s; display:flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; width:auto; white-space:nowrap;">
-  <i class="fas fa-microphone"></i> Ativar Comandos de Voz
-</button>
+  <button id="voice-btn" 
+          style="background:#1e3a3a; color:#c5a880; border:1px solid #c5a880; border-radius:50px; padding:12px 24px; font-weight:700; font-size:0.9rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.15); transition:all 0.2s; display:flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; width:auto; white-space:nowrap;">
+    <i class="fas fa-microphone"></i> Ativar Comandos de Voz
+  </button>
 
   <!-- Status do reconhecimento de voz (opcional) -->
   <span id="voice-status" style="color:#e2e8f0; font-size:0.8rem; padding-left:8px; min-height:1.4em; font-family:'Inter',sans-serif; max-width:220px; word-break:break-word;"></span>
@@ -776,24 +777,19 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
-// ===== COMANDOS DE VOZ (unificado para todos os botões com classe .voice-btn) =====
+// ===== COMANDOS DE VOZ =====
 document.addEventListener('DOMContentLoaded', function() {
-  // Seleciona TODOS os botões com a classe 'voice-btn'
-  const voiceBtns = document.querySelectorAll('.voice-btn');
-  if (!voiceBtns.length) return;
-
-  // Elemento de status (pode ser único; usaremos o primeiro encontrado)
-  const statusEl = document.getElementById('voice-status') || document.querySelector('.voice-status');
+  const voiceBtn = document.getElementById('voice-btn');
+  if (!voiceBtn) return;
+  const statusEl = document.getElementById('voice-status');
   let isListening = false;
   let recognition = null;
 
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SpeechRecognition) {
-    if (statusEl) statusEl.textContent = '❌ Seu navegador não suporta reconhecimento de voz.';
-    voiceBtns.forEach(btn => {
-      btn.disabled = true;
-      btn.style.opacity = '0.5';
-    });
+    if (statusEl) { statusEl.textContent = '❌ Seu navegador não suporta reconhecimento de voz.'; }
+    voiceBtn.disabled = true;
+    voiceBtn.style.opacity = '0.5';
     return;
   }
 
@@ -803,145 +799,13 @@ document.addEventListener('DOMContentLoaded', function() {
   recognition.interimResults = false;
   recognition.maxAlternatives = 1;
 
-  // Função para atualizar todos os botões
-  function updateButtons(text, isListeningState) {
-    voiceBtns.forEach(btn => {
-      if (isListeningState) {
-        btn.innerHTML = '<i class="fas fa-stop"></i> Parar Escuta';
-        btn.classList.add('listening');
-      } else {
-        btn.innerHTML = '<i class="fas fa-microphone"></i> Ativar Comandos de Voz';
-        btn.classList.remove('listening');
-      }
-    });
-    if (statusEl) {
-      if (isListeningState) {
-        statusEl.textContent = '🎤 Ouvindo... Fale um comando.';
-      } else {
-        statusEl.textContent = text || '⏸️ Reconhecimento pausado.';
-      }
-    }
-  }
-
   recognition.onresult = function(event) {
     const last = event.results.length - 1;
     const command = event.results[last][0].transcript.toLowerCase().trim();
-    if (statusEl) statusEl.textContent = '🗣️ Comando: "' + command + '"';
+    if (statusEl) { statusEl.textContent = '🗣️ Comando: "' + command + '"'; }
     console.log('Comando de voz:', command);
 
     const cmd = command.toLowerCase();
-
-    // Navegação
-    if (cmd.includes('ir para notícias') || cmd.includes('notícias')) {
-      window.location.href = '/noticias.html';
-    } else if (cmd.includes('ir para loja') || cmd.includes('loja')) {
-      window.location.href = '/loja.html';
-    } else if (cmd.includes('início') || cmd.includes('pagina inicial') || cmd.includes('home')) {
-      window.location.href = '/index.html';
-    } else if (cmd.includes('voltar')) {
-      history.back();
-    }
-    // Modo escuro/claro
-    else if (cmd.includes('modo escuro') || cmd.includes('escuro')) {
-      document.body.classList.add('modo-escuro');
-      if (statusEl) statusEl.textContent = '✅ Modo escuro ativado.';
-      salvarPreferencia('modoEscuro', true);
-    } else if (cmd.includes('modo claro') || cmd.includes('claro')) {
-      document.body.classList.remove('modo-escuro');
-      if (statusEl) statusEl.textContent = '✅ Modo claro ativado.';
-      salvarPreferencia('modoEscuro', false);
-    }
-    // Contraste
-    else if (cmd.includes('alto contraste') || cmd.includes('contraste alto')) {
-      document.body.classList.add('alto-contraste');
-      if (statusEl) statusEl.textContent = '✅ Alto contraste ativado.';
-      salvarPreferencia('altoContraste', true);
-    } else if (cmd.includes('contraste normal') || cmd.includes('normal')) {
-      document.body.classList.remove('alto-contraste');
-      if (statusEl) statusEl.textContent = '✅ Contraste normal ativado.';
-      salvarPreferencia('altoContraste', false);
-    }
-    // Fonte
-    else if (cmd.includes('aumentar fonte') || cmd.includes('fonte maior')) {
-      document.body.classList.remove('tamanho-fonte-1', 'tamanho-fonte-2', 'tamanho-fonte-3');
-      document.body.classList.add('tamanho-fonte-2');
-      if (statusEl) statusEl.textContent = '✅ Fonte aumentada.';
-      salvarPreferencia('tamanhoFonte', 2);
-    } else if (cmd.includes('diminuir fonte') || cmd.includes('fonte menor')) {
-      document.body.classList.remove('tamanho-fonte-1', 'tamanho-fonte-2', 'tamanho-fonte-3');
-      document.body.classList.add('tamanho-fonte-1');
-      if (statusEl) statusEl.textContent = '✅ Fonte diminuída.';
-      salvarPreferencia('tamanhoFonte', 1);
-    } else if (cmd.includes('fonte padrão') || cmd.includes('padrão')) {
-      document.body.classList.remove('tamanho-fonte-1', 'tamanho-fonte-2', 'tamanho-fonte-3');
-      if (statusEl) statusEl.textContent = '✅ Fonte padrão restaurada.';
-      salvarPreferencia('tamanhoFonte', 0);
-    }
-    // Dislexia
-    else if (cmd.includes('fonte dislexia') || cmd.includes('dislexia')) {
-      document.body.classList.toggle('fonte-dislexia');
-      if (statusEl) {
-        statusEl.textContent = document.body.classList.contains('fonte-dislexia') ? '✅ Fonte para dislexia ativada.' : '✅ Fonte para dislexia desativada.';
-      }
-      salvarPreferencia('fonteDislexia', document.body.classList.contains('fonte-dislexia'));
-    }
-    // Ajuda
-    else if (cmd.includes('ajuda') || cmd.includes('comandos') || cmd.includes('o que posso dizer')) {
-      if (statusEl) statusEl.textContent = '💡 Comandos: "Ir para notícias", "Ir para loja", "Início", "Voltar", "Modo escuro", "Modo claro", "Alto contraste", "Contraste normal", "Aumentar fonte", "Diminuir fonte", "Fonte padrão", "Fonte dislexia".';
-    } else {
-      if (statusEl) statusEl.textContent = '❓ Comando não reconhecido. Diga "ajuda" para ver os comandos disponíveis.';
-    }
-
-    if (isListening) {
-      setTimeout(() => { try { recognition.start(); } catch(e) {} }, 500);
-    }
-  };
-
-  recognition.onend = function() {
-    if (isListening) {
-      try { recognition.start(); } catch(e) {}
-    }
-  };
-
-  recognition.onerror = function(event) {
-    if (event.error === 'not-allowed') {
-      if (statusEl) statusEl.textContent = '❌ Permissão do microfone negada.';
-      isListening = false;
-      updateButtons('⏸️ Reconhecimento pausado.', false);
-      return;
-    }
-    if (event.error === 'no-speech') {
-      if (statusEl) statusEl.textContent = '⏳ Nada foi ouvido. Tente novamente.';
-      if (isListening) {
-        setTimeout(() => { try { recognition.start(); } catch(e) {} }, 500);
-      }
-      return;
-    }
-    if (isListening) {
-      setTimeout(() => { try { recognition.start(); } catch(e) {} }, 500);
-    }
-  };
-
-  // Adiciona o evento de clique para CADA botão
-  voiceBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      if (isListening) {
-        // Para a escuta
-        isListening = false;
-        recognition.stop();
-        updateButtons('⏸️ Reconhecimento pausado.', false);
-      } else {
-        // Inicia a escuta
-        isListening = true;
-        updateButtons('', true);
-        try { recognition.start(); } catch(e) {}
-      }
-    });
-  });
-
-  // Inicializa os botões com o estado padrão
-  updateButtons('Clique no microfone e fale um comando.', false);
-});
 
     // Navegação
     if (cmd.includes('ir para notícias') || cmd.includes('notícias')) {
