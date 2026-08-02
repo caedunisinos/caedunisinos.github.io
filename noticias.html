@@ -540,18 +540,22 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
         return;
       }
 
-      // Renderiza os cards
+      // Renderiza os cards - CORRIGIDO COM IMAGENS
       let html = '';
       
       postsPagina.forEach((post, index) => {
         const isFuturo = post.futuro === true;
         const classeFuturo = isFuturo ? 'futuro' : '';
         const classeDestaque = index === 0 && pagina === 1 ? 'featured' : '';
+        const temImagem = post.imagem && post.imagem !== '';
         
         html += `
           <article class="news-card ${classeDestaque} reveal ${classeFuturo}" data-categoria="${post.categoria}">
-            <div class="news-card-img">
-              ${post.imagem ? `<img src="${post.imagem}" alt="${post.titulo}" loading="lazy">` : '📄'}
+            <div class="news-card-img" style="background: linear-gradient(135deg, var(--brd-dk) 0%, #1a0508 100%); overflow: hidden; position: relative;">
+              ${temImagem 
+                ? `<img src="${post.imagem}" alt="${post.titulo}" title="${post.titulo}" style="width:100%; height:100%; object-fit:cover;" loading="lazy" onerror="this.style.display='none'">` 
+                : '<span style="font-size:3rem; opacity:0.3;">📄</span>'
+              }
               <span class="badge-categoria">${post.categoriaLabel}</span>
               ${isFuturo ? '<span class="badge-futuro">🔮 Em breve</span>' : ''}
             </div>
