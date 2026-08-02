@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <!--
   Design & Desenvolvimento: Fábio Wlademir
+  https://f2suporte.blogspot.com/2025/07/fabio-wlademir-especialista-em-ti-noc.html
+  https://linkedin.com/in/fabiowlademir | https://instagram.com/fabiowlademirrs
   CAED – Direito UNISINOS © 2026
-  Notícia baseada na Acolhida 2026/2: Guia de Preparação
 -->
 <html lang="pt-BR" prefix="og: https://ogp.me/ns#">
 <head>
@@ -82,6 +83,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/open-dyslexic@5.0.21/index.css"/>
+  <link rel="stylesheet" href="/acessibilidade.css">
 
   <style>
     /* ===== ESTILOS GLOBAIS DO SITE CAED ===== */
@@ -103,7 +105,7 @@
     a{color:inherit;text-decoration:none}
     body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
 
-    /* NAV (mesmo da notícia original) */
+    /* NAV */
     #nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(69,10,18,0.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,168,76,0.2);transition:box-shadow .3s}
     #nav.scrolled{box-shadow:0 4px 30px rgba(0,0,0,0.6)}
     .nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:68px;display:flex;align-items:center;justify-content:space-between}
@@ -158,7 +160,7 @@
     .page-hero-desc{font-size:1.1rem;color:var(--cream-dk);max-width:560px;margin:0 auto;line-height:1.7}
     .ornament-line{height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,.3),transparent);margin:3rem 0}
 
-    /* ARTICLE BODY - MESMO ESTILO DA ORIGINAL */
+    /* ARTICLE BODY */
     .article-body{padding:2rem 0 4rem}
     .article-body h2{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--cream);margin:2rem 0 1rem}
     .article-body h3{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--gold);margin:1.5rem 0 .8rem}
@@ -185,7 +187,29 @@
     .backlink-card a{display:flex;align-items:center;gap:.6rem;font-size:.9rem;color:var(--cream-dk);font-weight:500}
     .backlink-card a i{color:var(--gold);font-size:1.1rem}
 
-    /* FOOTER - MESMO ESTILO */
+    /* VOICE COMMAND BUTTON */
+    .voice-btn {
+      display:inline-flex;
+      align-items:center;
+      gap:.6rem;
+      background:var(--gold);
+      color:var(--brd-dk);
+      border:none;
+      border-radius:50px;
+      padding:.7rem 1.5rem;
+      font-family:'Montserrat',sans-serif;
+      font-size:.75rem;
+      font-weight:700;
+      cursor:pointer;
+      transition:all .2s;
+      box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    }
+    .voice-btn:hover{transform:scale(1.03);background:var(--gold-lt)}
+    .voice-btn.listening{background:#f59e0b;color:#fff;animation:pulse-voice 1.5s infinite}
+    .voice-status{font-size:.85rem;color:var(--cream-dk);margin-top:.3rem}
+    @keyframes pulse-voice{0%{box-shadow:0 0 0 0 rgba(245,158,11,0.5)}70%{box-shadow:0 0 0 10px rgba(245,158,11,0)}100%{box-shadow:0 0 0 0 rgba(245,158,11,0)}}
+
+    /* FOOTER */
     footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);padding:4rem 2rem 2rem}
     .footer-inner{max-width:1100px;margin:0 auto}
     .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:3rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(201,168,76,.1)}
@@ -207,6 +231,28 @@
     .footer-bottom a{color:rgba(201,168,76,.5);transition:color .2s}
     .footer-bottom a:hover{color:var(--gold)}
 
+    /* ===== ACESSIBILIDADE ===== */
+    .skip-link:focus{top:10px !important;background:#0b251e;color:#c5a880;outline:2px solid #c5a880}
+    body.alto-contraste{background:#000 !important;color:#fff !important}
+    body.alto-contraste *{background:#000 !important;color:#fff !important;border-color:#fff !important}
+    body.alto-contraste a{color:#ffdd57 !important}
+    body.alto-contraste button,body.alto-contraste input,body.alto-contraste textarea{background:#222 !important;color:#fff !important;border-color:#fff !important}
+    body.modo-escuro{background:#1a1a2e !important;color:#e2e8f0 !important}
+    body.modo-escuro header,body.modo-escuro footer,body.modo-escuro .top-bar,body.modo-escuro section{background:#16213e !important;color:#e2e8f0 !important}
+    body.modo-escuro a{color:#c5a880 !important}
+    body.modo-escuro .area-card,body.modo-escuro .service-card{background:#1e2a4a !important;border-color:#2a3a5c !important}
+    body.modo-escuro .sec-title{color:#f1f5f9 !important}
+    body.tamanho-fonte-1{font-size:110% !important}
+    body.tamanho-fonte-2{font-size:125% !important}
+    body.tamanho-fonte-3{font-size:150% !important}
+    body.fonte-dislexia{font-family:'OpenDyslexic','EB Garamond',serif !important}
+    body.animacoes-reduzidas *{animation-duration:0.01ms !important;transition-duration:0.01ms !important}
+    :focus-visible{outline:3px solid #c5a880 !important;outline-offset:2px !important}
+    #accessibility-toggle:hover,#accessibility-toggle:focus{background:#c5a880;color:#0b251e;border-color:#0b251e}
+    #accessibility-toolbar button:hover,#accessibility-toolbar button:focus{background:rgba(197,168,128,0.2);border-color:#c5a880}
+    @media(max-width:640px){#accessibility-toolbar{left:10px !important;right:10px !important;max-width:none !important;width:auto !important;bottom:150px !important}#accessibility-toolbar div{gap:6px !important}#accessibility-toolbar button{font-size:.7rem !important;padding:4px 8px !important}}
+    .vw-access-button{bottom:120px !important;right:20px !important}
+
     /* RESPONSIVE */
     @media(max-width:1024px){.footer-top{grid-template-columns:1fr 1fr}}
     @media(max-width:900px){.nav-links,.nav-loja-btn{display:none}.nav-toggle{display:flex}}
@@ -216,346 +262,738 @@
 
 <body>
 
-  <!-- ===== SKIP TO CONTENT ===== -->
-  <a href="#main-content" class="skip-link" style="position:absolute;top:-999px;left:50%;transform:translateX(-50%);background:#0b251e;color:#c5a880;padding:12px 24px;border-radius:0 0 8px 8px;z-index:9999;font-weight:700;text-decoration:none;transition:top 0.3s;">♿ Pular para o conteúdo principal</a>
+<!-- ===== SKIP TO CONTENT ===== -->
+<a href="#main-content" class="skip-link" style="position:absolute;top:-999px;left:50%;transform:translateX(-50%);background:#0b251e;color:#c5a880;padding:12px 24px;border-radius:0 0 8px 8px;z-index:9999;font-weight:700;text-decoration:none;transition:top 0.3s;">♿ Pular para o conteúdo principal</a>
 
-  <!-- ===== NAV (MESMA DA ORIGINAL) ===== -->
-  <header id="nav" role="banner">
-    <div class="nav-inner">
-      <a href="/index.html" class="nav-brand" aria-label="CAED Direito UNISINOS – Página inicial">
-        <div class="nav-brand-shield" aria-hidden="true">⚖</div>
-        <div class="nav-brand-txt">
-          <strong>CAED</strong>
-          <span>Direito Unisinos</span>
+<!-- ===== NAV ===== -->
+<header id="nav" role="banner">
+  <div class="nav-inner">
+    <a href="/index.html" class="nav-brand" aria-label="CAED Direito UNISINOS – Página inicial">
+      <div class="nav-brand-shield" aria-hidden="true">⚖</div>
+      <div class="nav-brand-txt">
+        <strong>CAED</strong>
+        <span>Direito Unisinos</span>
+      </div>
+    </a>
+    <ul class="nav-links" role="navigation" aria-label="Menu principal">
+      <li class="nav-dropdown">
+        <a href="/index.html#sobre" aria-haspopup="true" aria-expanded="false">CAED</a>
+        <div class="nav-dropdown-menu" role="menu">
+          <a href="/index.html#sobre" role="menuitem">Sobre o CAED</a>
+          <a href="/index.html#gestao" role="menuitem">Gestão 2026/1</a>
+          <a href="/gestoes-anteriores.html" role="menuitem">Gestões anteriores</a>
+          <a href="/prestacao-de-contas.html" role="menuitem">Prestação de contas</a>
         </div>
-      </a>
-      <ul class="nav-links" role="navigation" aria-label="Menu principal">
-        <li class="nav-dropdown">
-          <a href="/index.html#sobre" aria-haspopup="true" aria-expanded="false">CAED</a>
-          <div class="nav-dropdown-menu" role="menu">
-            <a href="/index.html#sobre" role="menuitem">Sobre o CAED</a>
-            <a href="/index.html#gestao" role="menuitem">Gestão 2026/1</a>
-            <a href="/gestoes-anteriores.html" role="menuitem">Gestões anteriores</a>
-            <a href="/prestacao-de-contas.html" role="menuitem">Prestação de contas</a>
-          </div>
-        </li>
-        <li><a href="/noticias.html" class="active" aria-current="page">Notícias</a></li>
-        <li><a href="https://fabiowlademir.github.io/simuladosdireito/" target="_blank" rel="noopener" class="sim-lnk">Simulados ↗</a></li>
-        <li><a href="/index.html#contato">Contato</a></li>
-        <li><a href="/patrocinadores.html" style="color:var(--gold-lt);">⭐ Patrocinadores</a></li>
-        <li><a href="https://linktr.ee/caed" target="_blank" rel="noopener" style="color:var(--gold);" aria-label="Linktree CAED – todos os links">🌿 Links</a></li>
+      </li>
+      <li><a href="/noticias.html" class="active" aria-current="page">Notícias</a></li>
+      <li><a href="https://fabiowlademir.github.io/simuladosdireito/" target="_blank" rel="noopener" class="sim-lnk">Simulados ↗</a></li>
+      <li><a href="/index.html#contato">Contato</a></li>
+      <li><a href="/patrocinadores.html" style="color:var(--gold-lt);">⭐ Patrocinadores</a></li>
+      <li><a href="https://linktr.ee/caed" target="_blank" rel="noopener" style="color:var(--gold);" aria-label="Linktree CAED – todos os links">🌿 Links</a></li>
+    </ul>
+    <a href="/loja.html" class="nav-loja-btn" aria-label="Loja oficial CAED – Coleção de Inverno 2026">🛍 Loja</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="nav-mobile" id="navMobile" aria-label="Menu mobile">
+    <button class="nav-mobile-dropdown-toggle" id="caedMobileToggle">CAED</button>
+    <div class="nav-mobile-sub" id="caedMobileSub">
+      <a href="/index.html#sobre">Sobre o CAED</a>
+      <a href="/index.html#gestao">Gestão 2026/1</a>
+      <a href="/gestoes-anteriores.html">Gestões anteriores</a>
+      <a href="/prestacao-de-contas.html">Prestação de contas</a>
+    </div>
+    <a href="/noticias.html" style="color:var(--gold);">📰 Notícias</a>
+    <a href="https://fabiowlademir.github.io/simuladosdireito/" target="_blank" rel="noopener" class="sim-lnk">Simulados ↗</a>
+    <a href="/loja.html">🛍 Loja Oficial</a>
+    <a href="/index.html#contato">Contato</a>
+    <a href="/patrocinadores.html" style="color:var(--gold-lt);">⭐ Patrocinadores</a>
+    <a href="https://linktr.ee/caed" target="_blank" rel="noopener" style="color:var(--gold);">🌿 Linktree</a>
+  </nav>
+</header>
+
+<main id="main-content">
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero" aria-label="Cabeçalho da notícia">
+    <div class="page-hero-orn" aria-hidden="true"></div>
+    <div style="position:relative;z-index:2;">
+      <nav class="breadcrumb" aria-label="Trilha de navegação">
+        <a href="/index.html">Início</a>
+        <span aria-hidden="true">›</span>
+        <a href="/noticias.html">Notícias</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Guia Acolhida 2026/2</span>
+      </nav>
+      <p class="page-hero-label">🎓 Dicas de Preparação · CAED</p>
+      <h1 class="page-hero-title">Guia da <em>Acolhida 2026/2</em></h1>
+      <p class="page-hero-desc">Prepare-se para a volta às aulas com dicas essenciais do CAED sobre o que levar, como se organizar e aproveitar ao máximo os dias de recepção nos campi.</p>
+    </div>
+  </section>
+
+  <div class="ornament-line" aria-hidden="true"></div>
+
+  <!-- ===== CONTEÚDO DA NOTÍCIA ===== -->
+  <section class="article-body">
+    <div class="container">
+
+      <!-- Imagem Principal -->
+      <div style="text-align:center;margin:0 0 2rem 0;">
+        <img src="https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/guia-dicas-acolhida-caed-2026-2.jpg" 
+             alt="Dicas para a Acolhida CAED 2026/2: Guia do que levar e como se preparar" 
+             title="Guia da Acolhida CAED 2026/2: O que Levar e Como se Preparar"
+             loading="eager" 
+             style="max-width:700px;width:100%;height:auto;max-height:400px;object-fit:cover;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.4);display:block;margin:0 auto;"/>
+        <p style="font-size:.8rem;color:var(--cream-dk);margin-top:8px;font-style:italic;">
+          <i class="fas fa-lightbulb" style="color:var(--gold);"></i> Dicas de ouro para começar o semestre com o pé direito
+        </p>
+      </div>
+
+      <p>
+        O grande dia está chegando! A <strong>Acolhida 2026/2</strong> da UNISINOS é o evento que marca o início do segundo semestre letivo, e o <strong>CAED</strong> estará nos campi de São Leopoldo e Porto Alegre para receber você com muitos brindes e novidades. Mas, para aproveitar ao máximo essa experiência, é bom estar preparado.
+      </p>
+
+      <p>
+        Preparamos um guia rápido com tudo o que você precisa saber e levar para a Acolhida. Confira!
+      </p>
+
+      <!-- DESTAQUE: Datas e Locais -->
+      <div class="highlight-box" style="border-left-color:var(--gold);background:rgba(201,168,76,.12);">
+        <p style="font-size:1.1rem;color:var(--cream);">
+          <i class="fas fa-calendar-check" style="color:var(--gold);margin-right:10px;"></i>
+          <strong>Datas e Locais da Acolhida:</strong><br>
+          📍 <strong>Campus São Leopoldo:</strong> Dia <strong>04/08</strong>, no <strong>Prédio Redondo</strong>.<br>
+          📍 <strong>Campus Porto Alegre:</strong> Dia <strong>05/08</strong>, no <strong>Andar B</strong>, Torre Educacional.<br>
+          🕒 <strong>Horário:</strong> Sempre das <strong>17h30 às 19h30</strong>.
+        </p>
+      </div>
+
+      <h2>🎒 O que levar para a Acolhida?</h2>
+      <p>Para não perder nenhum detalhe e curtir o evento com tranquilidade, separamos uma lista de itens que podem fazer a diferença:</p>
+
+      <ul>
+        <li><i class="fas fa-address-card"></i> <strong>Documentos Pessoais:</strong> Tenha seu RG ou CNH e, se for calouro, uma cópia do comprovante de matrícula. É sempre bom ter à mão para qualquer eventualidade.</li>
+        <li><i class="fas fa-water"></i> <strong>Garrafa de Água:</strong> Manter-se hidratado é essencial para curtir todas as atividades e caminhadas pelo campus. Leve sua garrafinha e use os bebedouros da universidade.</li>
+        <li><i class="fas fa-phone-alt"></i> <strong>Carregador Portátil (Power Bank):</strong> Você vai querer registrar todos os momentos, tirar fotos com os brindes do CAED e, claro, acessar a programação no celular. Não fique na mão com a bateria descarregada.</li>
+        <li><i class="fas fa-folder-open"></i> <strong>Pasta ou Mochila:</strong> Você vai receber panfletos, brindes e, quem sabe, alguns materiais da universidade. Um local seguro para guardar tudo é indispensável.</li>
+        <li><i class="fas fa-sun"></i> <strong>Protetor Solar e/ou Guarda-chuva:</strong> Se a Acolhida tiver atividades ao ar livre, é bom estar preparado para o sol gaúcho ou para uma chuva inesperada.</li>
+        <li><i class="fas fa-smile"></i> <strong>Disposição e Simpatia:</strong> Este é o item mais importante! A Acolhida é um ambiente de integração. Use e abuse da sua simpatia para conhecer novos colegas, veteranos e professores.</li>
       </ul>
-      <a href="/loja.html" class="nav-loja-btn" aria-label="Loja oficial CAED – Coleção de Inverno 2026">🛍 Loja</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
-    </div>
-    <nav class="nav-mobile" id="navMobile" aria-label="Menu mobile">
-      <button class="nav-mobile-dropdown-toggle" id="caedMobileToggle">CAED</button>
-      <div class="nav-mobile-sub" id="caedMobileSub">
-        <a href="/index.html#sobre">Sobre o CAED</a>
-        <a href="/index.html#gestao">Gestão 2026/1</a>
-        <a href="/gestoes-anteriores.html">Gestões anteriores</a>
-        <a href="/prestacao-de-contas.html">Prestação de contas</a>
+
+      <div style="background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);border-radius:8px;padding:1.5rem;margin:2rem 0;text-align:center;">
+        <p style="font-size:1rem;">
+          <i class="fas fa-gift" style="color:var(--gold);margin-right:8px;"></i> 
+          <strong>Dica de Ouro:</strong> Passe no estande do CAED para garantir sua <strong>agenda personalizada</strong> e sua <strong>caneta</strong> exclusiva! Serão itens especiais para você organizar seu semestre com estilo.
+        </p>
       </div>
-      <a href="/noticias.html" style="color:var(--gold);">📰 Notícias</a>
-      <a href="https://fabiowlademir.github.io/simuladosdireito/" target="_blank" rel="noopener" class="sim-lnk">Simulados ↗</a>
-      <a href="/loja.html">🛍 Loja Oficial</a>
-      <a href="/index.html#contato">Contato</a>
-      <a href="/patrocinadores.html" style="color:var(--gold-lt);">⭐ Patrocinadores</a>
-      <a href="https://linktr.ee/caed" target="_blank" rel="noopener" style="color:var(--gold);">🌿 Linktree</a>
-    </nav>
-  </header>
 
-  <main id="main-content">
+      <h2>📱 Como se preparar e se informar</h2>
+      <p>Além do que levar, a preparação também envolve se manter informado. A UNISINOS e o CAED disponibilizam diversos canais para você não perder nada:</p>
 
-    <!-- ===== PAGE HERO ===== -->
-    <section class="page-hero" aria-label="Cabeçalho da notícia">
-      <div class="page-hero-orn" aria-hidden="true"></div>
-      <div style="position:relative;z-index:2;">
-        <nav class="breadcrumb" aria-label="Trilha de navegação">
-          <a href="/index.html">Início</a>
-          <span aria-hidden="true">›</span>
-          <a href="/noticias.html">Notícias</a>
-          <span aria-hidden="true">›</span>
-          <span aria-current="page">Guia Acolhida 2026/2</span>
-        </nav>
-        <p class="page-hero-label">🎓 Dicas de Preparação · CAED</p>
-        <h1 class="page-hero-title">Guia da <em>Acolhida 2026/2</em></h1>
-        <p class="page-hero-desc">Prepare-se para a volta às aulas com dicas essenciais do CAED sobre o que levar, como se organizar e aproveitar ao máximo os dias de recepção nos campi.</p>
+      <ul>
+        <li><i class="fab fa-instagram"></i> <strong>Redes Sociais:</strong> Siga o <strong>@caed_unisinos</strong> e os perfis oficiais da UNISINOS. Lá você encontra os últimos detalhes, fotos e novidades em tempo real.</li>
+        <li><i class="fas fa-book"></i> <strong>Guia de Bolso do Estudante:</strong> A UNISINOS disponibiliza um material digital com todas as informações essenciais sobre a universidade, plataformas e benefícios. <a href="https://unisinos.br/images/docs-emails/2026-1/Guia_de_Bolso_Genrico_DIGITAL.pdf" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">Baixe aqui</a>.</li>
+        <li><i class="fas fa-map-signs"></i> <strong>Site da UNISINOS:</strong> Acesse o site oficial para ver a programação completa da Acolhida e os detalhes de cada campus.</li>
+      </ul>
+
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:1.5rem 0;">
+        <a href="https://unisinos.br/acolhida?utm_campaign=AL2026216&utm_content=Unisinos+-+Acolhida&utm_medium=email&utm_source=dinamize&utm_term=AL2026216" target="_blank" rel="noopener" class="btn btn-gold btn-lg" style="font-size:.75rem;padding:1rem 2.5rem;">
+          <i class="fas fa-calendar-check"></i> Programação Completa
+        </a>
+        <a href="https://wa.me/5551997311502?text=Olá,%20vim%20pelo%20guia%20da%20Acolhida%202026/2%20e%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener" class="btn btn-ghost btn-lg" style="font-size:.75rem;padding:1rem 2.5rem;">
+          <i class="fab fa-whatsapp"></i> Dúvidas? Fale Conosco
+        </a>
       </div>
-    </section>
 
-    <div class="ornament-line" aria-hidden="true"></div>
+      <!-- ===== CONTEÚDO ADICIONAL DA UNISINOS ===== -->
+      <div style="margin-top: 3rem; border-top: 1px solid rgba(201,168,76,.2); padding-top: 2rem;">
 
-    <!-- ===== CONTEÚDO DA NOTÍCIA ===== -->
-    <section class="article-body">
-      <div class="container">
+        <h2>🎓 Viva a experiência UNISINOS</h2>
+        <p>
+          A Acolhida é apenas o começo de uma jornada incrível. A UNISINOS, com seus campi em São Leopoldo e Porto Alegre, é um ambiente que vai além da sala de aula. É um espaço para construir amizades, desenvolver habilidades e se preparar para o futuro.
+        </p>
+        <p>
+          Aproveite cada momento, participe das atividades e não hesite em perguntar e se envolver. O CAED e toda a comunidade acadêmica estão aqui para apoiar você!
+        </p>
 
-        <!-- Imagem Principal -->
-        <div style="text-align:center;margin:0 0 2rem 0;">
-          <img src="https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/guia-dicas-acolhida-caed-2026-2.jpg" 
-               alt="Dicas para a Acolhida CAED 2026/2: Guia do que levar e como se preparar" 
-               title="Guia da Acolhida CAED 2026/2: O que Levar e Como se Preparar"
-               loading="eager" 
-               style="max-width:700px;width:100%;height:auto;max-height:400px;object-fit:cover;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.4);display:block;margin:0 auto;"/>
-          <p style="font-size:.8rem;color:var(--cream-dk);margin-top:8px;font-style:italic;">
-            <i class="fas fa-lightbulb" style="color:var(--gold);"></i> Dicas de ouro para começar o semestre com o pé direito
+        <div class="highlight-box" style="border-left-color: var(--gold); background: rgba(201,168,76,.08); margin-top: 2rem;">
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--cream); margin-bottom: 0.5rem;">
+            🎵 Playlist da Acolhida
+          </h3>
+          <p>
+            Os estudantes da UNISINOS criaram uma playlist especial para embalar a volta às aulas! Bora ouvir e entrar no clima? Acesse a playlist oficial no site da universidade.
           </p>
+          <div style="margin-top: 1rem;">
+            <a href="https://unisinos.br/acolhida?utm_campaign=AL2026216&utm_content=Unisinos+-+Acolhida&utm_medium=email&utm_source=dinamize&utm_term=AL2026216" target="_blank" rel="noopener" class="btn btn-gold btn-sm">
+              <i class="fas fa-music"></i> Ouvir a Playlist
+            </a>
+          </div>
         </div>
 
         <p>
-          O grande dia está chegando! A <strong>Acolhida 2026/2</strong> da UNISINOS é o evento que marca o início do segundo semestre letivo, e o <strong>CAED</strong> estará nos campi de São Leopoldo e Porto Alegre para receber você com muitos brindes e novidades. Mas, para aproveitar ao máximo essa experiência, é bom estar preparado.
+          Com essas dicas, você está pronto para começar o semestre com energia e disposição. Vamos juntos fazer história na Acolhida 2026/2!
         </p>
 
-        <p>
-          Preparamos um guia rápido com tudo o que você precisa saber e levar para a Acolhida. Confira!
-        </p>
-
-        <!-- DESTAQUE: Datas e Locais -->
-        <div class="highlight-box" style="border-left-color:var(--gold);background:rgba(201,168,76,.12);">
+        <!-- Destaque: O CAED na Acolhida -->
+        <div style="background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);border-radius:8px;padding:1.5rem;margin:2rem 0;text-align:center;border-left:4px solid var(--gold);">
           <p style="font-size:1.1rem;color:var(--cream);">
-            <i class="fas fa-calendar-check" style="color:var(--gold);margin-right:10px;"></i>
-            <strong>Datas e Locais da Acolhida:</strong><br>
-            📍 <strong>Campus São Leopoldo:</strong> Dia <strong>04/08</strong>, no <strong>Prédio Redondo</strong>.<br>
-            📍 <strong>Campus Porto Alegre:</strong> Dia <strong>05/08</strong>, no <strong>Andar B</strong>, Torre Educacional.<br>
-            🕒 <strong>Horário:</strong> Sempre das <strong>17h30 às 19h30</strong>.
+            <i class="fas fa-gavel" style="color:var(--gold);margin-right:10px;"></i>
+            <strong>O CAED estará presente!</strong><br>
+            O Centro Acadêmico de Estudantes de Direito participará ativamente da Acolhida promovida pela UNISINOS. Venha nos encontrar nos pontos de acolhida, conhecer nossos brindes e saber mais sobre as ações do CAED para este semestre. Nossos representantes estarão prontos para tirar suas dúvidas e apresentar as novidades.
           </p>
         </div>
 
-        <h2>🎒 O que levar para a Acolhida?</h2>
-        <p>Para não perder nenhum detalhe e curtir o evento com tranquilidade, separamos uma lista de itens que podem fazer a diferença:</p>
+      </div>
+      <!-- ===== FIM CONTEÚDO ADICIONAL ===== -->
 
+      <!-- ===== LOJA CTA ===== -->
+      <div class="cta-box">
+        <h3>🛍 Visite nossa Loja Oficial</h3>
+        <p>Confira a Coleção de Inverno CAED 2026 com peças exclusivas: Camiseta, Moletom Preto, Moletom Bordô, Ecobag e Kit Chimarrão. Mostre seu orgulho de ser CAED!</p>
+        <a href="/loja.html" class="btn btn-gold btn-lg">
+          <i class="fas fa-store"></i> Acessar a Loja CAED
+        </a>
+      </div>
+
+      <!-- ===== POSTAGENS RELACIONADAS ===== -->
+      <h2 style="margin-top:3rem;">📰 Notícias Relacionadas do CAED</h2>
+      <div class="backlinks-grid">
+        <div class="backlink-card">
+          <a href="https://caedunisinos.com.br/noticias/acolhida-caed-2026-2.html" target="_blank" rel="noopener">
+            <i class="fas fa-calendar-check"></i> Acolhida CAED 2026/2: Brindes e Novidades
+          </a>
+        </div>
+        <div class="backlink-card">
+          <a href="https://caedunisinos.com.br/noticias/noticia-guia-apresentacoes.html" target="_blank" rel="noopener">
+            <i class="fas fa-presentation"></i> Guia: Como Criar Apresentações Notáveis
+          </a>
+        </div>
+        <div class="backlink-card">
+          <a href="https://caedunisinos.com.br/noticias/noticia-filmes-ferias.html" target="_blank" rel="noopener">
+            <i class="fas fa-film"></i> Férias com Direito: 30 Filmes para Estudantes
+          </a>
+        </div>
+        <div class="backlink-card">
+          <a href="https://caedunisinos.com.br/noticias/noticia-regulariza-unisinos.html" target="_blank" rel="noopener">
+            <i class="fas fa-gavel"></i> Regulariza Unisinos: Consultoria para DAs e CAs
+          </a>
+        </div>
+        <div class="backlink-card">
+          <a href="https://caedunisinos.com.br/noticias/noticia-acessibilidade-caed.html" target="_blank" rel="noopener">
+            <i class="fas fa-universal-access"></i> CAED implementa Acessibilidade Digital
+          </a>
+        </div>
+        <div class="backlink-card">
+          <a href="/noticias/colecao-inverno-2026.html"><i class="fas fa-tshirt"></i> Coleção Inverno 2026</a>
+        </div>
+        <div class="backlink-card">
+          <a href="/noticias/noticia-vitoria-dce-caed.html"><i class="fas fa-gavel"></i> Vitória no DCE</a>
+        </div>
+        <div class="backlink-card">
+          <a href="/index.html#gestao"><i class="fas fa-users"></i> Gestão 2026/1</a>
+        </div>
+        <div class="backlink-card">
+          <a href="/loja.html"><i class="fas fa-store"></i> Loja Oficial CAED</a>
+        </div>
+        <div class="backlink-card">
+          <a href="https://fabiowlademir.github.io/simuladosdireito/" target="_blank"><i class="fas fa-graduation-cap"></i> Simulados OAB</a>
+        </div>
+        <div class="backlink-card">
+          <a href="/prestacao-de-contas.html"><i class="fas fa-chart-pie"></i> Prestação de Contas</a>
+        </div>
+        <div class="backlink-card">
+          <a href="/patrocinadores.html"><i class="fas fa-handshake"></i> Patrocinadores</a>
+        </div>
+        <div class="backlink-card">
+          <a href="/noticias.html"><i class="fas fa-newspaper"></i> Todas as Notícias</a>
+        </div>
+      </div>
+
+      <p style="text-align:center;margin-top:2rem;">
+        <a href="/noticias.html" style="color:var(--gold);font-weight:600;display:inline-flex;align-items:center;gap:.5rem;">
+          <i class="fas fa-arrow-left"></i> Voltar para Notícias
+        </a>
+      </p>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <strong>CAED</strong>
+        <span class="footer-sub">Centro Acadêmico · Direito Unisinos</span>
+        <p>Representando os estudantes de Direito da UNISINOS nos campi de São Leopoldo e Porto Alegre, Rio Grande do Sul.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
         <ul>
-          <li><i class="fas fa-address-card"></i> <strong>Documentos Pessoais:</strong> Tenha seu RG ou CNH e, se for calouro, uma cópia do comprovante de matrícula. É sempre bom ter à mão para qualquer eventualidade.</li>
-          <li><i class="fas fa-water"></i> <strong>Garrafa de Água:</strong> Manter-se hidratado é essencial para curtir todas as atividades e caminhadas pelo campus. Leve sua garrafinha e use os bebedouros da universidade.</li>
-          <li><i class="fas fa-phone-alt"></i> <strong>Carregador Portátil (Power Bank):</strong> Você vai querer registrar todos os momentos, tirar fotos com os brindes do CAED e, claro, acessar a programação no celular. Não fique na mão com a bateria descarregada.</li>
-          <li><i class="fas fa-folder-open"></i> <strong>Pasta ou Mochila:</strong> Você vai receber panfletos, brindes e, quem sabe, alguns materiais da universidade. Um local seguro para guardar tudo é indispensável.</li>
-          <li><i class="fas fa-sun"></i> <strong>Protetor Solar e/ou Guarda-chuva:</strong> Se a Acolhida tiver atividades ao ar livre, é bom estar preparado para o sol gaúcho ou para uma chuva inesperada.</li>
-          <li><i class="fas fa-smile"></i> <strong>Disposição e Simpatia:</strong> Este é o item mais importante! A Acolhida é um ambiente de integração. Use e abuse da sua simpatia para conhecer novos colegas, veteranos e professores.</li>
+          <li><a href="/index.html">Início</a></li>
+          <li><a href="/index.html#sobre">Sobre o CAED</a></li>
+          <li><a href="/index.html#gestao">Gestão 2026/1</a></li>
+          <li><a href="/gestoes-anteriores.html">Gestões Anteriores</a></li>
+          <li><a href="/prestacao-de-contas.html">Prestação de Contas</a></li>
+          <li><a href="/noticias.html" style="color:var(--gold);">📰 Notícias</a></li>
+          <li><a href="https://fabiowlademir.github.io/simuladosdireito/" target="_blank" rel="noopener">Simulados ↗</a></li>
+          <li><a href="/loja.html" style="color:var(--gold);">🛍 Loja Oficial</a></li>
+          <li><a href="/patrocinadores.html" style="color:var(--gold-lt);">⭐ Patrocinadores</a></li>
+          <li><a href="/index.html#contato">Contato</a></li>
         </ul>
-
-        <div style="background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);border-radius:8px;padding:1.5rem;margin:2rem 0;text-align:center;">
-          <p style="font-size:1rem;">
-            <i class="fas fa-gift" style="color:var(--gold);margin-right:8px;"></i> 
-            <strong>Dica de Ouro:</strong> Passe no estande do CAED para garantir sua <strong>agenda personalizada</strong> e sua <strong>caneta</strong> exclusiva! Serão itens especiais para você organizar seu semestre com estilo.
-          </p>
-        </div>
-
-        <h2>📱 Como se preparar e se informar</h2>
-        <p>Além do que levar, a preparação também envolve se manter informado. A UNISINOS e o CAED disponibilizam diversos canais para você não perder nada:</p>
-
+      </div>
+      <div class="footer-col">
+        <h4>Contato Rápido</h4>
         <ul>
-          <li><i class="fab fa-instagram"></i> <strong>Redes Sociais:</strong> Siga o <strong>@caed_unisinos</strong> e os perfis oficiais da UNISINOS. Lá você encontra os últimos detalhes, fotos e novidades em tempo real.</li>
-          <li><i class="fas fa-book"></i> <strong>Guia de Bolso do Estudante:</strong> A UNISINOS disponibiliza um material digital com todas as informações essenciais sobre a universidade, plataformas e benefícios. <a href="https://unisinos.br/images/docs-emails/2026-1/Guia_de_Bolso_Genrico_DIGITAL.pdf" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600;">Baixe aqui</a>.</li>
-          <li><i class="fas fa-map-signs"></i> <strong>Site da UNISINOS:</strong> Acesse o site oficial para ver a programação completa da Acolhida e os detalhes de cada campus.</li>
+          <li><a href="https://www.instagram.com/caed_unisinos/" target="_blank" rel="noopener">📷 @caed_unisinos</a></li>
+          <li><a href="https://wa.me/5551997311502" target="_blank" rel="noopener">💬 (51) 99731-1502</a></li>
+          <li><a href="mailto:caed-unisinos@outlook.com">✉️ caed-unisinos@outlook.com</a></li>
+          <li><a href="https://linktr.ee/caed" target="_blank" rel="noopener">🔗 linktr.ee/caed</a></li>
+          <li><a href="https://www.unisinos.br" target="_blank" rel="noopener">🎓 UNISINOS</a></li>
         </ul>
-
-        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:1.5rem 0;">
-          <a href="https://unisinos.br/acolhida?utm_campaign=AL2026216&utm_content=Unisinos+-+Acolhida&utm_medium=email&utm_source=dinamize&utm_term=AL2026216" target="_blank" rel="noopener" class="btn btn-gold btn-lg" style="font-size:.75rem;padding:1rem 2.5rem;">
-            <i class="fas fa-calendar-check"></i> Programação Completa
-          </a>
-          <a href="https://wa.me/5551997311502?text=Olá,%20vim%20pelo%20guia%20da%20Acolhida%202026/2%20e%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener" class="btn btn-ghost btn-lg" style="font-size:.75rem;padding:1rem 2.5rem;">
-            <i class="fab fa-whatsapp"></i> Dúvidas? Fale Conosco
-          </a>
-        </div>
-
-        <!-- ===== CONTEÚDO ADICIONAL DA UNISINOS (REESCRITO) ===== -->
-        <div style="margin-top: 3rem; border-top: 1px solid rgba(201,168,76,.2); padding-top: 2rem;">
-
-          <h2>🎓 Viva a experiência UNISINOS</h2>
-          <p>
-            A Acolhida é apenas o começo de uma jornada incrível. A UNISINOS, com seus campi em São Leopoldo e Porto Alegre, é um ambiente que vai além da sala de aula. É um espaço para construir amizades, desenvolver habilidades e se preparar para o futuro.
-          </p>
-          <p>
-            Aproveite cada momento, participe das atividades e não hesite em perguntar e se envolver. O CAED e toda a comunidade acadêmica estão aqui para apoiar você!
-          </p>
-
-          <div class="highlight-box" style="border-left-color: var(--gold); background: rgba(201,168,76,.08); margin-top: 2rem;">
-            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--cream); margin-bottom: 0.5rem;">
-              🎵 Playlist da Acolhida
-            </h3>
-            <p>
-              Os estudantes da UNISINOS criaram uma playlist especial para embalar a volta às aulas! Bora ouvir e entrar no clima? Acesse a playlist oficial no site da universidade.
-            </p>
-            <div style="margin-top: 1rem;">
-              <a href="https://unisinos.br/acolhida?utm_campaign=AL2026216&utm_content=Unisinos+-+Acolhida&utm_medium=email&utm_source=dinamize&utm_term=AL2026216" target="_blank" rel="noopener" class="btn btn-gold btn-sm">
-                <i class="fas fa-music"></i> Ouvir a Playlist
-              </a>
-            </div>
-          </div>
-
-          <p>
-            Com essas dicas, você está pronto para começar o semestre com energia e disposição. Vamos juntos fazer história na Acolhida 2026/2!
-          </p>
-
-          <!-- Destaque: O CAED na Acolhida -->
-          <div style="background:rgba(201,168,76,.05);border:1px solid rgba(201,168,76,.15);border-radius:8px;padding:1.5rem;margin:2rem 0;text-align:center;border-left:4px solid var(--gold);">
-            <p style="font-size:1.1rem;color:var(--cream);">
-              <i class="fas fa-gavel" style="color:var(--gold);margin-right:10px;"></i>
-              <strong>O CAED estará presente!</strong><br>
-              O Centro Acadêmico de Estudantes de Direito participará ativamente da Acolhida promovida pela UNISINOS. Venha nos encontrar nos pontos de acolhida, conhecer nossos brindes e saber mais sobre as ações do CAED para este semestre. Nossos representantes estarão prontos para tirar suas dúvidas e apresentar as novidades.
-            </p>
-          </div>
-
-        </div>
-        <!-- ===== FIM CONTEÚDO ADICIONAL ===== -->
-
-        <!-- ===== LOJA CTA ===== -->
-        <div class="cta-box">
-          <h3>🛍 Visite nossa Loja Oficial</h3>
-          <p>Confira a Coleção de Inverno CAED 2026 com peças exclusivas: Camiseta, Moletom Preto, Moletom Bordô, Ecobag e Kit Chimarrão. Mostre seu orgulho de ser CAED!</p>
-          <a href="/loja.html" class="btn btn-gold btn-lg">
-            <i class="fas fa-store"></i> Acessar a Loja CAED
-          </a>
-        </div>
-
-        <!-- ===== POSTAGENS RELACIONADAS (COM BACKLINKS) ===== -->
-        <h2 style="margin-top:3rem;">📰 Notícias Relacionadas do CAED</h2>
-        <div class="backlinks-grid">
-          <div class="backlink-card">
-            <a href="https://caedunisinos.com.br/noticias/acolhida-caed-2026-2.html" target="_blank" rel="noopener">
-              <i class="fas fa-calendar-check"></i> Acolhida CAED 2026/2: Brindes e Novidades
-            </a>
-          </div>
-          <div class="backlink-card">
-            <a href="https://caedunisinos.com.br/noticias/noticia-guia-apresentacoes.html" target="_blank" rel="noopener">
-              <i class="fas fa-presentation"></i> Guia: Como Criar Apresentações Notáveis
-            </a>
-          </div>
-          <div class="backlink-card">
-            <a href="https://caedunisinos.com.br/noticias/noticia-filmes-ferias.html" target="_blank" rel="noopener">
-              <i class="fas fa-film"></i> Férias com Direito: 30 Filmes para Estudantes
-            </a>
-          </div>
-          <div class="backlink-card">
-            <a href="https://caedunisinos.com.br/noticias/noticia-regulariza-unisinos.html" target="_blank" rel="noopener">
-              <i class="fas fa-gavel"></i> Regulariza Unisinos: Consultoria para DAs e CAs
-            </a>
-          </div>
-          <div class="backlink-card">
-            <a href="https://caedunisinos.com.br/noticias/noticia-acessibilidade-caed.html" target="_blank" rel="noopener">
-              <i class="fas fa-universal-access"></i> CAED implementa Acessibilidade Digital
-            </a>
-          </div>
-          <div class="backlink-card">
-            <a href="/noticias/colecao-inverno-2026.html"><i class="fas fa-tshirt"></i> Coleção Inverno 2026</a>
-          </div>
-          <div class="backlink-card">
-            <a href="/noticias/noticia-vitoria-dce-caed.html"><i class="fas fa-gavel"></i> Vitória no DCE</a>
-          </div>
-          <div class="backlink-card">
-            <a href="/index.html#gestao"><i class="fas fa-users"></i> Gestão 2026/1</a>
-          </div>
-          <div class="backlink-card">
-            <a href="/loja.html"><i class="fas fa-store"></i> Loja Oficial CAED</a>
-          </div>
-          <div class="backlink-card">
-            <a href="https://fabiowlademir.github.io/simuladosdireito/" target="_blank"><i class="fas fa-graduation-cap"></i> Simulados OAB</a>
-          </div>
-          <div class="backlink-card">
-            <a href="/prestacao-de-contas.html"><i class="fas fa-chart-pie"></i> Prestação de Contas</a>
-          </div>
-          <div class="backlink-card">
-            <a href="/patrocinadores.html"><i class="fas fa-handshake"></i> Patrocinadores</a>
-          </div>
-          <div class="backlink-card">
-            <a href="/noticias.html"><i class="fas fa-newspaper"></i> Todas as Notícias</a>
-          </div>
-        </div>
-
-        <p style="text-align:center;margin-top:2rem;">
-          <a href="/noticias.html" style="color:var(--gold);font-weight:600;display:inline-flex;align-items:center;gap:.5rem;">
-            <i class="fas fa-arrow-left"></i> Voltar para Notícias
-          </a>
-        </p>
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ===== FOOTER (MESMO DA ORIGINAL) ===== -->
-  <footer role="contentinfo">
-    <div class="footer-inner">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <strong>CAED</strong>
-          <span class="footer-sub">Centro Acadêmico · Direito Unisinos</span>
-          <p>Representando os estudantes de Direito da UNISINOS nos campi de São Leopoldo e Porto Alegre, Rio Grande do Sul.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Navegação</h4>
-          <ul>
-            <li><a href="/index.html">Início</a></li>
-            <li><a href="/index.html#sobre">Sobre o CAED</a></li>
-            <li><a href="/index.html#gestao">Gestão 2026/1</a></li>
-            <li><a href="/gestoes-anteriores.html">Gestões Anteriores</a></li>
-            <li><a href="/prestacao-de-contas.html">Prestação de Contas</a></li>
-            <li><a href="/noticias.html" style="color:var(--gold);">📰 Notícias</a></li>
-            <li><a href="https://fabiowlademir.github.io/simuladosdireito/" target="_blank" rel="noopener">Simulados ↗</a></li>
-            <li><a href="/loja.html" style="color:var(--gold);">🛍 Loja Oficial</a></li>
-            <li><a href="/patrocinadores.html" style="color:var(--gold-lt);">⭐ Patrocinadores</a></li>
-            <li><a href="/index.html#contato">Contato</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contato Rápido</h4>
-          <ul>
-            <li><a href="https://www.instagram.com/caed_unisinos/" target="_blank" rel="noopener">📷 @caed_unisinos</a></li>
-            <li><a href="https://wa.me/5551997311502" target="_blank" rel="noopener">💬 (51) 99731-1502</a></li>
-            <li><a href="mailto:caed-unisinos@outlook.com">✉️ caed-unisinos@outlook.com</a></li>
-            <li><a href="https://linktr.ee/caed" target="_blank" rel="noopener">🔗 linktr.ee/caed</a></li>
-            <li><a href="https://www.unisinos.br" target="_blank" rel="noopener">🎓 UNISINOS</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-dev-strip">
-        <span class="footer-dev-label">⚡ Design &amp; Desenvolvimento</span>
-        <div class="footer-dev-links">
-          <a href="https://f2suporte.blogspot.com/2025/07/fabio-wlademir-especialista-em-ti-noc.html" target="_blank" rel="noopener">💻 Fábio Wlademir</a>
-          <span class="footer-dev-sep">·</span>
-          <a href="https://www.linkedin.com/in/fabiowlademir/" target="_blank" rel="noopener">🔗 LinkedIn</a>
-          <span class="footer-dev-sep">·</span>
-          <a href="https://www.instagram.com/fabiowlademirrs/" target="_blank" rel="noopener">📷 Instagram</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 CAED – Direito UNISINOS · Todos os direitos reservados</span>
-        <span style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
-          <a href="/sobre.html">Sobre</a>
-          <a href="/politica-de-privacidade.html">Privacidade</a>
-          <a href="/termos-de-uso.html">Termos de Uso</a>
-          <a href="https://www.instagram.com/caed_unisinos/" target="_blank" rel="noopener">@caed_unisinos</a>
-        </span>
       </div>
     </div>
-  </footer>
-
-  <!-- ===== VLIBRAS ===== -->
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
+    <div class="footer-dev-strip">
+      <span class="footer-dev-label">⚡ Design &amp; Desenvolvimento</span>
+      <div class="footer-dev-links">
+        <a href="https://f2suporte.blogspot.com/2025/07/fabio-wlademir-especialista-em-ti-noc.html" target="_blank" rel="noopener">💻 Fábio Wlademir</a>
+        <span class="footer-dev-sep">·</span>
+        <a href="https://www.linkedin.com/in/fabiowlademir/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+        <span class="footer-dev-sep">·</span>
+        <a href="https://www.instagram.com/fabiowlademirrs/" target="_blank" rel="noopener">📷 Instagram</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CAED – Direito UNISINOS · Todos os direitos reservados</span>
+      <span style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+        <a href="/sobre.html">Sobre</a>
+        <a href="/politica-de-privacidade.html">Privacidade</a>
+        <a href="/termos-de-uso.html">Termos de Uso</a>
+        <a href="https://www.instagram.com/caed_unisinos/" target="_blank" rel="noopener">@caed_unisinos</a>
+      </span>
     </div>
   </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+</footer>
 
-  <!-- ===== SCRIPTS DE NAVEGAÇÃO E ACESSIBILIDADE ===== -->
-  <script>
-    // Nav scroll
-    const nav=document.getElementById('nav');
-    window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+<!-- ===== TOOLBAR DE ACESSIBILIDADE ===== -->
+<button id="accessibility-toggle" aria-label="Abrir ferramentas de acessibilidade" 
+        style="position:fixed; bottom:300px; left:20px; width:56px; height:56px; border-radius:50%; background:#0b251e; color:#c5a880; border:2px solid #c5a880; font-size:1.8rem; cursor:pointer; z-index:9998; box-shadow:0 4px 15px rgba(0,0,0,0.3); display:flex; align-items:center; justify-content:center; transition:background 0.2s;">♿</button>
 
-    // Mobile nav toggle
-    const tog=document.getElementById('navToggle'),mob=document.getElementById('navMobile');
-    tog.addEventListener('click',()=>mob.classList.toggle('open'));
-    mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mob.classList.remove('open')));
+<div id="accessibility-toolbar" role="dialog" aria-label="Ferramentas de acessibilidade" 
+     style="position:fixed; bottom:370px; left:20px; background:rgba(11,37,30,0.97); backdrop-filter:blur(12px); padding:20px 16px; border-radius:12px; border:1px solid #c5a880; box-shadow:0 8px 30px rgba(0,0,0,0.5); z-index:9997; display:none; flex-direction:column; gap:12px; min-width:200px; max-width:220px; transition:opacity 0.3s ease;">
+  <div style="display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
+    <button data-acao="contraste" title="Alto Contraste" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">🔲 Contraste</button>
+    <button data-acao="modo" title="Modo Escuro/Claro" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">🌙 Escuro</button>
+    <button data-acao="fonte" data-nivel="1" title="Diminuir fonte" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">A-</button>
+    <button data-acao="fonte" data-nivel="0" title="Fonte padrão" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">A</button>
+    <button data-acao="fonte" data-nivel="2" title="Aumentar fonte" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">A+</button>
+    <button data-acao="fonte" data-nivel="3" title="Aumentar muito" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">A++</button>
+    <button data-acao="dislexia" title="Fonte para Dislexia" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">📖 Dislexia</button>
+    <button data-acao="animacoes" title="Reduzir animações" style="background:transparent; border:1px solid #cbd5e1; border-radius:6px; color:#e2e8f0; padding:6px 10px; font-size:0.8rem; cursor:pointer; transition:background 0.2s;">🎬 Reduzir</button>
+  </div>
+  <div style="text-align:center; font-size:0.65rem; color:#94a3b8; border-top:1px solid rgba(255,255,255,0.1); padding-top:8px; margin-top:4px;">Preferências salvas automaticamente</div>
+</div>
 
-    // Mobile CAED dropdown
-    const caedTog=document.getElementById('caedMobileToggle'),caedSub=document.getElementById('caedMobileSub');
-    caedTog.addEventListener('click',()=>{caedTog.classList.toggle('open');caedSub.classList.toggle('open')});
-    caedSub.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mob.classList.remove('open')));
-  </script>
+<!-- ===== BOTÕES DE COMANDO DE VOZ E LEITURA ===== -->
+<div id="action-buttons" style="position:fixed; bottom:80px; left:20px; z-index:9998; display:flex; flex-direction:column; gap:10px; align-items:flex-start;">
+
+  <!-- BOTÃO COMANDOS DE VOZ -->
+  <button id="voice-btn" class="voice-btn" aria-label="Ativar comandos de voz" style="background:var(--gold); color:var(--brd-dk); border:none; border-radius:50px; padding:10px 20px; font-weight:700; font-size:0.8rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.15); transition:all 0.2s; display:flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; width:auto; white-space:nowrap;">
+    <i class="fas fa-microphone"></i> Ativar Comandos de Voz
+  </button>
+
+  <!-- BOTÃO OUVIR PÁGINA -->
+  <button id="audio-reader-btn" onclick="readPageAloud()" style="background:#c5a880; color:#0b251e; border:none; border-radius:50px; padding:10px 20px; font-weight:700; font-size:0.8rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.15); transition:all 0.2s; display:flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; width:auto; white-space:nowrap;">
+    <i class="fas fa-volume-up"></i> Ouvir Página
+  </button>
+
+  <!-- BOTÃO PARAR LEITURA -->
+  <button id="audio-stop-btn" onclick="stopReading()" style="background:#6B0F1A; color:white; border:none; border-radius:50px; padding:10px 20px; font-weight:700; font-size:0.8rem; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.15); transition:all 0.2s; display:none; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; width:auto; white-space:nowrap;">
+    <i class="fas fa-stop"></i> Parar
+  </button>
+
+  <!-- STATUS DO RECONHECIMENTO DE VOZ -->
+  <span id="voice-status" style="color:#e2e8f0; font-size:0.75rem; padding-left:8px; min-height:1.2em; font-family:'Inter',sans-serif; max-width:200px; word-break:break-word;"></span>
+
+</div>
+
+<!-- ===== VLIBRAS ===== -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+
+<!-- ===== BANNER LGPD ===== -->
+<div id="cookie-consent-banner" style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:90%; max-width:900px; background:rgba(11,37,30,0.95); backdrop-filter:blur(10px); padding:18px 25px; border-radius:12px; box-shadow:0 8px 40px rgba(0,0,0,0.6); border:1px solid #c5a880; z-index:9999; display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:15px; font-family:'Inter',sans-serif; transition:opacity 0.4s ease, transform 0.4s ease;">
+  <div style="flex:1 1 100%; text-align:center; color:#e2e8f0; font-size:0.9rem; line-height:1.5;">
+    <i class="fas fa-shield-alt" style="color:#c5a880; margin-right:8px; font-size:1.1rem;"></i>
+    <span style="font-weight:300;">Utilizamos cookies essenciais e, com seu consentimento, cookies de análise para melhorar sua experiência. <a href="/politica-de-privacidade.html" style="color:#c5a880; text-decoration:underline; font-weight:500;">Política de Privacidade</a><span style="color:#94a3b8; margin:0 6px;">|</span><a href="/termos-de-uso.html" style="color:#cbd5e1; text-decoration:underline;">Configurar</a></span>
+  </div>
+  <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center;">
+    <button onclick="rejectCookies()" style="background:transparent; color:#cbd5e1; border:1px solid #64748b; padding:8px 20px; border-radius:6px; font-weight:600; font-size:0.85rem; cursor:pointer; transition:background 0.2s, border-color 0.2s;">Recusar</button>
+    <button onclick="acceptCookies()" style="background:#c5a880; color:#0b251e; border:none; padding:8px 28px; border-radius:6px; font-weight:700; font-size:0.85rem; cursor:pointer; transition:background 0.2s;">Aceitar</button>
+  </div>
+</div>
+
+<style>
+  @media (max-width: 600px) {
+    #accessibility-toggle { bottom: 250px !important; }
+    #accessibility-toolbar { bottom: 320px !important; left: 10px !important; min-width: 160px !important; max-width: 180px !important; }
+    #action-buttons { bottom: 60px !important; left: 10px !important; gap: 8px !important; }
+    #action-buttons button { padding: 8px 14px !important; font-size: 0.7rem !important; white-space: normal !important; }
+    #voice-status { font-size: 0.65rem !important; max-width: 160px !important; }
+  }
+</style>
+
+<script>
+// ===== TOOLBAR DE ACESSIBILIDADE =====
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleBtn = document.getElementById('accessibility-toggle');
+  const toolbar = document.getElementById('accessibility-toolbar');
+  let toolbarAberta = false;
+
+  if (toggleBtn && toolbar) {
+    toggleBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toolbarAberta = !toolbarAberta;
+      toolbar.style.display = toolbarAberta ? 'flex' : 'none';
+      this.setAttribute('aria-expanded', toolbarAberta);
+    });
+
+    document.addEventListener('click', function(e) {
+      if (toolbarAberta && !toolbar.contains(e.target) && e.target !== toggleBtn) {
+        toolbar.style.display = 'none';
+        toolbarAberta = false;
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    const botoes = toolbar.querySelectorAll('[data-acao]');
+    botoes.forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const acao = this.dataset.acao;
+        const body = document.body;
+
+        switch (acao) {
+          case 'contraste':
+            body.classList.toggle('alto-contraste');
+            salvarPreferencia('altoContraste', body.classList.contains('alto-contraste'));
+            break;
+          case 'modo':
+            body.classList.toggle('modo-escuro');
+            salvarPreferencia('modoEscuro', body.classList.contains('modo-escuro'));
+            break;
+          case 'fonte': {
+            const nivel = parseInt(this.dataset.nivel);
+            for (let i = 0; i <= 3; i++) {
+              body.classList.remove(`tamanho-fonte-${i}`);
+            }
+            if (nivel > 0) {
+              body.classList.add(`tamanho-fonte-${nivel}`);
+            }
+            salvarPreferencia('tamanhoFonte', nivel);
+            break;
+          }
+          case 'dislexia':
+            body.classList.toggle('fonte-dislexia');
+            salvarPreferencia('fonteDislexia', body.classList.contains('fonte-dislexia'));
+            break;
+          case 'animacoes':
+            body.classList.toggle('animacoes-reduzidas');
+            salvarPreferencia('animacoesReduzidas', body.classList.contains('animacoes-reduzidas'));
+            break;
+          default: break;
+        }
+      });
+    });
+  }
+
+  function salvarPreferencia(chave, valor) {
+    const prefs = JSON.parse(localStorage.getItem('acessibilidadePrefs')) || {};
+    prefs[chave] = valor;
+    localStorage.setItem('acessibilidadePrefs', JSON.stringify(prefs));
+  }
+
+  function carregarPreferencias() {
+    const body = document.body;
+    const prefs = JSON.parse(localStorage.getItem('acessibilidadePrefs')) || {};
+    if (prefs.altoContraste) body.classList.add('alto-contraste');
+    if (prefs.modoEscuro) body.classList.add('modo-escuro');
+    if (prefs.fonteDislexia) body.classList.add('fonte-dislexia');
+    if (prefs.animacoesReduzidas) body.classList.add('animacoes-reduzidas');
+    const nivel = prefs.tamanhoFonte || 0;
+    if (nivel > 0) body.classList.add(`tamanho-fonte-${nivel}`);
+  }
+  carregarPreferencias();
+});
+
+// ===== LGPD COOKIES =====
+function setCookieConsent(choice) {
+  localStorage.setItem('cookieConsent', choice);
+  const banner = document.getElementById('cookie-consent-banner');
+  if (banner) {
+    banner.style.opacity = '0';
+    banner.style.transform = 'translateX(-50%) translateY(20px)';
+    setTimeout(() => { banner.style.display = 'none'; }, 500);
+  }
+}
+function acceptCookies() { setCookieConsent('accepted'); }
+function rejectCookies() { setCookieConsent('rejected'); }
+document.addEventListener('DOMContentLoaded', function() {
+  const consent = localStorage.getItem('cookieConsent');
+  if (consent === 'accepted' || consent === 'rejected') {
+    const banner = document.getElementById('cookie-consent-banner');
+    if (banner) banner.style.display = 'none';
+  }
+});
+
+// ===== LEITURA POR ÁUDIO (TTS) =====
+let currentUtterance = null;
+let isReading = false;
+
+function readPageAloud() {
+  if (isReading) {
+    stopReading();
+    setTimeout(() => { readPageAloud(); }, 300);
+    return;
+  }
+  const mainContent = document.querySelector('main') || document.body;
+  const clone = mainContent.cloneNode(true);
+  const removeSelectors = ['nav', 'footer', '.nav-menu', '.top-bar', '.footer-grid', '.visitor-counter', '#cookie-consent-banner'];
+  removeSelectors.forEach(selector => {
+    const elements = clone.querySelectorAll(selector);
+    elements.forEach(el => el.remove());
+  });
+  let text = clone.textContent || '';
+  text = text.replace(/\s+/g, ' ').trim();
+  if (!text || text.length < 10) {
+    alert('Não há conteúdo suficiente para leitura nesta página.');
+    return;
+  }
+  currentUtterance = new SpeechSynthesisUtterance(text);
+  currentUtterance.lang = 'pt-BR';
+  currentUtterance.rate = 0.9;
+  currentUtterance.pitch = 1.0;
+  currentUtterance.volume = 1;
+  const voices = window.speechSynthesis.getVoices();
+  const ptVoice = voices.find(v => v.lang === 'pt-BR' && v.name.includes('Female')) || voices.find(v => v.lang === 'pt-BR') || voices.find(v => v.lang.startsWith('pt'));
+  if (ptVoice) { currentUtterance.voice = ptVoice; }
+  currentUtterance.onstart = function() {
+    isReading = true;
+    const btn = document.getElementById('audio-reader-btn');
+    if (btn) { btn.innerHTML = '<i class="fas fa-pause"></i> Pausar'; btn.style.background = '#f59e0b'; }
+    const stopBtn = document.getElementById('audio-stop-btn');
+    if (stopBtn) stopBtn.style.display = 'flex';
+  };
+  currentUtterance.onend = function() {
+    isReading = false;
+    const btn = document.getElementById('audio-reader-btn');
+    if (btn) { btn.innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página'; btn.style.background = '#c5a880'; }
+    const stopBtn = document.getElementById('audio-stop-btn');
+    if (stopBtn) stopBtn.style.display = 'none';
+  };
+  currentUtterance.onerror = function() {
+    isReading = false;
+    const btn = document.getElementById('audio-reader-btn');
+    if (btn) { btn.innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página'; btn.style.background = '#c5a880'; }
+    const stopBtn = document.getElementById('audio-stop-btn');
+    if (stopBtn) stopBtn.style.display = 'none';
+  };
+  window.speechSynthesis.speak(currentUtterance);
+}
+
+function stopReading() {
+  if (window.speechSynthesis) {
+    window.speechSynthesis.cancel();
+  }
+  isReading = false;
+  const btn = document.getElementById('audio-reader-btn');
+  if (btn) { btn.innerHTML = '<i class="fas fa-volume-up"></i> Ouvir Página'; btn.style.background = '#c5a880'; }
+  const stopBtn = document.getElementById('audio-stop-btn');
+  if (stopBtn) stopBtn.style.display = 'none';
+}
+
+if (window.speechSynthesis) {
+  window.speechSynthesis.getVoices();
+  window.speechSynthesis.onvoiceschanged = function() {
+    window.speechSynthesis.getVoices();
+  };
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && isReading) {
+    stopReading();
+  }
+});
+
+function salvarPreferencia(chave, valor) {
+  const prefs = JSON.parse(localStorage.getItem('acessibilidadePrefs')) || {};
+  prefs[chave] = valor;
+  localStorage.setItem('acessibilidadePrefs', JSON.stringify(prefs));
+}
+
+// ===== COMANDOS DE VOZ =====
+document.addEventListener('DOMContentLoaded', function() {
+  const voiceBtn = document.getElementById('voice-btn');
+  if (!voiceBtn) return;
+  const statusEl = document.getElementById('voice-status');
+  let isListening = false;
+  let recognition = null;
+
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognition) {
+    if (statusEl) { statusEl.textContent = '❌ Seu navegador não suporta reconhecimento de voz.'; }
+    voiceBtn.disabled = true;
+    voiceBtn.style.opacity = '0.5';
+    return;
+  }
+
+  recognition = new SpeechRecognition();
+  recognition.lang = 'pt-BR';
+  recognition.continuous = false;
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  recognition.onresult = function(event) {
+    const last = event.results.length - 1;
+    const command = event.results[last][0].transcript.toLowerCase().trim();
+    if (statusEl) { statusEl.textContent = '🗣️ Comando: "' + command + '"'; }
+    console.log('Comando de voz:', command);
+
+    const cmd = command.toLowerCase();
+
+    // Navegação
+    if (cmd.includes('ir para notícias') || cmd.includes('notícias')) {
+      window.location.href = '/noticias.html';
+    } else if (cmd.includes('ir para loja') || cmd.includes('loja')) {
+      window.location.href = '/loja.html';
+    } else if (cmd.includes('início') || cmd.includes('pagina inicial') || cmd.includes('home')) {
+      window.location.href = '/index.html';
+    } else if (cmd.includes('voltar')) {
+      history.back();
+    }
+    // Modo escuro/claro
+    else if (cmd.includes('modo escuro') || cmd.includes('escuro')) {
+      document.body.classList.add('modo-escuro');
+      if (statusEl) statusEl.textContent = '✅ Modo escuro ativado.';
+      salvarPreferencia('modoEscuro', true);
+    } else if (cmd.includes('modo claro') || cmd.includes('claro')) {
+      document.body.classList.remove('modo-escuro');
+      if (statusEl) statusEl.textContent = '✅ Modo claro ativado.';
+      salvarPreferencia('modoEscuro', false);
+    }
+    // Contraste
+    else if (cmd.includes('alto contraste') || cmd.includes('contraste alto')) {
+      document.body.classList.add('alto-contraste');
+      if (statusEl) statusEl.textContent = '✅ Alto contraste ativado.';
+      salvarPreferencia('altoContraste', true);
+    } else if (cmd.includes('contraste normal') || cmd.includes('normal')) {
+      document.body.classList.remove('alto-contraste');
+      if (statusEl) statusEl.textContent = '✅ Contraste normal ativado.';
+      salvarPreferencia('altoContraste', false);
+    }
+    // Fonte
+    else if (cmd.includes('aumentar fonte') || cmd.includes('fonte maior')) {
+      document.body.classList.remove('tamanho-fonte-1', 'tamanho-fonte-2', 'tamanho-fonte-3');
+      document.body.classList.add('tamanho-fonte-2');
+      if (statusEl) statusEl.textContent = '✅ Fonte aumentada.';
+      salvarPreferencia('tamanhoFonte', 2);
+    } else if (cmd.includes('diminuir fonte') || cmd.includes('fonte menor')) {
+      document.body.classList.remove('tamanho-fonte-1', 'tamanho-fonte-2', 'tamanho-fonte-3');
+      document.body.classList.add('tamanho-fonte-1');
+      if (statusEl) statusEl.textContent = '✅ Fonte diminuída.';
+      salvarPreferencia('tamanhoFonte', 1);
+    } else if (cmd.includes('fonte padrão') || cmd.includes('padrão')) {
+      document.body.classList.remove('tamanho-fonte-1', 'tamanho-fonte-2', 'tamanho-fonte-3');
+      if (statusEl) statusEl.textContent = '✅ Fonte padrão restaurada.';
+      salvarPreferencia('tamanhoFonte', 0);
+    }
+    // Dislexia
+    else if (cmd.includes('fonte dislexia') || cmd.includes('dislexia')) {
+      document.body.classList.toggle('fonte-dislexia');
+      if (statusEl) {
+        statusEl.textContent = document.body.classList.contains('fonte-dislexia') ? '✅ Fonte para dislexia ativada.' : '✅ Fonte para dislexia desativada.';
+      }
+      salvarPreferencia('fonteDislexia', document.body.classList.contains('fonte-dislexia'));
+    }
+    // Ajuda
+    else if (cmd.includes('ajuda') || cmd.includes('comandos')) {
+      if (statusEl) statusEl.textContent = '💡 Comandos: notícias, loja, início, voltar, modo escuro/claro, alto contraste/normal, aumentar/diminuir fonte, fonte padrão, dislexia.';
+    } else {
+      if (statusEl) statusEl.textContent = '❓ Comando não reconhecido. Diga "ajuda" para ver os comandos.';
+    }
+
+    if (isListening) {
+      setTimeout(() => { try { recognition.start(); } catch(e) {} }, 500);
+    }
+  };
+
+  recognition.onend = function() {
+    if (isListening) {
+      try { recognition.start(); } catch(e) {}
+    }
+  };
+
+  recognition.onerror = function(event) {
+    if (event.error === 'not-allowed') {
+      if (statusEl) statusEl.textContent = '❌ Permissão do microfone negada.';
+      isListening = false;
+      voiceBtn.classList.remove('listening');
+      voiceBtn.innerHTML = '<i class="fas fa-microphone"></i> Ativar Comandos de Voz';
+      return;
+    }
+    if (event.error === 'no-speech') {
+      if (statusEl) statusEl.textContent = '⏳ Nada foi ouvido. Tente novamente.';
+      if (isListening) {
+        setTimeout(() => { try { recognition.start(); } catch(e) {} }, 500);
+      }
+      return;
+    }
+    if (isListening) {
+      setTimeout(() => { try { recognition.start(); } catch(e) {} }, 500);
+    }
+  };
+
+  voiceBtn.addEventListener('click', function() {
+    if (isListening) {
+      isListening = false;
+      recognition.stop();
+      voiceBtn.classList.remove('listening');
+      voiceBtn.innerHTML = '<i class="fas fa-microphone"></i> Ativar Comandos de Voz';
+      if (statusEl) statusEl.textContent = '⏸️ Reconhecimento pausado.';
+    } else {
+      isListening = true;
+      voiceBtn.classList.add('listening');
+      voiceBtn.innerHTML = '<i class="fas fa-stop"></i> Parar Escuta';
+      if (statusEl) statusEl.textContent = '🎤 Ouvindo... Fale um comando.';
+      try { recognition.start(); } catch(e) {}
+    }
+  });
+});
+</script>
+
+<!-- ===== SCRIPTS DE NAVEGAÇÃO ===== -->
+<script>
+  // Nav scroll
+  const nav=document.getElementById('nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>40));
+
+  // Mobile nav toggle
+  const tog=document.getElementById('navToggle'),mob=document.getElementById('navMobile');
+  tog.addEventListener('click',()=>mob.classList.toggle('open'));
+  mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mob.classList.remove('open')));
+
+  // Mobile CAED dropdown
+  const caedTog=document.getElementById('caedMobileToggle'),caedSub=document.getElementById('caedMobileSub');
+  caedTog.addEventListener('click',()=>{caedTog.classList.toggle('open');caedSub.classList.toggle('open')});
+  caedSub.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mob.classList.remove('open')));
+</script>
 
 </body>
 </html>
