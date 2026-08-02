@@ -242,6 +242,30 @@ const posts = [
   futuro: false
 },
   {
+  titulo: "Carteirinha Estudantil UNISINOS: Como Solicitar e Quais os Benefícios",
+  link: "https://caedunisinos.com.br/noticias/carteirinha-estudantil-unisinos-como-solicitar.html",
+  resumo: "Saiba como solicitar sua carteirinha estudantil com o CAED e garanta meia-entrada em cinemas, teatros, eventos culturais e muito mais.",
+  data: "06/08/2026",
+  horario: "08:00",
+  categoria: "servicos",
+  categoriaLabel: "🎫 Benefícios Estudantis",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/carteirinha-estudantil-caed-unisinos.jpg",
+  destaque: false,
+  futuro: false
+},
+  {
+  titulo: "Simulados OAB: Prepare-se para o Exame com o CAED",
+  link: "https://caedunisinos.com.br/noticias/simulados-oab-prepare-se-caed.html",
+  resumo: "O CAED oferece simulados OAB gratuitos para você testar seus conhecimentos, identificar pontos fracos e chegar preparado para o exame da OAB.",
+  data: "07/08/2026",
+  horario: "08:00",
+  categoria: "academico",
+  categoriaLabel: "📚 OAB & Carreira",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/simulados-oab-caed-unisinos.jpg",
+  destaque: false,
+  futuro: false
+},
+  {
     titulo: "📌 NOVIDADE: CAED lança plataforma de mentoria para calouros",
     link: "https://caedunisinos.com.br/noticias/mentoria-calouros-caed.html",
     resumo: "Programa de mentoria para apoiar os novos estudantes de Direito da Unisinos em São Leopoldo e Porto Alegre.",
