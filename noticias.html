@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
   Design & Desenvolvimento: Fábio Wlademir
-  https://f2suporte.blogspot.com/2026/03/pericia-digital-investigacao-forense-e.html
+  https://f2suporte.blogspot.com/2025/07/fabio-wlademir-especialista-em-ti-noc.html
   https://linkedin.com/in/fabiowlademir | https://instagram.com/fabiowlademirrs
   CAED – Direito UNISINOS © 2026
 -->
@@ -58,7 +58,6 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .nav-links a:hover{color:var(--gold);background:rgba(201,168,76,.08)}
 .nav-links a.active{color:var(--gold)}
 .nav-links a.sim-lnk{color:var(--gold-lt)}
-/* DROPDOWN */
 .nav-dropdown{position:relative}
 .nav-dropdown>a{display:flex;align-items:center;gap:.35rem}
 .nav-dropdown>a::after{content:'▾';font-size:.55rem;opacity:.7;transition:transform .25s}
@@ -69,7 +68,6 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .nav-dropdown-menu a{display:block;font-family:'Montserrat',sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;color:var(--cream-dk);padding:.65rem 1.3rem;transition:color .2s,background .2s;white-space:nowrap}
 .nav-dropdown-menu a:hover{color:var(--gold);background:rgba(201,168,76,.07)}
 .nav-dropdown:hover .nav-dropdown-menu{display:block}
-/* mobile dropdown */
 .nav-mobile-dropdown-toggle{display:flex;justify-content:space-between;align-items:center;font-family:'Montserrat',sans-serif;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--cream-dk);padding:.75rem 0;border-bottom:1px solid rgba(201,168,76,.1);cursor:pointer;background:none;border-top:none;border-left:none;border-right:none;width:100%;text-align:left}
 .nav-mobile-dropdown-toggle::after{content:'▾';font-size:.6rem;opacity:.6;transition:transform .25s}
 .nav-mobile-dropdown-toggle.open::after{transform:rotate(-180deg)}
@@ -374,7 +372,7 @@ footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);paddin
             <div style="display:flex;flex-direction:column;gap:.6rem">
               <a href="https://www.instagram.com/caed_unisinos/" target="_blank" rel="noopener" style="font-size:.9rem;color:var(--cream-dk);display:flex;align-items:center;gap:.6rem;transition:color .2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--cream-dk)'">📷 @caed_unisinos</a>
               <a href="https://wa.me/5551997311502" target="_blank" rel="noopener" style="font-size:.9rem;color:var(--cream-dk);display:flex;align-items:center;gap:.6rem;transition:color .2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--cream-dk)'">💬 (51) 99731-1502</a>
-              <a href="mailto:caed-unisinos@outlook.com" style="font-size:.9rem;color:var(--cream-dk);display:flex;align-items:center;gap:.6rem;transition:color .2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--cream-dk)'">✉️ contato@caedunisinos.com.br</a>
+              <a href="mailto:caed-unisinos@outlook.com" style="font-size:.9rem;color:var(--cream-dk);display:flex;align-items:center;gap:.6rem;transition:color .2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--cream-dk)'">✉️ caed-unisinos@outlook.com</a>
               <a href="https://linktr.ee/caed" target="_blank" rel="noopener" style="font-size:.9rem;color:var(--cream-dk);display:flex;align-items:center;gap:.6rem;transition:color .2s" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--cream-dk)'">🔗 linktr.ee/caed</a>
             </div>
           </div>
@@ -415,7 +413,7 @@ footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);paddin
         <ul>
           <li><a href="https://www.instagram.com/caed_unisinos/" target="_blank" rel="noopener">📷 @caed_unisinos</a></li>
           <li><a href="https://wa.me/5551997311502" target="_blank" rel="noopener">💬 (51) 99731-1502</a></li>
-          <li><a href="mailto:caed-unisinos@outlook.com">✉️ contato@caedunisinos.com.br</a></li>
+          <li><a href="mailto:caed-unisinos@outlook.com">✉️ caed-unisinos@outlook.com</a></li>
           <li><a href="https://linktr.ee/caed" target="_blank" rel="noopener">🔗 linktr.ee/caed</a></li>
           <li><a href="https://www.unisinos.br" target="_blank" rel="noopener">🎓 UNISINOS</a></li>
         </ul>
@@ -483,12 +481,31 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
     const gradeNoticias = document.getElementById('grade-noticias');
     const botoesFiltro = document.querySelectorAll('.filter-btn');
 
-    // ===== FUNÇÃO PARA RENDERIZAR NOTÍCIAS COM PAGINAÇÃO =====
+    // ===== FUNÇÃO PARA RENDERIZAR NOTÍCIAS COM PAGINAÇÃO E FILTRO DE DATA =====
     function renderizarNoticias(categoria = 'todas', pagina = 1) {
-      // Filtra os posts
+      // Obtém a data atual para comparar
+      const hoje = new Date();
+      const dia = String(hoje.getDate()).padStart(2, '0');
+      const mes = String(hoje.getMonth() + 1).padStart(2, '0');
+      const ano = hoje.getFullYear();
+      const dataAtual = `${dia}/${mes}/${ano}`;
+      
+      // Função para converter data string para objeto Date
+      function parseData(dataStr) {
+        const partes = dataStr.split('/');
+        return new Date(partes[2], partes[1] - 1, partes[0]);
+      }
+
+      // Filtra os posts: primeiro por categoria, depois por data (apenas notícias com data <= hoje)
       postsFiltrados = posts.filter(post => {
-        if (categoria === 'todas') return true;
-        return post.categoria === categoria;
+        // Filtro por categoria
+        if (categoria !== 'todas' && post.categoria !== categoria) {
+          return false;
+        }
+        // Filtro por data: apenas notícias com data <= hoje (ignora futuras)
+        const dataPost = parseData(post.data);
+        const dataHoje = parseData(dataAtual);
+        return dataPost <= dataHoje;
       });
 
       // Ordena por data (mais recentes primeiro)
@@ -517,7 +534,7 @@ document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
           <div class="sem-resultados">
             <i class="fas fa-newspaper"></i>
             <h3>Nenhuma notícia encontrada</h3>
-            <p>Não há posts nesta categoria no momento.</p>
+            <p>Não há posts disponíveis no momento.</p>
           </div>
         `;
         return;
