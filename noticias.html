@@ -916,7 +916,157 @@ filterBtns.forEach(btn=>{
     <button onclick="acceptCookies()" class="btn-aceitar">Aceitar</button>
   </div>
 </div>
-
 <script src="/acessibilidade.js"></script>
+<!-- ===== SCRIPT PARA CARREGAR OS POSTS ===== -->
+<script src="/dados/posts.js"></script>
+
+<script>
+  (function() {
+    'use strict';
+
+    // ===== CONFIGURAÇÕES =====
+    const ITENS_POR_PAGINA = 14;
+    let paginaAtual = 1;
+    let postsFiltrados = [];
+
+    // ===== REFERÊNCIAS DOM =====
+    const gradeNoticias = document.getElementById('grade-noticias');
+    const botoesFiltro = document.querySelectorAll('#filtros button');
+
+    // ===== FUNÇÃO PARA RENDERIZAR NOTÍCIAS COM PAGINAÇÃO =====
+    function renderizarNoticias(categoria = 'todas', pagina = 1) {
+      // Filtra os posts
+      postsFiltrados = posts.filter(post => {
+        if (categoria === 'todas') return true;
+        return post.categoria === categoria;
+      });
+
+      // Ordena por data (mais recentes primeiro)
+      postsFiltrados.sort((a, b) => {
+        const dataA = a.data.split('/').reverse().join('');
+        const dataB = b.data.split('/').reverse().join('');
+        return dataB - dataA;
+      });
+
+      // Calcula total de páginas
+      const totalPaginas = Math.ceil(postsFiltrados.length / ITENS_POR_PAGINA);
+      
+      // Garante que a página atual é válida
+      if (pagina < 1) pagina = 1;
+      if (pagina > totalPaginas) pagina = totalPaginas;
+      paginaAtual = pagina;
+
+      // Calcula índices de início e fim
+      const inicio = (pagina - 1) * ITENS_POR_PAGINA;
+      const fim = Math.min(inicio + ITENS_POR_PAGINA, postsFiltrados.length);
+      const postsPagina = postsFiltrados.slice(inicio, fim);
+
+      // Se não houver posts
+      if (postsPagina.length === 0) {
+        gradeNoticias.innerHTML = `
+          <div class="sem-resultados" style="grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+            <i class="fas fa-newspaper" style="font-size: 3rem; color: rgba(201,168,76,0.3);"></i>
+            <h3 style="margin-top: 1rem; color: var(--cream-dk);">Nenhuma notícia encontrada</h3>
+            <p style="color: rgba(224,208,176,0.5);">Não há posts nesta categoria no momento.</p>
+          </div>
+        `;
+        return;
+      }
+
+      // Renderiza os cards
+      let html = '';
+      
+      postsPagina.forEach((post, index) => {
+        const isFuturo = post.futuro === true;
+        const classeFuturo = isFuturo ? 'futuro' : '';
+        // Primeiro item com destaque visual
+        const classeDestaque = index === 0 && pagina === 1 ? 'featured' : '';
+        
+        html += `
+          <article class="news-card ${classeDestaque} reveal ${classeFuturo}" data-cat="${post.categoria}">
+            <div class="news-card-img" aria-hidden="true" style="background: linear-gradient(135deg, var(--brd-dk) 0%, #1a0508 100%); overflow: hidden; position: relative;">
+              ${post.imagem ? `<img src="${post.imagem}" alt="${post.titulo}" style="width:100%; height:100%; object-fit:cover;" loading="lazy">` : '📄'}
+              <span class="badge-categoria" style="position: absolute; top: 12px; left: 12px; background: rgba(139, 0, 0, 0.9); color: white; padding: 4px 14px; border-radius: 20px; font-size: 0.7rem; font-weight: 600;">${post.categoriaLabel}</span>
+              ${isFuturo ? '<span style="position: absolute; top: 12px; right: 12px; background: #ffc107; color: #333; padding: 4px 14px; border-radius: 20px; font-size: 0.7rem; font-weight: 700;">🔮 Em breve</span>' : ''}
+            </div>
+            <div class="news-card-body">
+              <span class="news-tag">${post.categoriaLabel}</span>
+              <h2 class="news-title">${post.titulo}</h2>
+              <p class="news-excerpt">${post.resumo}</p>
+              <div class="news-meta">
+                <span>📅 ${post.data} ${post.horario ? '• ' + post.horario : ''}</span>
+              </div>
+              <a href="${post.link}" class="news-cta">Leia mais →</a>
+            </div>
+          </article>
+        `;
+      });
+
+      // Adiciona área de paginação
+      html += `
+        <div class="paginacao" style="grid-column: 1 / -1; display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 2rem; padding: 1.5rem 0; border-top: 1px solid rgba(201,168,76,0.1); flex-wrap: wrap;">
+          <button onclick="mudarPagina(${paginaAtual - 1})" class="btn-paginacao" ${paginaAtual <= 1 ? 'disabled' : ''} style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); color: ${paginaAtual <= 1 ? 'rgba(201,168,76,0.3)' : 'var(--gold)'}; padding: 0.5rem 1.2rem; border-radius: 4px; cursor: ${paginaAtual <= 1 ? 'not-allowed' : 'pointer'}; font-family: 'Montserrat', sans-serif; font-size: 0.65rem; letter-spacing: 0.12em; transition: all 0.3s;">
+            ← Anteriores
+          </button>
+          
+          <span style="font-family: 'Montserrat', sans-serif; font-size: 0.7rem; color: rgba(224,208,176,0.6);">
+            Página ${paginaAtual} de ${totalPaginas} · ${postsFiltrados.length} notícias
+          </span>
+          
+          <button onclick="mudarPagina(${paginaAtual + 1})" class="btn-paginacao" ${paginaAtual >= totalPaginas ? 'disabled' : ''} style="background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2); color: ${paginaAtual >= totalPaginas ? 'rgba(201,168,76,0.3)' : 'var(--gold)'}; padding: 0.5rem 1.2rem; border-radius: 4px; cursor: ${paginaAtual >= totalPaginas ? 'not-allowed' : 'pointer'}; font-family: 'Montserrat', sans-serif; font-size: 0.65rem; letter-spacing: 0.12em; transition: all 0.3s;">
+            Próximas →
+          </button>
+          
+          <a href="/arquivo.html" style="background: var(--gold); color: var(--brd-dk); padding: 0.5rem 1.5rem; border-radius: 4px; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.65rem; letter-spacing: 0.12em; font-weight: 700; transition: all 0.3s;">
+            📚 Ver Arquivo Completo
+          </a>
+        </div>
+      `;
+
+      gradeNoticias.innerHTML = html;
+
+      // Reativa o scroll reveal nos novos cards
+      document.querySelectorAll('.reveal').forEach(el => {
+        if (el.classList.contains('visible')) return;
+        const obs = new IntersectionObserver(e => {
+          e.forEach(x => { if (x.isIntersecting) x.target.classList.add('visible'); });
+        }, { threshold: 0.08 });
+        obs.observe(el);
+      });
+    }
+
+    // ===== FUNÇÃO GLOBAL PARA MUDAR PÁGINA =====
+    window.mudarPagina = function(novaPagina) {
+      const categoriaAtiva = document.querySelector('#filtros .active');
+      const categoria = categoriaAtiva ? categoriaAtiva.dataset.categoria : 'todas';
+      renderizarNoticias(categoria, novaPagina);
+      // Scroll suave para o topo da grade
+      document.querySelector('.news-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    // ===== EVENTOS DOS FILTROS =====
+    botoesFiltro.forEach(botao => {
+      botao.addEventListener('click', function() {
+        botoesFiltro.forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        const categoria = this.dataset.categoria;
+        renderizarNoticias(categoria, 1);
+      });
+    });
+
+    // ===== INICIALIZAÇÃO =====
+    if (typeof posts !== 'undefined' && posts.length > 0) {
+      renderizarNoticias('todas', 1);
+    } else {
+      gradeNoticias.innerHTML = `
+        <div class="sem-resultados" style="grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+          <i class="fas fa-exclamation-triangle" style="font-size: 3rem; color: rgba(201,168,76,0.3);"></i>
+          <h3 style="margin-top: 1rem; color: var(--cream-dk);">Erro ao carregar notícias</h3>
+          <p style="color: rgba(224,208,176,0.5);">Não foi possível carregar os dados. Tente recarregar a página.</p>
+        </div>
+      `;
+    }
+  })();
+</script>	
 </body>
 </html>
