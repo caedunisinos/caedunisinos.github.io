@@ -1597,5 +1597,18 @@ function salvarPreferencia(chave, valor) {
   localStorage.setItem('acessibilidadePrefs', JSON.stringify(prefs));
 }
 </script>
+<!-- ===== REGISTRO DO SERVICE WORKER PARA CONTADOR ===== -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then(function(registration) {
+      console.log('Service Worker registrado com sucesso para CAED:', registration);
+    })
+    .catch(function(error) {
+      console.log('Falha ao registrar Service Worker:', error);
+    });
+}
+</script>
+</body>
 </body>
 </html>
