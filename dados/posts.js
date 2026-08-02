@@ -206,6 +206,18 @@ const posts = [
   //  POSTAGENS FUTURAS (programadas - SÓ APARECEM NO ARQUIVO)
   // ==========================================================
   {
+  titulo: "Guia da Acolhida CAED 2026/2: O que Levar e Como se Preparar",
+  link: "https://caedunisinos.com.br/noticias/guia-acolhida-caed-2026-2-o-que-levar.html",
+  resumo: "Prepare-se para a volta às aulas com o guia do CAED. Confira dicas essenciais sobre o que levar, como se organizar e aproveitar ao máximo a Acolhida 2026/2 nos campi de São Leopoldo e Porto Alegre.",
+  data: "03/08/2026",
+  horario: "08:00",
+  categoria: "eventos",
+  categoriaLabel: "🎓 Volta às Aulas",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/guia-dicas-acolhida-caed-2026-2.jpg",
+  destaque: false,
+  futuro: false
+},
+  {
     titulo: "📌 NOVIDADE: CAED lança plataforma de mentoria para calouros",
     link: "https://caedunisinos.com.br/noticias/mentoria-calouros-caed.html",
     resumo: "Programa de mentoria para apoiar os novos estudantes de Direito da Unisinos em São Leopoldo e Porto Alegre.",
