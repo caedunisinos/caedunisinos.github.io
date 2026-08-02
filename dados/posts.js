@@ -230,6 +230,18 @@ const posts = [
   futuro: false
 },
   {
+  titulo: "CAED Explica: Tudo sobre a Colação de Grau e a Formatura de Direito na Unisinos",
+  link: "https://caedunisinos.com.br/noticias/guia-formatura-direito-unisinos-caed.html",
+  resumo: "Guia completo do CAED para os formandos de Direito da Unisinos. Datas das cerimônias, prazos, passo a passo e tudo que você precisa saber para se preparar para a formatura.",
+  data: "05/08/2026",
+  horario: "08:00",
+  categoria: "academico",
+  categoriaLabel: "🎓 Formatura & Carreira",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/guia-formatura-direito-unisinos-caed.jpg",
+  destaque: false,
+  futuro: false
+},
+  {
     titulo: "📌 NOVIDADE: CAED lança plataforma de mentoria para calouros",
     link: "https://caedunisinos.com.br/noticias/mentoria-calouros-caed.html",
     resumo: "Programa de mentoria para apoiar os novos estudantes de Direito da Unisinos em São Leopoldo e Porto Alegre.",
