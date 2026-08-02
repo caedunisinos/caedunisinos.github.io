@@ -28,7 +28,7 @@
     // Conteúdo do contador - AGORA COM O DOMÍNIO DO CAED!
     contadorDiv.innerHTML = `
       <i class="fas fa-eye" style="color: #8B0000;"></i>
-      <span>Visitas ao portal a partir de 10/08/2026:</span>
+        <span>Visitas ao portal desde 10/08/2026:</span>
       <img src="https://hits.dwyl.com/caedunisinos/caedunisinos.github.io.svg" 
            alt="Contador de Acessos" 
            style="display: inline-block; vertical-align: middle;">
