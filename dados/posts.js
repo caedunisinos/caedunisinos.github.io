@@ -37,7 +37,7 @@ const posts = [
     titulo: "CAED encaminha à Unisinos o Projeto Aluno Destaque",
     link: "https://caedunisinos.com.br/noticias/projeto-aluno-destaque.html",
     resumo: "Iniciativa visa reconhecer e premiar os melhores estudantes de Direito da Unisinos a cada semestre, com troféu, certificado e créditos acadêmicos.",
-    data: "31/07/2026",
+    data: "01/08/2026",
     horario: "14:00",
     categoria: "institucional",
     categoriaLabel: "🏆 Valorização Acadêmica",
@@ -49,7 +49,7 @@ const posts = [
     titulo: "CAED na Acolhida 2026/2: Brindes e Novidades para os Calouros",
     link: "https://caedunisinos.com.br/noticias/acolhida-caed-2026-2.html",
     resumo: "O CAED estará nos campi de São Leopoldo e Porto Alegre com distribuição de agendas, canetas e o Tubarão com panfletos e canecas exclusivas.",
-    data: "30/07/2026",
+    data: "31/07/2026",
     horario: "15:30",
     categoria: "eventos",
     categoriaLabel: "🎓 Volta às Aulas",
@@ -61,7 +61,7 @@ const posts = [
     titulo: "CAED implementa acessibilidade digital: recursos já disponíveis",
     link: "https://caedunisinos.com.br/noticias/noticia-acessibilidade-caed.html",
     resumo: "Nesta página você encontra VLibras, modo escuro, alto contraste, fonte para dislexia, leitura por áudio, comandos de voz e muito mais.",
-    data: "22/07/2026",
+    data: "30/07/2026",
     horario: "16:00",
     categoria: "acessibilidade",
     categoriaLabel: "♿ Inclusão Digital",
@@ -109,7 +109,7 @@ const posts = [
     titulo: "Férias com Direito: 30 filmes que todo estudante de Direito deveria assistir",
     link: "https://caedunisinos.com.br/noticias/noticia-filmes-ferias.html",
     resumo: "Clássicos nacionais e internacionais que dialogam com o universo jurídico e ajudam a aprender Direito fora da sala de aula.",
-    data: "09/07/2026",
+    data: "16/07/2026",
     horario: "08:30",
     categoria: "variedades",
     categoriaLabel: "🎓 Férias com Direito",
@@ -181,7 +181,7 @@ const posts = [
     titulo: "Grupos Oficiais de WhatsApp do Curso de Direito da Unisinos",
     link: "https://caedunisinos.com.br/noticias/noticia-grupos-whatsapp.html",
     resumo: "Fique por dentro de tudo o que acontece no curso! O CAED indica os grupos oficiais de WhatsApp.",
-    data: "10/06/2026",
+    data: "20/07/2026",
     horario: "14:30",
     categoria: "comunidade",
     categoriaLabel: "📲 Conecte-se",
@@ -193,7 +193,7 @@ const posts = [
     titulo: "Guia Completo: Como Criar Apresentações de Slides Notáveis",
     link: "https://caedunisinos.com.br/noticias/noticia-guia-apresentacoes.html",
     resumo: "Do planejamento à execução: ferramentas, design, uso de IA e cuidados com o ambiente de exibição.",
-    data: "05/06/2026",
+    data: "05/07/2026",
     horario: "16:30",
     categoria: "academico",
     categoriaLabel: "🎓 Dicas Acadêmicas",
@@ -216,31 +216,8 @@ const posts = [
     imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/mentoria-calouros.jpg",
     destaque: false,
     futuro: true
-  },
-  {
-    titulo: "📌 Palestra: Direito e Inteligência Artificial com Especialista da OAB",
-    link: "https://caedunisinos.com.br/noticias/palestra-direito-ia-oab.html",
-    resumo: "Evento imperdível sobre os desafios da IA no Direito, com palestrante convidado da OAB/RS.",
-    data: "20/09/2026",
-    horario: "19:00",
-    categoria: "eventos",
-    categoriaLabel: "🔮 Em breve",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/palestra-ia.jpg",
-    destaque: false,
-    futuro: true
-  },
-  {
-    titulo: "📌 Processo Seletivo para Novos Membros do CAED 2026/2",
-    link: "https://caedunisinos.com.br/noticias/processo-seletivo-caed-2026-2.html",
-    resumo: "Estão abertas as inscrições para estudantes que desejam integrar as equipes do CAED.",
-    data: "25/09/2026",
-    horario: "14:00",
-    categoria: "institucional",
-    categoriaLabel: "🔮 Em breve",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/processo-seletivo-caed.jpg",
-    destaque: false,
-    futuro: true
   }
+
 ];
 
 // ==========================================================
