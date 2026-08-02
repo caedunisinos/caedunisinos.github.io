@@ -1,7 +1,7 @@
 // ==========================================================
 //  SERVICE WORKER PARA INJETAR CONTADOR GLOBAL
 //  Arquivo: /sw.js
-//  Localização: Raiz do site (ex: caedunisinos.com.br/sw.js)
+//  Site: https://caedunisinos.com.br
 // ==========================================================
 
 const CACHE_NAME = 'caed-cache-v1';
@@ -21,18 +21,23 @@ self.addEventListener('fetch', function(event) {
   // Ignora requisições que não são HTML
   const url = new URL(event.request.url);
   
-  // Verifica se é uma requisição para página HTML
-  const isHtml = event.request.headers.get('accept')?.includes('text/html') ||
-                 url.pathname.endsWith('.html') ||
-                 url.pathname === '/' ||
-                 url.pathname === '' ||
-                 !url.pathname.includes('.');
+  // ===== CONDIÇÃO CORRIGIDA PARA CAPTURAR TODAS AS PÁGINAS =====
+  // Considera como HTML:
+  // - URLs sem extensão (ex: /noticias, /contato)
+  // - URLs que terminam com .html (ex: /noticias/projeto-aluno-destaque.html)
+  // - Página inicial (/) ou vazia
+  const isHtml = !url.pathname.includes('.') || // URLs sem extensão
+                 url.pathname.endsWith('.html') || // URLs com .html
+                 url.pathname === '/' || // Página inicial
+                 url.pathname === ''; // Página inicial
 
+  // Se NÃO for HTML, busca o arquivo normalmente e sai
   if (!isHtml) {
     event.respondWith(fetch(event.request));
     return;
   }
 
+  // ===== PROCESSAMENTO DE PÁGINAS HTML =====
   event.respondWith(
     fetch(event.request).then(function(response) {
       // Só processa respostas HTML bem-sucedidas
@@ -50,7 +55,8 @@ self.addEventListener('fetch', function(event) {
         }
 
         // Cria o script tag para ser inserido
-        const scriptTag = `<script src="${CONTADOR_SCRIPT}" defer></script>`;
+        // USANDO CAMINHO ABSOLUTO (COM / NO INÍCIO) PARA FUNCIONAR EM SUBPASTAS
+        const scriptTag = `<script src="/js/contador-loader.js" defer></script>`;
         
         // Insere o script ANTES do </body>
         let novoHTML = html.replace('</body>', scriptTag + '\n</body>');
