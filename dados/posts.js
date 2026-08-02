@@ -17,7 +17,7 @@
   horario: "HH:MM",
   categoria: "institucional",
   categoriaLabel: "🏛️ Institucional",
-  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/imagens/nome-da-imagem.jpg",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/nome-da-imagem.jpg",
   destaque: false,
   futuro: false
 }
@@ -125,7 +125,7 @@ const posts = [
     horario: "16:30",
     categoria: "loja",
     categoriaLabel: "🛍️ Loja Oficial",
-    imagem: "",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/colecao-inverno-2026.jpg",
     destaque: false,
     futuro: false
   },
@@ -213,7 +213,7 @@ const posts = [
     horario: "08:00",
     categoria: "institucional",
     categoriaLabel: "🔮 Em breve",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/imagens/mentoria-calouros.jpg",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/mentoria-calouros.jpg",
     destaque: false,
     futuro: true
   },
@@ -225,7 +225,7 @@ const posts = [
     horario: "19:00",
     categoria: "eventos",
     categoriaLabel: "🔮 Em breve",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/imagens/palestra-ia.jpg",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/palestra-ia.jpg",
     destaque: false,
     futuro: true
   },
@@ -237,7 +237,7 @@ const posts = [
     horario: "14:00",
     categoria: "institucional",
     categoriaLabel: "🔮 Em breve",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/imagens/processo-seletivo-caed.jpg",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/processo-seletivo-caed.jpg",
     destaque: false,
     futuro: true
   }
@@ -245,6 +245,7 @@ const posts = [
 
 // ==========================================================
 //  NÃO MODIFICAR A PARTIR DAQUI
+//  (código para exportar os dados)
 // ==========================================================
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = posts;
