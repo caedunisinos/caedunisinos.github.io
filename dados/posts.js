@@ -218,6 +218,18 @@ const posts = [
   futuro: false
 },
   {
+  titulo: "Calouro de Direito: Dicas do CAED para Você Sobreviver (e Curtir) o Primeiro Semestre na Unisinos",
+  link: "https://caedunisinos.com.br/noticias/dicas-calouros-direito-caed-unisinos.html",
+  resumo: "Chegou o primeiro dia de aula! O CAED preparou um guia com dicas essenciais para você se localizar nos campi, estudar, fazer networking e começar a vida acadêmica com o pé direito.",
+  data: "04/08/2026",
+  horario: "08:00",
+  categoria: "academico",
+  categoriaLabel: "🎓 Dicas para Calouros",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dicas-calouros-direito-caed-2026-2.jpg",
+  destaque: false,
+  futuro: false
+},
+  {
     titulo: "📌 NOVIDADE: CAED lança plataforma de mentoria para calouros",
     link: "https://caedunisinos.com.br/noticias/mentoria-calouros-caed.html",
     resumo: "Programa de mentoria para apoiar os novos estudantes de Direito da Unisinos em São Leopoldo e Porto Alegre.",
