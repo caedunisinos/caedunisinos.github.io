@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste do Chat CAED</title>
+  
+  <!-- 1. CSS do Widget -->
+  <link rel="stylesheet" href="css/chatbot-widget.css">
+</head>
+<body>
+
+  <!-- Conteúdo da página de teste -->
+  <h1>🧪 Teste do Chat CAED</h1>
+  <p>Esta página está testando o widget do assistente.</p>
+  <p>Clique no botão 💬 no canto inferior direito para abrir o chat.</p>
+
+  <!-- 2. HTML do Widget -->
+  <div id="caed-chat-widget">
+    <button id="caed-chat-button" onclick="toggleChat()">
+      💬 Assistente CAED
+    </button>
+    <div id="caed-chat-box">
+      <div class="chat-header">
+        <span>🤖 Assistente CAED</span>
+        <button onclick="toggleChat()">✕</button>
+      </div>
+      <div id="caed-chat-messages" class="chat-messages">
+        <div class="message bot">
+          Olá! 👋 Sou o Assistente Virtual do CAED.<br>
+          Como posso ajudar você hoje? ⚖️
+        </div>
+      </div>
+      <div class="chat-input-area">
+        <input id="caed-user-input" type="text" placeholder="Digite sua pergunta..." onkeypress="handleKeyPress(event)">
+        <button onclick="sendMessage()">➤</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. JavaScript do Widget -->
+  <script src="js/chatbot-widget.js"></script>
+
+</body>
+</html>
