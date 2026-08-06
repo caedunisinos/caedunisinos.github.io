@@ -241,12 +241,12 @@ const posts = [
   destaque: false,
   futuro: false
 },
-    {
+ {
   titulo: "NOTA PÚBLICA: CAED repudia obstáculos do DCE para reabertura de sala no Campus Porto Alegre",
   link: "https://caedunisinos.com.br/noticias/nota-publica-caed-repudia-dce-sala-poa.html",
-  resumo: "O CAED vem a público repudiar a postura do DCE Unisinos que, desde abril, impede a reabertura de uma sala de uso comum no Campus Porto Alegre, destinada a estudantes e entidades.",
+  resumo: "O CAED vem a público repudiar a postura do DCE Unisinos que, desde abril, impede a reabertura de uma sala de uso comum no Campus Porto Alegre, destinada a estudantes e entidades. Leia a nota na íntegra.",
   data: "05/08/2026",
-  horario: "08:00",
+  horario: "18:00",
   categoria: "representacao",
   categoriaLabel: "🗳️ Representação",
   imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/nota-publica-caed-repudia-dce-sala-poa.jpg",
