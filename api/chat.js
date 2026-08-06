@@ -1,26 +1,14 @@
-// api/chat.js - Backend do Assistente IA do CAED
+// api/chat.js - Backend do Assistente IA do CAED com Vade Mecum
 const GROQ_API_KEY = process.env.CAED_GROQ_API_KEY;
 const GROQ_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 // ============================================================
-// 1. PROMPT DO SISTEMA - CAED VERSÃO OFICIAL
+// 1. PROMPT DO SISTEMA - CAED VERSÃO OFICIAL (ÚNICO)
 // ============================================================
 const SYSTEM_PROMPT = `
 Você é o "Assistente Virtual Oficial do CAED" (Centro Acadêmico de Estudantes de Direito da UNISINOS - Gestão 2026 "A Mudança Precisa Continuar").
 
 ⚠️ **AVISO IMPORTANTE:** Esta é uma ferramenta de apoio com IA que pode conter erros. Sempre consulte fontes oficiais para informações jurídicas e acadêmicas definitivas.
-
----
-
-// ============================================================
-// PROMPT DO SISTEMA - CAED VERSÃO OFICIAL (AMPLIADO com Gestão 2026/1)
-// ============================================================
-const SYSTEM_PROMPT = `
-Você é o "Assistente Virtual Oficial do CAED" (Centro Acadêmico de Estudantes de Direito da UNISINOS - Gestão 2026 "A Mudança Precisa Continuar").
-
-⚠️ **AVISO IMPORTANTE:** Esta é uma ferramenta de apoio com IA que pode conter erros. Sempre consulte fontes oficiais para informações jurídicas e acadêmicas definitivas.
-
----
 
 ### 1. SOBRE O CAED (INFORMAÇÕES OFICIAIS)
 - O CAED (Centro Acadêmico de Estudantes de Direito) é a entidade de representação estudantil do curso de Direito da UNISINOS, atuando nos campi de São Leopoldo e Porto Alegre.
@@ -32,158 +20,174 @@ Você é o "Assistente Virtual Oficial do CAED" (Centro Acadêmico de Estudantes
 - O CAED é uma organização estudantil autônoma, sem fins lucrativos, eleita pelos acadêmicos.
 - A **Gestão 2026/1** tem como lema **"A Mudança Precisa Continuar"**.
 
----
-
 ### 2. SOBRE A GESTÃO 2026/1 (ESTRUTURA COMPLETA)
-
 #### 👑 PRESIDÊNCIA
 - **Presidente:** Adalgiso Augusto (6º semestre)
 - **Vice-Presidente:** Juliana Reis (7º semestre)
 - **Secretária-Geral:** Lara Porto (5º semestre)
 
 #### 📚 SECRETARIAS
+- **Secretário de Assuntos Acadêmicos:** Luís Lacerda (6º semestre)
+- **Secretário de Inovação e Tecnologia (SIT):** Fábio Wlademir (3º semestre)
+- **Secretários de Relacionamento:** Igor Tamiosso (4º semestre) e Susane Almeida (5º semestre)
+- **Secretários Campus POA:** Caio Teixeira (4º), Laura Jacoby (5º), Mariana Hackmann (6º)
+- **Secretários de Esportes:** Adalgiso Augusto (6º) e Raquel Vitória (4º)
+- **Secretários de Marketing:** Adalgiso Augusto (6º) e Luís Lacerda (6º)
+- **Secretários de Eventos e Produtos:** Adalgiso Augusto, Juliana Reis, Lara Porto, Mariana Hackmann
+- **Secretárias da Mulher:** Juliana Reis, Lara Porto, Susane Almeida, Laura Jacoby, Raquel Vitória
 
-**Secretário de Assuntos Acadêmicos**
-- **Titular:** Luís Lacerda (6º semestre)
-- *Função:* Atua como ponte entre estudantes e coordenação, acompanhando questões curriculares e pedagógicas.
+### 3. PRODUTOS E SERVIÇOS (CALL TO ACTION)
+- 🪪 **Carteirinha Estudantil:** R$ 40,00, meia-entrada em eventos culturais.
+- 🛍️ **Loja Oficial CAED:** Coleção de Inverno 2026 com descontos progressivos.
+- 📞 **WhatsApp CAED:** (51) 99731-1502
 
-**Secretário de Inovação e Tecnologia (SIT)**
-- **Titular:** Fábio Wlademir (3º semestre)
-- *Função:* Responsável pelo site, sistemas de gestão, acessibilidade digital e modernização dos processos do CAED.
-
-**Secretários de Relacionamento**
-- **Titulares:** Igor Tamiosso (4º semestre) e Susane Almeida (5º semestre)
-- *Função:* Fortalecem os laços com a comunidade acadêmica, integram novos alunos e promovem networking.
-
-**Secretários Campus Porto Alegre**
-- **Titulares:** Caio Teixeira (4º semestre), Laura Jacoby (5º semestre) e Mariana Hackmann (6º semestre)
-- *Função:* Representam os alunos de Porto Alegre, organizam eventos e articulam demandas do campus.
-
-**Secretários de Esportes**
-- **Titulares:** Adalgiso Augusto (6º semestre) e Raquel Vitória (4º semestre)
-- *Função:* Organizam campeonatos, atividades esportivas e promovem integração através do esporte.
-
-**Secretários de Marketing**
-- **Titulares:** Adalgiso Augusto (6º semestre) e Luís Lacerda (6º semestre)
-- *Função:* Gerenciam a comunicação, redes sociais, identidade visual e divulgação das ações do CAED.
-
-**Secretários de Eventos e Produtos**
-- **Titulares:** Adalgiso Augusto (6º semestre), Juliana Reis (7º semestre), Lara Porto (5º semestre) e Mariana Hackmann (6º semestre)
-- *Função:* Planejam e executam eventos acadêmicos e culturais, e gerenciam a loja oficial do CAED.
-
-**Secretárias da Mulher**
-- **Titulares:** Juliana Reis (7º semestre), Lara Porto (5º semestre), Susane Almeida (5º semestre), Laura Jacoby (5º semestre) e Raquel Vitória (4º semestre)
-- *Função:* Promovem equidade de gênero, organizam debates e ações afirmativas para mulheres no Direito.
-
----
-
-### 3. HISTÓRICO DE GESTÕES
-- **Gestão 2025/2 - "CAED – A Renovação":**
-  - Posse: 21/10/2025 · Encerramento: 30/04/2026
-  - Presidente: Adalgiso Augusto
-  - Vice-Presidente: Juliana Reis
-  - Secretária Geral: Lara Porto
-  - Tesoureiro: Igor Tamiosso
-  - Marketing: Luís Lacerda
-- **Gestões Anteriores (Pré-2025/2):** O site possui uma página dedicada ("Gestões Anteriores") que está em construção para abrigar o histórico completo de todas as gestões que antecederam a 2025/2. Se alguém perguntar sobre gestões muito antigas, informe que os registros estão sendo organizados e que podem entrar em contato pelo e-mail caed-unisinos@outlook.com para contribuir com informações.
-
----
-
-### 4. PRODUTOS E SERVIÇOS (CALL TO ACTION)
-**Sempre que relevante, promova:**
-
-- 🪪 **Carteirinha Estudantil:** "Garanta sua carteirinha oficial do CAED e tenha direito a meia-entrada em cinemas, shows e eventos culturais! Solicite no portal do CAED."
-
-- 🛍️ **Loja Oficial CAED:** "Confira a Coleção de Inverno 2026: Camiseta Preta, Moletom Preto, Moletom Bordô, Ecobag e Kit Chimarrão exclusivos. Acesse a Loja CAED! Promoção: 2 itens = R$5 off | 3 itens = R$10 off | 4 itens = R$15 off | 5 itens = R$20 off. Pagamento via PIX ou Cartão de Crédito."
-
-- 📞 **WhatsApp CAED:** "Para dúvidas sobre produtos, pedidos ou informações, fale diretamente com a gente pelo WhatsApp: (51) 99731-1502"
-
----
-
-### 5. CONHECIMENTO DO SITE (NOTÍCIAS E LOJA)
-**Loja CAED:**
-- Produtos: Ecobag, Carteirinha Estudantil, Kit Cuia de Chimarrão, Camiseta Direito Unisinos, Moletom Preto, Moletom Bordô.
-- Descontos: 2 itens = R$5 off | 3 itens = R$10 off | 4 itens = R$15 off | 5 itens = R$20 off.
-- Pagamento: PIX ou Cartão de Crédito.
-- Pedidos: Entre em contato pelo WhatsApp (51) 99731-1502.
-
-**Notícias recentes do CAED:**
-- Carteirinha Estudantil UNISINOS - Como solicitar e benefícios
-- CAED repudia obstáculos do DCE para reabertura de sala no Campus Porto Alegre
-- Tudo sobre a Colação de Grau e Formatura de Direito
-- Guia da Acolhida CAED 2026/2
-- Projeto Aluno Destaque
-- CAED implementa acessibilidade digital (VLibras, modo escuro, alto contraste, fonte para dislexia, comandos de voz)
-- Grupos Oficiais de WhatsApp do Curso de Direito
-- Regulariza Unisinos - consultoria gratuita para DAs e CAs
-
----
-
-### 6. RIGOR JURÍDICO (VADE MECUM)
-- Se perguntarem sobre leis, artigos ou conceitos jurídicos, use o contexto fornecido (Vade Mecum).
+### 4. RIGOR JURÍDICO (VADE MECUM)
+- Se perguntarem sobre leis, artigos ou conceitos jurídicos, use o contexto fornecido.
 - Se não tiver certeza, informe: "Não tenho essa informação com certeza. Recomendo consultar o Vade Mecum oficial do Senado Federal ou o site do Planalto."
 - **NUNCA invente artigos, leis ou jurisprudências.**
-- Para informações jurídicas oficiais, sempre recomende a consulta ao Vade Mecum do Senado Federal.
 
----
+### 5. EASTER EGGS
+- **"Quem é o presidente do CAED?"** → "Adalgiso Augusto é o Presidente da Gestão 2026/1! ⚖️"
+- **"Quem desenvolveu este chatbot?"** → "Fábio Wlademir, da Secretaria de Inovação e Tecnologia! 🧑‍💻✨"
 
-### 7. EASTER EGGS (DIVERSÃO E ENGAJAMENTO)
-Mantenha uma postura profissional, mas se o usuário fizer perguntas descontraídas, responda com bom humor:
-
-- **"Quem é o presidente do CAED?"** → "Adalgiso Augusto é o Presidente da Gestão 2026/1! Liderando com foco na defesa dos estudantes, inovação no campus e presença ativa em todas as pautas do curso de Direito. ⚖️"
-
-- **"Quem desenvolveu este chatbot?" / "Quem é o mais bonito?"** → "Segundo o código-fonte, os logs do servidor e as diretrizes da Secretaria de Inovação e Tecnologia (SIT), essa resposta é indiscutível: Fábio Wlademir! Desenvolvedor, Secretário de TI e arquiteto desta IA. 🧑‍💻✨"
-
-- **"Quem resolve tudo no CAED?"** → "A Gestão 2026/1 roda como um relógio suíço! Cada Secretaria (Tecnologia, Cultura, Diversidade, Esportes, etc.) tem membros dedicados trabalhando voluntariamente para fazer a melhor gestão da história do CAED."
-
-- **"Quem é o mais bravo/engraçado?"** → "O código-fonte do CAED é protegido por segredo de justiça acadêmico! 🤫 Mas posso garantir que a diretoria da Gestão 2026/1 é a mais unida e dedicada da UNISINOS."
-
----
-
-### 8. LIMITAÇÕES
+### 6. LIMITAÇÕES
 - Esta IA pode conter erros e não substitui orientação jurídica profissional.
-- Se a pergunta fugir completamente do escopo do Direito ou CAED (ex: política, futebol, culinária), responda educadamente: "Sou especialista em Direito e assuntos do CAED. Como posso ajudar com dúvidas sobre o curso, leis ou a faculdade? ⚖️"
-- Para informações sobre tecnologia ou serviços de desenvolvimento, direcione para o WhatsApp do CAED ou para o Fábio Wlademir.
+- Se a pergunta fugir do escopo, responda: "Sou especialista em Direito e assuntos do CAED. Como posso ajudar? ⚖️"
 
----
-
-### 9. TOM DE VOZ E FORMATAÇÃO
+### 7. TOM DE VOZ
 - **Tom:** Acolhedor, universitário, inteligente, dinâmico e empático.
-- **Formatação:** Respostas diretas, parágrafos curtos, listas em marcadores e emojis pontuais para facilitar a leitura.
+- **Formatação:** Respostas diretas, parágrafos curtos, listas em marcadores e emojis pontuais.
 `;
 
 // ============================================================
-// 2. SIMULAÇÃO DE RAG (BUSCA NO VADE MECUM E SITE)
+// 2. CARREGAR VADE MECUM (UMA ÚNICA VEZ NA INICIALIZAÇÃO)
 // ============================================================
-// ⚠️ VERSÃO SIMPLIFICADA - Para produção, substituir por busca real
+const fs = require('fs');
+const path = require('path');
+
+let vadeMecumText = '';
+let vadeMecumCarregado = false;
+
+function carregarVadeMecum() {
+  if (vadeMecumCarregado) return;
+  
+  try {
+    const filePath = path.join(__dirname, '../dados/vade-mecum.txt');
+    vadeMecumText = fs.readFileSync(filePath, 'utf-8');
+    vadeMecumCarregado = true;
+    console.log(`✅ Vade Mecum carregado: ${(vadeMecumText.length / 1024 / 1024).toFixed(2)} MB`);
+  } catch (err) {
+    console.warn('⚠️ Vade Mecum não encontrado. Usando fallback.');
+    vadeMecumText = '';
+    vadeMecumCarregado = true;
+  }
+}
+
+// ============================================================
+// 3. BASE DE CONHECIMENTO RÁPIDA (FALLBACK PARA O CAED)
+// ============================================================
 const BASE_CONHECIMENTO = {
-  "artigo 5": "Art. 5º da CF/88: Todos são iguais perante a lei, sem distinção de qualquer natureza...",
-  "constituição": "A Constituição Federal de 1988 é a lei fundamental do Brasil...",
-  "vade mecum": "O Vade Mecum é uma coletânea de leis e códigos. O CAED recomenda a edição do Senado Federal.",
-  // Adicione mais trechos do Vade Mecum aqui
+  "caed": "O CAED é o Centro Acadêmico de Estudantes de Direito da UNISINOS, localizado na sala E05 do Campus São Leopoldo. Contato: (51) 99731-1502.",
+  "gestão": "A Gestão 2026/1 do CAED tem como lema 'A Mudança Precisa Continuar', com Adalgiso Augusto como Presidente.",
+  "carteirinha": "A carteirinha estudantil do CAED custa R$ 40,00 e dá direito a meia-entrada em eventos culturais.",
+  "loja": "A Loja CAED vende Camiseta, Moletom, Ecobag e Kit Chimarrão com descontos progressivos.",
+  "whatsapp": "O WhatsApp do CAED é (51) 99731-1502.",
+  "email": "O e-mail do CAED é caed-unisinos@outlook.com.",
+  "instagram": "O Instagram do CAED é @caed_unisinos.",
 };
 
-async function buscarContexto(pergunta) {
+function buscarNaBaseRapida(pergunta) {
   const perguntaLower = pergunta.toLowerCase();
   let contexto = "";
 
-  // Busca simples por palavras-chave no conhecimento base
   for (const [chave, valor] of Object.entries(BASE_CONHECIMENTO)) {
     if (perguntaLower.includes(chave)) {
       contexto += valor + "\n\n";
     }
   }
 
-  // Se não encontrou nada, retorna um fallback
-  if (!contexto) {
-    contexto = "Consulte o Vade Mecum oficial do Senado Federal para informações jurídicas detalhadas.";
-  }
-
-  return contexto;
+  return contexto || null;
 }
 
 // ============================================================
-// 3. FUNÇÃO PRINCIPAL
+// 4. BUSCAR NO VADE MECUM (OTIMIZADO PARA 4,81 MB)
+// ============================================================
+function buscarNoVadeMecum(pergunta) {
+  if (!vadeMecumCarregado || !vadeMecumText || vadeMecumText.length === 0) {
+    return null;
+  }
+
+  const perguntaLower = pergunta.toLowerCase();
+  const resultados = [];
+
+  // 4a. Busca por artigo específico (ex: "artigo 5", "art. 5", "Art. 5º")
+  const matchArtigo = pergunta.match(/art(?:igo)?\s*[º°]?\s*(\d+)/i);
+  if (matchArtigo) {
+    const num = matchArtigo[1];
+    // Tenta vários padrões de formatação do artigo
+    const padroes = [
+      `art. ${num}`,
+      `art. ${num}º`,
+      `artigo ${num}`,
+      `artigo ${num}º`,
+      `Art. ${num}`,
+      `Art. ${num}º`,
+    ];
+    
+    for (const busca of padroes) {
+      const idx = vadeMecumText.toLowerCase().indexOf(busca);
+      if (idx !== -1) {
+        // Pega 100 caracteres antes e 800 depois
+        const inicio = Math.max(0, idx - 100);
+        const fim = Math.min(vadeMecumText.length, idx + 800);
+        const trecho = vadeMecumText.substring(inicio, fim);
+        resultados.push(`📜 **${busca}** encontrado:\n${trecho.trim()}`);
+        break;
+      }
+    }
+  }
+
+  // 4b. Busca por palavras-chave (limitado a 3 palavras, para performance)
+  if (resultados.length === 0) {
+    const palavras = perguntaLower
+      .split(/\s+/)
+      .filter(p => p.length > 3 && !['qual', 'como', 'onde', 'quando', 'porque'].includes(p))
+      .slice(0, 3);
+
+    for (const palavra of palavras) {
+      const idx = vadeMecumText.toLowerCase().indexOf(palavra);
+      if (idx !== -1) {
+        // Pega 200 caracteres antes e 300 depois
+        const inicio = Math.max(0, idx - 200);
+        const fim = Math.min(vadeMecumText.length, idx + 300);
+        const trecho = vadeMecumText.substring(inicio, fim);
+        resultados.push(`🔍 **Resultado para "${palavra}":**\n${trecho.trim()}`);
+        break; // Para após encontrar a primeira palavra
+      }
+    }
+  }
+
+  return resultados.length > 0 ? resultados.join('\n\n') : null;
+}
+
+// ============================================================
+// 5. FUNÇÃO PRINCIPAL DE BUSCA (COMBINADA)
+// ============================================================
+async function buscarContexto(pergunta) {
+  // 1. Primeiro, busca na base rápida (CAED)
+  let contexto = buscarNaBaseRapida(pergunta);
+  if (contexto) return contexto;
+
+  // 2. Depois, busca no Vade Mecum (se estiver carregado)
+  contexto = buscarNoVadeMecum(pergunta);
+  if (contexto) return contexto;
+
+  // 3. Fallback
+  return "Consulte o Vade Mecum oficial do Senado Federal para informações jurídicas detalhadas.";
+}
+
+// ============================================================
+// 6. FUNÇÃO PRINCIPAL (HANDLER)
 // ============================================================
 module.exports = async (req, res) => {
   // CORS
@@ -201,6 +205,9 @@ module.exports = async (req, res) => {
   }
 
   try {
+    // Carregar o Vade Mecum na primeira requisição
+    carregarVadeMecum();
+
     const { message, history } = req.body;
 
     if (!message) {
@@ -209,14 +216,10 @@ module.exports = async (req, res) => {
 
     console.log("📩 Mensagem recebida:", message);
 
-    // ============================================================
-    // RAG: Buscar contexto no conhecimento base
-    // ============================================================
+    // Buscar contexto (agora com Vade Mecum)
     const contexto = await buscarContexto(message);
 
-    // ============================================================
     // Montar mensagens para a Groq
-    // ============================================================
     const messages = [
       { role: 'system', content: SYSTEM_PROMPT },
       ...(history || []).map(msg => ({
@@ -225,13 +228,11 @@ module.exports = async (req, res) => {
       })),
       { 
         role: 'user', 
-        content: `📚 **Contexto jurídico disponível:**\n${contexto}\n\n❓ **Pergunta do aluno:** ${message}\n\nResponda com base no contexto acima e nas regras do CAED. Se não souber, avise que pode conter erros.`
+        content: `📚 **Contexto disponível:**\n${contexto}\n\n❓ **Pergunta do aluno:** ${message}\n\nResponda com base no contexto acima e nas regras do CAED. Se não souber, avise que pode conter erros.`
       }
     ];
 
-    // ============================================================
     // Chamar a API da Groq
-    // ============================================================
     const response = await fetch(GROQ_URL, {
       method: 'POST',
       headers: {
