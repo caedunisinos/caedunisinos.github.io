@@ -1,0 +1,7 @@
+{
+  "name": "caed-chatbot-backend",
+  "version": "1.0.0",
+  "description": "Assistente Virtual do CAED - Backend com Groq IA",
+  "author": "Fábio Wlademir | Secretaria de Inovação e Tecnologia (SIT)",
+  "dependencies": {}
+}
