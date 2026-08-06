@@ -187,7 +187,18 @@ async function buscarContexto(pergunta) {
 }
 
 // ============================================================
-// 6. FUNÇÃO PRINCIPAL (HANDLER)
+// 6. VALIDAÇÃO DA API KEY
+// ============================================================
+function validarApiKey() {
+  if (!GROQ_API_KEY) {
+    console.error('❌ CAED_GROQ_API_KEY não configurada!');
+    return false;
+  }
+  return true;
+}
+
+// ============================================================
+// 7. FUNÇÃO PRINCIPAL (HANDLER)
 // ============================================================
 module.exports = async (req, res) => {
   // CORS
@@ -205,6 +216,13 @@ module.exports = async (req, res) => {
   }
 
   try {
+    // Validar API Key
+    if (!validarApiKey()) {
+      return res.status(500).json({ 
+        reply: '❌ Erro de configuração do servidor. Contate o administrador.' 
+      });
+    }
+
     // Carregar o Vade Mecum na primeira requisição
     carregarVadeMecum();
 
