@@ -1,5 +1,5 @@
 // js/chatbot-widget.js - Widget do CAED
-const API_URL = "https://fw-chatbot-backend.vercel.app/api/chat";
+const API_URL = "https://caed-chatbot-backend.vercel.app/api/chat";
 
 let chatHistory = [];
 let isOpen = false;
