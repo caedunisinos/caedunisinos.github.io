@@ -36,17 +36,6 @@ Quando perguntarem "O que é o CAED?", você DEVE responder EXATAMENTE:
 - Instagram: @caed_unisinos
 - Sala física: Campus São Leopoldo, Av. Unisinos, 950, Sala E05, Sala 205
 
-✅ **ESTRUTURA DA GESTÃO 2026/1:**
-- Presidente: Adalgiso Augusto (6º semestre)
-- Vice-Presidente: Juliana Reis (7º semestre)
-- Secretária-Geral: Lara Porto (5º semestre)
-- Secretário de Assuntos Acadêmicos: Luís Lacerda (6º semestre)
-- Secretário de Inovação e Tecnologia (SIT): Fábio Wlademir (3º semestre)
-
-✅ **PRODUTOS DO CAED:**
-- Carteirinha Estudantil: R$ 40,00 (meia-entrada)
-- Loja CAED: Camiseta, Moletom, Ecobag, Kit Chimarrão
-
 ⚠️ **SE NÃO SOUBER A RESPOSTA, DIGA:**
 "Desculpe, não tenho certeza sobre isso. Recomendo consultar o CAED pessoalmente (Sala E05, Campus São Leopoldo) ou verificar as fontes oficiais."
 
@@ -57,10 +46,6 @@ Quando perguntarem "O que é o CAED?", você DEVE responder EXATAMENTE:
 - A sala física do CAED fica no Campus São Leopoldo: Av. Unisinos, 950, Sala E05, Sala 205.
 - O CAED é uma organização estudantil autônoma, sem fins lucrativos, eleita pelos acadêmicos.
 - A **Gestão 2026/1** tem como lema **"A Mudança Precisa Continuar"**.
-
-### 2. SOBRE A GESTÃO 2026/1 (ESTRUTURA COMPLETA)
-[... continua com o resto do prompt ...]
-`;
 
 ### 2. SOBRE A GESTÃO 2026/1 (ESTRUTURA COMPLETA)
 #### 👑 PRESIDÊNCIA
@@ -102,7 +87,7 @@ Quando perguntarem "O que é o CAED?", você DEVE responder EXATAMENTE:
 `;
 
 // ============================================================
-// 2. CARREGAR VADE MECUM (UMA ÚNICA VEZ NA INICIALIZAÇÃO)
+// 2. CARREGAR VADE MECUM
 // ============================================================
 const fs = require('fs');
 const path = require('path');
@@ -152,7 +137,7 @@ function buscarNaBaseRapida(pergunta) {
 }
 
 // ============================================================
-// 4. BUSCAR NO VADE MECUM (OTIMIZADO PARA 4,81 MB)
+// 4. BUSCAR NO VADE MECUM (OTIMIZADO)
 // ============================================================
 function buscarNoVadeMecum(pergunta) {
   if (!vadeMecumCarregado || !vadeMecumText || vadeMecumText.length === 0) {
@@ -162,11 +147,10 @@ function buscarNoVadeMecum(pergunta) {
   const perguntaLower = pergunta.toLowerCase();
   const resultados = [];
 
-  // 4a. Busca por artigo específico (ex: "artigo 5", "art. 5", "Art. 5º")
+  // Busca por artigo específico
   const matchArtigo = pergunta.match(/art(?:igo)?\s*[º°]?\s*(\d+)/i);
   if (matchArtigo) {
     const num = matchArtigo[1];
-    // Tenta vários padrões de formatação do artigo
     const padroes = [
       `art. ${num}`,
       `art. ${num}º`,
@@ -179,7 +163,6 @@ function buscarNoVadeMecum(pergunta) {
     for (const busca of padroes) {
       const idx = vadeMecumText.toLowerCase().indexOf(busca);
       if (idx !== -1) {
-        // Pega 100 caracteres antes e 800 depois
         const inicio = Math.max(0, idx - 100);
         const fim = Math.min(vadeMecumText.length, idx + 800);
         const trecho = vadeMecumText.substring(inicio, fim);
@@ -189,7 +172,7 @@ function buscarNoVadeMecum(pergunta) {
     }
   }
 
-  // 4b. Busca por palavras-chave (limitado a 3 palavras, para performance)
+  // Busca por palavras-chave
   if (resultados.length === 0) {
     const palavras = perguntaLower
       .split(/\s+/)
@@ -199,12 +182,11 @@ function buscarNoVadeMecum(pergunta) {
     for (const palavra of palavras) {
       const idx = vadeMecumText.toLowerCase().indexOf(palavra);
       if (idx !== -1) {
-        // Pega 200 caracteres antes e 300 depois
         const inicio = Math.max(0, idx - 200);
         const fim = Math.min(vadeMecumText.length, idx + 300);
         const trecho = vadeMecumText.substring(inicio, fim);
         resultados.push(`🔍 **Resultado para "${palavra}":**\n${trecho.trim()}`);
-        break; // Para após encontrar a primeira palavra
+        break;
       }
     }
   }
@@ -216,11 +198,22 @@ function buscarNoVadeMecum(pergunta) {
 // 5. FUNÇÃO PRINCIPAL DE BUSCA (COMBINADA)
 // ============================================================
 async function buscarContexto(pergunta) {
-  // 1. Primeiro, busca na base rápida (CAED)
+  const perguntaLower = pergunta.toLowerCase();
+  
+  // 🚫 SE FOR PERGUNTA SOBRE O CAED, NÃO USAR O VADE MECUM
+  const palavrasCAED = ['caed', 'centro acadêmico', 'o que é o caed', 'sobre o caed', 'gestão 2026'];
+  if (palavrasCAED.some(p => perguntaLower.includes(p))) {
+    // Busca apenas na base rápida
+    let contexto = buscarNaBaseRapida(pergunta);
+    if (contexto) return contexto;
+    return null; // Não usa o Vade Mecum para perguntas sobre o CAED
+  }
+
+  // 1. Busca na base rápida (CAED)
   let contexto = buscarNaBaseRapida(pergunta);
   if (contexto) return contexto;
 
-  // 2. Depois, busca no Vade Mecum (se estiver carregado)
+  // 2. Busca no Vade Mecum (apenas para perguntas jurídicas)
   contexto = buscarNoVadeMecum(pergunta);
   if (contexto) return contexto;
 
@@ -229,7 +222,61 @@ async function buscarContexto(pergunta) {
 }
 
 // ============================================================
-// 6. VALIDAÇÃO DA API KEY
+// 6. FILTRO DE CORREÇÃO DE RESPOSTAS
+// ============================================================
+function corrigirResposta(texto) {
+  // Se a resposta mencionar "sistema de gestão" ou "cadastro de empresas", SUBSTITUIR COMPLETAMENTE
+  if (texto.includes('sistema de gestão') || 
+      texto.includes('cadastro de empresas') || 
+      texto.includes('plataforma criada por uma empresa') ||
+      texto.includes('sistema de gestão de dados')) {
+    return "O CAED (Centro Acadêmico de Estudantes de Direito) é a entidade de representação estudantil do curso de Direito da UNISINOS, atuando nos campi de São Leopoldo e Porto Alegre. É uma organização estudantil autônoma, sem fins lucrativos, eleita pelos acadêmicos. A Gestão 2026/1 tem como lema 'A Mudança Precisa Continuar'.";
+  }
+  
+  // Corrigir "Centro de Apoio" para "Centro Acadêmico"
+  if (texto.includes('Centro de Apoio')) {
+    texto = texto.replace(/Centro de Apoio ao Estudante de Direito/g, 'Centro Acadêmico de Estudantes de Direito');
+    texto = texto.replace(/Centro de Apoio ao Estudante/g, 'Centro Acadêmico de Estudantes de Direito');
+  }
+  
+  // Remover telefone errado
+  if (texto.includes('99888-3187')) {
+    texto = texto.replace(/\(51\) 99888-3187/g, '(51) 99731-1502');
+  }
+  
+  // Corrigir "editora" para "entidade estudantil"
+  if (texto.includes('editora')) {
+    texto = texto.replace(/é o editor do Vade Mecum/g, 'utiliza o Vade Mecum como ferramenta de consulta');
+    texto = texto.replace(/editora jurídica/g, 'entidade estudantil');
+  }
+  
+  // Remover menções a serviços particulares (a menos que seja o Easter Egg)
+  if (texto.includes('Fábio Wlademir') && !texto.includes('desenvolveu')) {
+    texto = texto.replace(/Fábio Wlademir oferece[^.]*\./g, '');
+    texto = texto.replace(/Você pode entrar em contato com ele[^.]*\./g, '');
+    texto = texto.replace(/Fábio Wlademir[^.]*serviços[^.]*\./g, '');
+  }
+  
+  // Se a resposta mencionar "solução personalizada" ou similar, remover
+  texto = texto.replace(/soluções personalizadas[^.]*\./g, '');
+  texto = texto.replace(/serviços de alta qualidade[^.]*\./g, '');
+  texto = texto.replace(/serviços de tecnologia[^.]*\./g, '');
+  
+  // Se ainda tiver informações erradas sobre o CAED, substituir pela definição correta
+  if (texto.includes('CAED') && 
+      !texto.includes('Centro Acadêmico de Estudantes de Direito') && 
+      !texto.includes('entidade de representação estudantil')) {
+    // Tenta identificar se a resposta está completamente errada
+    if (texto.includes('sistema') || texto.includes('plataforma') || texto.includes('software')) {
+      return "O CAED (Centro Acadêmico de Estudantes de Direito) é a entidade de representação estudantil do curso de Direito da UNISINOS, atuando nos campi de São Leopoldo e Porto Alegre. É uma organização estudantil autônoma, sem fins lucrativos, eleita pelos acadêmicos. A Gestão 2026/1 tem como lema 'A Mudança Precisa Continuar'.";
+    }
+  }
+  
+  return texto;
+}
+
+// ============================================================
+// 7. VALIDAÇÃO DA API KEY
 // ============================================================
 function validarApiKey() {
   if (!GROQ_API_KEY) {
@@ -240,7 +287,7 @@ function validarApiKey() {
 }
 
 // ============================================================
-// 7. FUNÇÃO PRINCIPAL (HANDLER)
+// 8. FUNÇÃO PRINCIPAL (HANDLER)
 // ============================================================
 module.exports = async (req, res) => {
   // CORS
@@ -276,7 +323,7 @@ module.exports = async (req, res) => {
 
     console.log("📩 Mensagem recebida:", message);
 
-    // Buscar contexto (agora com Vade Mecum)
+    // Buscar contexto
     const contexto = await buscarContexto(message);
 
     // Montar mensagens para a Groq
@@ -313,7 +360,10 @@ module.exports = async (req, res) => {
     }
 
     const data = await response.json();
-    const reply = data.choices?.[0]?.message?.content || "Desculpe, não consegui gerar uma resposta.";
+    let reply = data.choices?.[0]?.message?.content || "Desculpe, não consegui gerar uma resposta.";
+
+    // 🔧 APLICAR FILTRO DE CORREÇÃO
+    reply = corrigirResposta(reply);
 
     console.log("✅ Resposta gerada com sucesso!");
     return res.status(200).json({ reply });
