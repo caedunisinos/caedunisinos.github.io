@@ -23,11 +23,14 @@
   <meta property="og:description" content="Assistente Virtual com IA do CAED UNISINOS. Tire dúvidas sobre Direito, Vade Mecum, Loja, Carteirinha Estudantil e muito mais."/>
   <meta property="og:locale" content="pt_BR"/>
   <meta property="og:site_name" content="CAED Unisinos"/>
+  <meta property="og:image" content="https://caedunisinos.com.br/imagens/logo_caed.jpeg"/>
+  <meta property="og:image:alt" content="Logo do CAED - Centro Acadêmico de Direito UNISINOS"/>
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Assistente IA do CAED – Centro Acadêmico de Direito UNISINOS"/>
   <meta name="twitter:description" content="Assistente Virtual com IA do CAED UNISINOS. Tire dúvidas sobre Direito, Vade Mecum, Loja, Carteirinha Estudantil e muito mais."/>
+  <meta name="twitter:image" content="https://caedunisinos.com.br/imagens/logo_caed.jpeg"/>
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
@@ -232,6 +235,8 @@
       height: var(--header-height);
       border-bottom: 1px solid rgba(201, 168, 76, 0.08);
       flex-shrink: 0;
+      flex-wrap: wrap;
+      gap: 8px;
     }
 
     .chat-header-left {
@@ -469,7 +474,155 @@
       color: var(--caed-dourado);
     }
 
-    /* TYPING INDICATOR */
+    /* ============================================================
+       FOOTER COM CONTADOR
+    ============================================================ */
+    .chat-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 32px;
+      background: rgba(0, 0, 0, 0.4);
+      border-top: 1px solid rgba(201, 168, 76, 0.08);
+      flex-shrink: 0;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .chat-footer .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .chat-footer .footer-left .badge {
+      background: rgba(201, 168, 76, 0.12);
+      color: var(--caed-dourado);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+      border: 1px solid rgba(201, 168, 76, 0.15);
+    }
+
+    .chat-footer .footer-left .badge i {
+      margin-right: 4px;
+    }
+
+    .chat-footer .footer-center {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 0.7rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .chat-footer .footer-center .counter {
+      color: var(--caed-dourado);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .chat-footer .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .chat-footer .footer-right a {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.7rem;
+      font-family: 'Inter', sans-serif;
+      text-decoration: none;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .chat-footer .footer-right a:hover {
+      color: var(--caed-dourado);
+    }
+
+    /* ============================================================
+       BOTÃO FLUTUANTE WHATSAPP
+    ============================================================ */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .whatsapp-float a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      font-size: 2rem;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+    }
+
+    .whatsapp-float a:hover {
+      transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    }
+
+    .whatsapp-float a::after {
+      content: 'Fale Conosco';
+      position: absolute;
+      top: -30px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.65rem;
+      font-family: 'Inter', sans-serif;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .whatsapp-float a:hover::after {
+      opacity: 1;
+    }
+
+    .whatsapp-float .float-badge {
+      background: #ff6b6b;
+      color: white;
+      font-size: 0.55rem;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      padding: 2px 10px;
+      border-radius: 20px;
+      animation: pulse-badge 2s infinite;
+      box-shadow: 0 2px 10px rgba(255, 107, 107, 0.3);
+      cursor: default;
+    }
+
+    @keyframes pulse-badge {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    /* ============================================================
+       TYPING INDICATOR
+    ============================================================ */
     .typing-dots {
       display: inline-flex;
       gap: 4px;
@@ -539,14 +692,45 @@
         justify-content: center;
       }
 
+      .chat-footer {
+        padding: 12px 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .chat-footer .footer-left {
+        justify-content: center;
+      }
+
+      .chat-footer .footer-right {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
       .message {
         max-width: 90%;
         font-size: 0.88rem;
         padding: 10px 16px;
       }
+
+      .whatsapp-float {
+        bottom: 16px;
+        right: 16px;
+      }
+
+      .whatsapp-float a {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+      }
+
+      .whatsapp-float a::after {
+        display: none;
+      }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
       .chat-header-custom h1 {
         font-size: 1.2rem;
       }
@@ -574,9 +758,66 @@
         padding: 12px 16px;
       }
 
+      .input-area button {
+        font-size: 0.8rem;
+        padding: 10px 16px;
+      }
+
+      .quick-buttons {
+        padding: 6px 16px 10px 16px;
+        gap: 4px;
+      }
+
       .quick-buttons button {
-        font-size: 0.7rem;
-        padding: 4px 12px;
+        font-size: 0.65rem;
+        padding: 4px 10px;
+      }
+
+      .chat-footer {
+        padding: 10px 16px;
+        gap: 8px;
+      }
+
+      .chat-footer .footer-left .badge {
+        font-size: 0.6rem;
+        padding: 2px 10px;
+      }
+
+      .chat-footer .footer-center {
+        font-size: 0.6rem;
+      }
+
+      .chat-footer .footer-center .counter {
+        font-size: 0.75rem;
+      }
+
+      .chat-footer .footer-right a {
+        font-size: 0.6rem;
+      }
+
+      .whatsapp-float a {
+        width: 44px;
+        height: 44px;
+        font-size: 1.4rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .chat-header-custom h1 {
+        font-size: 1rem;
+      }
+
+      .chat-header-custom h1 i {
+        font-size: 1rem;
+      }
+
+      .header-status {
+        font-size: 0.6rem;
+      }
+
+      .message {
+        font-size: 0.75rem;
+        padding: 6px 12px;
       }
     }
 
@@ -595,6 +836,7 @@
       z-index: 9999;
       font-weight: 700;
       text-decoration: none;
+      font-family: 'Inter', sans-serif;
     }
 
     :focus-visible {
@@ -606,6 +848,26 @@
       * {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ============================================================
+       PRINT STYLES
+    ============================================================ */
+    @media print {
+      .sidebar,
+      .quick-buttons,
+      .input-area,
+      .chat-footer,
+      .whatsapp-float {
+        display: none !important;
+      }
+      .main-content {
+        margin-left: 0 !important;
+      }
+      .chat-messages {
+        height: auto !important;
+        overflow: visible !important;
       }
     }
   </style>
@@ -622,7 +884,6 @@
   ============================================================ -->
   <aside class="sidebar" id="sidebar" role="navigation" aria-label="Menu principal">
     <div class="sidebar-brand">
-      <!-- LOGO DO CAED - COM EFEITOS -->
       <div class="logo-wrapper">
         <img src="/imagens/logo_caed.jpeg" alt="Logo do CAED - Centro Acadêmico de Direito UNISINOS" loading="lazy">
       </div>
@@ -639,13 +900,13 @@
       <li><a href="loja.html"><i class="fas fa-store"></i> Loja</a></li>
       <li><a href="noticias.html"><i class="fas fa-newspaper"></i> Notícias</a></li>
       <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
-      <li><a href="https://wa.me/5551997311502" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-      <li><a href="https://www.instagram.com/caed_unisinos/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+      <li><a href="https://wa.me/5551997311502" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+      <li><a href="https://www.instagram.com/caed_unisinos/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a></li>
     </ul>
 
     <div class="sidebar-footer">
       <p>&copy; 2026 CAED UNISINOS</p>
-      <p>Desenvolvido por <a href="https://linkedin.com/in/fabiowlademir" target="_blank">Fábio Wlademir</a></p>
+      <p>Desenvolvido por <a href="https://linkedin.com/in/fabiowlademir" target="_blank" rel="noopener">Fábio Wlademir</a></p>
     </div>
   </aside>
 
@@ -661,14 +922,14 @@
           <i class="fas fa-bars"></i>
         </button>
         <h1>
-          <i class="fas fa-robot"></i>
+          <i class="fas fa-robot" aria-hidden="true"></i>
           Assistente IA
         </h1>
       </div>
       <div class="header-status">
-        <span class="status-dot online" id="statusDot"></span>
+        <span class="status-dot online" id="statusDot" role="status" aria-label="Status da conexão"></span>
         <span id="statusText">Conectado</span>
-        <span style="margin-left:12px;">|</span>
+        <span style="margin-left:12px;color:rgba(255,255,255,0.2);">|</span>
         <span><span id="messageCount">0</span> mensagens</span>
       </div>
     </header>
@@ -683,12 +944,12 @@
 
     <!-- QUICK BUTTONS -->
     <div class="quick-buttons">
-      <button onclick="quickQuestion('O que é o CAED?')">⚖️ O que é o CAED?</button>
-      <button onclick="quickQuestion('O que tem na loja do CAED?')">🛍️ Loja CAED</button>
-      <button onclick="quickQuestion('Como fazer a carteirinha estudantil?')">🪪 Carteirinha</button>
-      <button onclick="quickQuestion('O que é o Vade Mecum?')">📚 Vade Mecum</button>
-      <button onclick="quickQuestion('Quem desenvolveu este assistente?')">🧑‍💻 Desenvolvedor</button>
-      <button onclick="clearChat()">🗑️ Limpar</button>
+      <button onclick="quickQuestion('O que é o CAED?')" aria-label="Perguntar o que é o CAED">⚖️ O que é o CAED?</button>
+      <button onclick="quickQuestion('O que tem na loja do CAED?')" aria-label="Perguntar sobre a loja">🛍️ Loja CAED</button>
+      <button onclick="quickQuestion('Como fazer a carteirinha estudantil?')" aria-label="Perguntar sobre a carteirinha">🪪 Carteirinha</button>
+      <button onclick="quickQuestion('O que é o Vade Mecum?')" aria-label="Perguntar sobre o Vade Mecum">📚 Vade Mecum</button>
+      <button onclick="quickQuestion('Quem desenvolveu este assistente?')" aria-label="Perguntar sobre o desenvolvedor">🧑‍💻 Desenvolvedor</button>
+      <button onclick="clearChat()" aria-label="Limpar o chat">🗑️ Limpar</button>
     </div>
 
     <!-- INPUT -->
@@ -697,11 +958,53 @@
              onkeypress="if(event.key==='Enter') sendMessage()" 
              aria-label="Digite sua pergunta para o assistente">
       <button id="sendBtn" onclick="sendMessage()">
-        <i class="fas fa-paper-plane"></i> Enviar
+        <i class="fas fa-paper-plane" aria-hidden="true"></i> Enviar
       </button>
     </div>
 
+    <!-- FOOTER COM CONTADOR -->
+    <footer class="chat-footer" role="contentinfo">
+      <div class="footer-left">
+        <span class="badge"><i class="fas fa-shield-alt" aria-hidden="true"></i> IA em teste</span>
+        <span class="badge"><i class="fas fa-gavel" aria-hidden="true"></i> CAED UNISINOS</span>
+      </div>
+      <div class="footer-center">
+        <span>👁️ Visualizações:</span>
+        <span class="counter" id="visitorCounter">5.014</span>
+        <span>visitas</span>
+        <span style="margin-left:8px;color:rgba(255,255,255,0.15);">|</span>
+        <span>💬 <span id="footerMessageCount">0</span> mensagens</span>
+      </div>
+      <div class="footer-right">
+        <a href="https://linkedin.com/in/fabiowlademir" target="_blank" rel="noopener" aria-label="LinkedIn do desenvolvedor">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="https://instagram.com/fabiowlademirrs" target="_blank" rel="noopener" aria-label="Instagram do desenvolvedor">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/FabioWlademir" target="_blank" rel="noopener" aria-label="GitHub do desenvolvedor">
+          <i class="fab fa-github" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:caed-unisinos@outlook.com" aria-label="E-mail do CAED">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+      </div>
+    </footer>
+
   </main>
+
+  <!-- ============================================================
+       BOTÃO FLUTUANTE WHATSAPP
+  ============================================================ -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/5551997311502?text=Ol%C3%A1%20CAED%2C%20vim%20pelo%20Assistente%20IA%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es!" 
+       target="_blank" 
+       rel="noopener" 
+       aria-label="Fale conosco pelo WhatsApp">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+    <span class="float-badge">💬</span>
+  </div>
 
   <!-- ============================================================
      SCRIPTS
@@ -723,6 +1026,7 @@
     const statusDot = document.getElementById('statusDot');
     const statusText = document.getElementById('statusText');
     const messageCountEl = document.getElementById('messageCount');
+    const footerMessageCount = document.getElementById('footerMessageCount');
 
     // Sidebar toggle
     const sidebarToggle = document.getElementById('sidebarToggle');
@@ -740,6 +1044,23 @@
         }
       }
     });
+
+    // ============================================================
+    // CONTADOR DE VISITAS (simulado com localStorage)
+    // ============================================================
+    function atualizarContador() {
+      const counterEl = document.getElementById('visitorCounter');
+      if (!counterEl) return;
+      
+      let visitas = parseInt(localStorage.getItem('caed_visitas')) || 5014;
+      // Incrementa apenas uma vez por sessão
+      if (!sessionStorage.getItem('caed_visitou')) {
+        visitas += 1;
+        localStorage.setItem('caed_visitas', visitas);
+        sessionStorage.setItem('caed_visitou', 'true');
+      }
+      counterEl.textContent = visitas.toLocaleString('pt-BR');
+    }
 
     // ============================================================
     // STATUS DA API
@@ -787,6 +1108,7 @@
       if (role === 'user' || role === 'bot') {
         messageCount++;
         messageCountEl.textContent = messageCount;
+        footerMessageCount.textContent = messageCount;
       }
       return div;
     }
@@ -878,13 +1200,20 @@
       }
       messageCount = 0;
       messageCountEl.textContent = '0';
+      footerMessageCount.textContent = '0';
       chatHistory = [];
     }
 
     // ============================================================
     // INICIALIZAR
     // ============================================================
+    // Atualizar contador de visitas
+    atualizarContador();
+
+    // Verificar status da API
     checkApiStatus();
+
+    // Foco no input
     userInput.focus();
 
     // Verificar status a cada 30 segundos
