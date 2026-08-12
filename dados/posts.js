@@ -291,7 +291,7 @@ const posts = [
 },
   {
   titulo: "📌 Ontem foi Dia do Advogado: CAED celebra a advocacia e inspira futuros colegas",
-  link: "https://caedunisinos.com.br/noticias/dia-do-advogado-caed-celebra-2026.html",
+  link: "https://caedunisinos.com.br/noticias/dia-do-advogado-caed-homenagem.html",
   resumo: "No 11 de agosto, Dia do Advogado, o CAED homenageia todos os profissionais da advocacia e deseja sucesso aos futuros colegas que estão construindo sua jornada no Direito.",
   data: "12/08/2026",
   horario: "08:00",
@@ -310,6 +310,30 @@ const posts = [
   categoria: "academico",
   categoriaLabel: "📚 Guias e Recursos",
   imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/guia-links-juridicos-caed.jpg",
+  destaque: false,
+  futuro: false
+},
+  {
+  titulo: "📖 Vade Mecum Digital e E-books Gratuitos: Biblioteca Jurídica ao Alcance de Todos",
+  link: "https://caedunisinos.com.br/noticias/vade-mecum-ebooks-gratuitos-caed.html",
+  resumo: "O CAED divulga uma seleção de bibliotecas virtuais com e-books gratuitos, incluindo o Vade Mecum do Senado, coletâneas de doutrina e materiais essenciais para a formação jurídica.",
+  data: "14/08/2026",
+  horario: "08:00",
+  categoria: "academico",
+  categoriaLabel: "📖 Bibliotecas Virtuais",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/vade-mecum-ebooks-caed.jpg",
+  destaque: false,
+  futuro: false
+},
+  {
+  titulo: "🚀 Direito Digital e Perícia Computacional: A Nova Fronteira da Advocacia",
+  link: "https://caedunisinos.com.br/noticias/direito-digital-pericia-caed.html",
+  resumo: "Descubra como o Direito Digital e a perícia computacional estão revolucionando a advocacia. Conheça a parceria do CAED com especialistas em cibersegurança e análise forense digital.",
+  data: "17/08/2026",
+  horario: "08:00",
+  categoria: "direito-digital",
+  categoriaLabel: "💻 Direito Digital",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/direito-digital-pericia-caed.jpg",
   destaque: false,
   futuro: false
 },
