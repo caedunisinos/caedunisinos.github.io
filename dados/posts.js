@@ -290,14 +290,26 @@ const posts = [
   futuro: false
 },
   {
-  titulo: "📌 Hoje é Dia do Advogado: CAED celebra a advocacia e inspira futuros colegas",
+  titulo: "📌 Ontem foi Dia do Advogado: CAED celebra a advocacia e inspira futuros colegas",
   link: "https://caedunisinos.com.br/noticias/dia-do-advogado-caed-celebra-2026.html",
-  resumo: "Neste 11 de agosto, Dia do Advogado, o CAED homenageia todos os profissionais da advocacia e deseja sucesso aos futuros colegas que estão construindo sua jornada no Direito.",
+  resumo: "No 11 de agosto, Dia do Advogado, o CAED homenageia todos os profissionais da advocacia e deseja sucesso aos futuros colegas que estão construindo sua jornada no Direito.",
   data: "12/08/2026",
   horario: "08:00",
   categoria: "institucional",
   categoriaLabel: "⚖️ Homenagem",
-  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dia-do-advogado-caed-2026.jpg",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dia-do-advogado2-caed-2026.jpg",
+  destaque: false,
+  futuro: false
+},
+  {
+  titulo: "📚 Guia Completo de Links Jurídicos: Referência para estudantes e operadores do Direito",
+  link: "https://caedunisinos.com.br/noticias/guia-links-juridicos-caed.html",
+  resumo: "O CAED apresenta um guia completo com os principais sites oficiais e portais jurídicos do Brasil, organizados por categoria: tribunais, legislação, previdência, jurisprudência e muito mais.",
+  data: "13/08/2026",
+  horario: "08:00",
+  categoria: "academico",
+  categoriaLabel: "📚 Guias e Recursos",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/guia-links-juridicos-caed.jpg",
   destaque: false,
   futuro: false
 },
