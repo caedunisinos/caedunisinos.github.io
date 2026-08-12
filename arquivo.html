@@ -387,5 +387,50 @@ caedSub.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mob.clas
 
 <script src="/acessibilidade.js"></script>
 
+<!-- ============================================================
+     WIDGET DO CHATBOT CAED
+     ============================================================ -->
+
+<!-- CSS do Widget (no <head> ou antes do </body>) -->
+<link rel="stylesheet" href="/css/chatbot-widget.css">
+
+<!-- HTML do Widget -->
+<div id="caed-chat-widget">
+  <button id="caed-chat-button" onclick="toggleChat()" aria-label="Abrir assistente virtual">
+    ⚖️ Assistente CAED
+  </button>
+
+  <div id="caed-chat-box">
+    <div class="chat-header">
+      <span class="chat-header-title">
+        ⚖️ Assistente Virtual CAED
+        <span class="chat-header-status">
+          <span class="status-dot"></span> Online
+        </span>
+      </span>
+      <button onclick="toggleChat()" aria-label="Fechar chat">✖</button>
+    </div>
+    <div class="chat-messages" id="caed-chat-messages">
+      <div class="message bot">
+        Olá! Sou o Assistente Virtual do CAED. 🤖<br>
+        Como posso ajudar você hoje?
+      </div>
+    </div>
+    <div class="chat-input-area">
+      <input 
+        type="text" 
+        id="caed-user-input" 
+        placeholder="Digite sua pergunta..." 
+        onkeypress="handleKeyPress(event)"
+        aria-label="Digite sua pergunta"
+      >
+      <button onclick="sendMessage()" aria-label="Enviar mensagem">➤</button>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript do Widget -->
+<script src="/js/chatbot-widget.js"></script>
+  
 </body>
 </html>
