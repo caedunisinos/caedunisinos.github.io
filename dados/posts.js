@@ -278,6 +278,18 @@ const posts = [
   futuro: false
 },
   {
+  titulo: "Dia do Advogado: CAED homenageia os profissionais e futuros colegas",
+  link: "https://caedunisinos.com.br/noticias/dia-do-advogado-caed-homenagem.html",
+  resumo: "Neste 11 de agosto, Dia do Advogado, o CAED homenageia todos os profissionais da advocacia e deseja sucesso aos futuros colegas que estão construindo sua jornada no Direito.",
+  data: "11/08/2026",
+  horario: "06:00",
+  categoria: "institucional",
+  categoriaLabel: "⚖️ Homenagem",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dia-do-advogado-caed-2026.jpg",
+  destaque: false,
+  futuro: false
+},
+  {
     titulo: "📌 NOVIDADE: CAED lança plataforma de mentoria para calouros",
     link: "https://caedunisinos.com.br/noticias/mentoria-calouros-caed.html",
     resumo: "Programa de mentoria para apoiar os novos estudantes de Direito da Unisinos em São Leopoldo e Porto Alegre.",
