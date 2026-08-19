@@ -348,7 +348,19 @@ const posts = [
     imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/mentoria-calouros.jpg",
     destaque: false,
     futuro: true
-  }
+  },
+  {
+  titulo: "VEM AÍ: 1ª Corrida da Unisinos – Inscrições abertas para o dia 18 de outubro",
+  link: "https://caedunisinos.com.br/noticias/primeira-corrida-unisinos-2026.html",
+  resumo: "O CAED, em parceria com a AD SPORTS e a Associação Atlética Direito Unisinos – TUBARÃO, apresenta a 1ª Corrida da Unisinos. Percurso de 5 km no campus São Leopoldo. Alunos têm 10% de desconto!",
+  data: "19/08/2026",
+  horario: "08:00",
+  categoria: "eventos",
+  categoriaLabel: "🏃 Eventos Esportivos",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/primeira_corrida_unisinos.jpeg",
+  destaque: false,
+  futuro: false
+}
 
 ];
 
