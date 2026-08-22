@@ -360,6 +360,18 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/primeira_corrida_unisinos.jpeg",
   destaque: false,
   futuro: false
+},
+  {
+  titulo: "VITÓRIA! CAED conquista sala no Campus Porto Alegre e fortalece representação estudantil",
+  link: "https://caedunisinos.com.br/noticias/caed-conquista-sala-campus-porto-alegre.html",
+  resumo: "Após meses de luta e mobilização estudantil, o CAED conquistou as chaves da sala no Campus Porto Alegre. Espaço será destinado ao acolhimento, representação e convivência dos estudantes de Direito.",
+  data: "19/08/2026",
+  horario: "20:00",
+  categoria: "representacao",
+  categoriaLabel: "🏛️ Conquista",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/caed_forte_vitoria.jpeg",
+  destaque: true,
+  futuro: false
 }
 
 ];
