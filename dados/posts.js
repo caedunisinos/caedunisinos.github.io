@@ -372,6 +372,18 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/caed_forte_vitoria.jpeg",
   destaque: true,
   futuro: false
+},
+  {
+  titulo: "🔥 VEM AÍ: Mês Acadêmico CAED Unisinos com palestras, networking e Calourada Direito",
+  link: "https://caedunisinos.com.br/noticias/mes-academico-caed-unisinos-2026.html",
+  resumo: "O CAED apresenta o Mês Acadêmico 2026: um mês inteiro de palestras, networking e conhecimento para os estudantes de Direito da Unisinos. Com grandes nomes do Direito e a tradicional Calourada para encerrar.",
+  data: "24/08/2026",
+  horario: "08:00",
+  categoria: "eventos",
+  categoriaLabel: "🎓 Mês Acadêmico",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/mes-academico-caed-unisinos-2026.jpg",
+  destaque: true,
+  futuro: false
 }
 
 ];
