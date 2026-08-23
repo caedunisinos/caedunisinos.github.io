@@ -1,36 +1,276 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ========== PÁGINAS PRINCIPAIS ========== -->
+  <!-- ============================================================ -->
+  <!--  PÁGINAS PRINCIPAIS                                           -->
+  <!-- ============================================================ -->
   <url>
     <loc>https://caedunisinos.com.br/</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://caedunisinos.com.br/noticias.html</loc>
-    <lastmod>2026-07-15</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
+    <loc>https://caedunisinos.com.br/arquivo.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/guia-do-estudante.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/sitemap.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================================================ -->
+  <!--  LOJA E SERVIÇOS                                              -->
+  <!-- ============================================================ -->
+  <url>
     <loc>https://caedunisinos.com.br/loja.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- ========== NOTÍCIAS INDIVIDUAIS (NOVAS) ========== -->
   <url>
-  <loc>https://caedunisinos.com.br/noticias/noticia-regulariza-unisinos.html</loc>
-  <lastmod>2026-07-15</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-  
+    <loc>https://caedunisinos.com.br/colecao-inverno-2026.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/trocas-e-devolucoes.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- ============================================================ -->
+  <!--  INSTITUCIONAL                                                -->
+  <!-- ============================================================ -->
+  <url>
+    <loc>https://caedunisinos.com.br/gestao.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/gestoes-anteriores.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/prestacao-de-contas.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/transparencia.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/patrocinadores.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/sobre.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/regulamentos.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================================================ -->
+  <!--  LEGAL E SUPORTE                                              -->
+  <!-- ============================================================ -->
+  <url>
+    <loc>https://caedunisinos.com.br/termos-de-uso.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/politica-de-privacidade.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/privacidade.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/termos.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/cookies.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/faq.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/ia.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ============================================================ -->
+  <!--  NOTÍCIAS INSTITUCIONAIS                                      -->
+  <!-- ============================================================ -->
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/projeto-aluno-destaque.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/acolhida-caed-2026-2.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/guia-acolhida-caed-2026-2-o-que-levar.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/noticia-acessibilidade-caed.html</loc>
+    <lastmod>2026-07-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/noticia-regulariza-unisinos.html</loc>
+    <lastmod>2026-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/noticia-reforma-estatutaria-dce.html</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/dce-fraudes-eleitorais-2026.html</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/noticia-vitoria-dce-caed.html</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/nota-publica-caed-repudia-dce-sala-poa.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/caed-conquista-sala-campus-porto-alegre.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/mes-academico-caed-unisinos-2026.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/guia-formatura-direito-unisinos-caed.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============================================================ -->
+  <!--  NOTÍCIAS ACADÊMICAS                                          -->
+  <!-- ============================================================ -->
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/dicas-calouros-direito-caed-unisinos.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/noticia-guia-apresentacoes.html</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://caedunisinos.com.br/noticias/noticia-livros-direito.html</loc>
     <lastmod>2026-07-15</lastmod>
@@ -46,17 +286,62 @@
   </url>
 
   <url>
-    <loc>https://caedunisinos.com.br/noticias/noticia-guia-apresentacoes.html</loc>
-    <lastmod>2026-07-09</lastmod>
+    <loc>https://caedunisinos.com.br/noticias/simulados-oab-prepare-se-caed.html</loc>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://caedunisinos.com.br/noticias/noticia-vitoria-dce-caed.html</loc>
-    <lastmod>2026-06-11</lastmod>
+    <loc>https://caedunisinos.com.br/noticias/guia-links-juridicos-caed.html</loc>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/vade-mecum-ebooks-gratuitos-caed.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/direito-digital-pericia-caed.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============================================================ -->
+  <!--  NOTÍCIAS DE EVENTOS E SERVIÇOS                              -->
+  <!-- ============================================================ -->
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/primeira-corrida-unisinos-2026.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/carteirinha-estudantil-unisinos-como-solicitar.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/carteirinha-estudantil-aergs.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/colecao-inverno-2026.html</loc>
+    <lastmod>2026-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
@@ -67,117 +352,47 @@
   </url>
 
   <url>
-    <loc>https://caedunisinos.com.br/noticias/noticia-reforma-estatutaria-dce.html</loc>
-    <lastmod>2026-06-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- ========== NOTÍCIAS INDIVIDUAIS (EXISTENTES) ========== -->
-  <url>
-    <loc>https://caedunisinos.com.br/noticias/colecao-inverno-2026.html</loc>
-    <lastmod>2026-05-13</lastmod>
+    <loc>https://caedunisinos.com.br/noticias/dia-do-advogado-caed-homenagem.html</loc>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <url>
-    <loc>https://caedunisinos.com.br/noticias/encerramento-gestao-2025-2.html</loc>
-    <lastmod>2026-05-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
+  <!-- ============================================================ -->
+  <!--  NOTÍCIAS ANTIGAS                                             -->
+  <!-- ============================================================ -->
   <url>
     <loc>https://caedunisinos.com.br/noticias/prestacao-contas-2025-2.html</loc>
-    <lastmod>2026-05-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://caedunisinos.com.br/noticias/carteirinha-estudantil-aergs.html</loc>
-    <lastmod>2026-05-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ========== PÁGINAS INSTITUCIONAIS ========== -->
-  <url>
-    <loc>https://caedunisinos.com.br/patrocinadores.html</loc>
-    <lastmod>2026-05-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://caedunisinos.com.br/prestacao-de-contas.html</loc>
-    <lastmod>2026-05-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://caedunisinos.com.br/gestoes-anteriores.html</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://caedunisinos.com.br/sobre.html</loc>
+    <loc>https://caedunisinos.com.br/noticias/encerramento-gestao-2025-2.html</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://caedunisinos.com.br/transparencia.html</loc>
-    <lastmod>2026-05-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://caedunisinos.com.br/regulamentos.html</loc>
+    <loc>https://caedunisinos.com.br/noticias/carteirinha-estudantil-aergs-1.html</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.5</priority>
   </url>
 
-  <!-- ========== LEGAL & SUPORTE ========== -->
   <url>
-    <loc>https://caedunisinos.com.br/privacidade.html</loc>
+    <loc>https://caedunisinos.com.br/noticias/colecao-inverno-2026-1.html</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://caedunisinos.com.br/termos.html</loc>
+    <loc>https://caedunisinos.com.br/noticias/encerramento-gestao-2025-2-1.html</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
-  <url>
-    <loc>https://caedunisinos.com.br/cookies.html</loc>
-    <lastmod>2026-05-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://caedunisinos.com.br/trocas-e-devolucoes.html</loc>
-    <lastmod>2026-05-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://caedunisinos.com.br/faq.html</loc>
-    <lastmod>2026-05-13</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
