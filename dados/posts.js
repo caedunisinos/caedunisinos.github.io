@@ -341,7 +341,7 @@ const posts = [
     titulo: "📌 NOVIDADE: CAED lança plataforma de mentoria para calouros",
     link: "https://caedunisinos.com.br/noticias/mentoria-calouros-caed.html",
     resumo: "Programa de mentoria para apoiar os novos estudantes de Direito da Unisinos em São Leopoldo e Porto Alegre.",
-    data: "15/09/2026",
+    data: "15/09/2027",
     horario: "08:00",
     categoria: "institucional",
     categoriaLabel: "🔮 Em breve",
