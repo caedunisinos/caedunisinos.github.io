@@ -384,6 +384,30 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/mes-academico-caed-unisinos-2026.jpg",
   destaque: true,
   futuro: false
+},
+  {
+  titulo: "CAED em Porto Alegre: Como encontrar, participar e fortalecer o movimento estudantil",
+  link: "https://caedunisinos.com.br/noticias/caed-porto-alegre-como-encontrar-participar.html",
+  resumo: "Com a conquista da sala no Campus Porto Alegre, o CAED está mais forte e acessível. Saiba como encontrar a gente, participar das ações e fortalecer a representação estudantil na capital.",
+  data: "25/08/2026",
+  horario: "08:00",
+  categoria: "representacao",
+  categoriaLabel: "🏛️ Representação",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/caed_forte_vitoria.jpeg",
+  destaque: false,
+  futuro: false
+},
+  {
+  titulo: "CAED marca presença no Encontro de 25 anos do Grupo Teoria do Direito",
+  link: "https://caedunisinos.com.br/noticias/caed-encontro-25-anos-teoria-do-direito.html",
+  resumo: "O CAED confirma sua participação no Encontro de 25 anos do Grupo Teoria do Direito, um dos eventos acadêmicos mais importantes da área, que acontece nos dias 21 e 22 de setembro na UNISINOS.",
+  data: "27/08/2026",
+  horario: "08:00",
+  categoria: "academico",
+  categoriaLabel: "🎓 Eventos Acadêmicos",
+  imagem: "https://images.even3.com/OAtarpvpo1OFEDg7-XS86oeoaQ0=/1100x440/smart/https://static.even3.com/banner/WhatsAppImage2026-08-12at5.53.18PM.9ac93c9dff0c4a3e8c0d.jpeg",
+  destaque: false,
+  futuro: false
 }
 
 ];
