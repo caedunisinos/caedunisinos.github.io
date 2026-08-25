@@ -684,5 +684,17 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')fecharModalBtn()});
 
 <!-- JavaScript do Widget -->
 <script src="/js/chatbot-widget.js"></script>	
+	<!-- Service Worker temporário para limpeza de cache -->
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then(function(reg) {
+      console.log('🔄 Service Worker de limpeza instalado.');
+    })
+    .catch(function(err) {
+      console.log('❌ Erro ao instalar Service Worker:', err);
+    });
+}
+</script>
 </body>
 </html>
