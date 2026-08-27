@@ -398,6 +398,18 @@ const posts = [
   futuro: false
 },
   {
+  titulo: "CAED notifica DCE extrajudicialmente por descumprimento de acordo e falta de registro",
+  link: "https://caedunisinos.com.br/noticias/caed-notifica-dce-extrajudicialmente-descumprimento.html",
+  resumo: "Após constatar que o DCE não registrou em cartório a alteração estatutária aprovada em Assembleia, o CAED formalizou notificação extrajudicial cobrando transparência e cumprimento da decisão coletiva.",
+  data: "26/08/2026",
+  horario: "08:00",
+  categoria: "representacao",
+  categoriaLabel: "🏛️ Representação",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/notificacao-extrajudicial-caed-dce-destaque.jpg",
+  destaque: true,
+  futuro: false
+},
+  {
   titulo: "CAED marca presença no Encontro de 25 anos do Grupo Teoria do Direito",
   link: "https://caedunisinos.com.br/noticias/caed-encontro-25-anos-teoria-do-direito.html",
   resumo: "O CAED confirma sua participação no Encontro de 25 anos do Grupo Teoria do Direito, um dos eventos acadêmicos mais importantes da área, que acontece nos dias 21 e 22 de setembro na UNISINOS.",
