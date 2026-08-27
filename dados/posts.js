@@ -432,6 +432,18 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/parceria-caed-pankekas-destaque.jpg",
   destaque: false,
   futuro: false
+},
+  {
+  titulo: "Mês Acadêmico CAED: Juiz Alexandre Kosby Boeira é o primeiro palestrante confirmado",
+  link: "https://caedunisinos.com.br/noticias/mes-academico-caed-primeiro-palestrante-juiz-alexandre-boeira.html",
+  resumo: "O Juiz de Direito Alexandre Kosby Boeira, titular da Vara Empresarial Regional de Novo Hamburgo, é o primeiro palestrante confirmado do Mês Acadêmico CAED Unisinos. Ele vai abordar o papel da Justiça na recuperação de empresas.",
+  data: "28/08/2026",
+  horario: "08:00",
+  categoria: "academico",
+  categoriaLabel: "🎓 Eventos Acadêmicos",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/palestrante-juiz-alexandre-boeira-mes-academico-caed.jpg",
+  destaque: false,
+  futuro: false
 }
 
 ];
