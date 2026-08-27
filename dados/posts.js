@@ -420,6 +420,18 @@ const posts = [
   imagem: "https://images.even3.com/OAtarpvpo1OFEDg7-XS86oeoaQ0=/1100x440/smart/https://static.even3.com/banner/WhatsAppImage2026-08-12at5.53.18PM.9ac93c9dff0c4a3e8c0d.jpeg",
   destaque: false,
   futuro: false
+},
+  {
+  titulo: "CAED anuncia nova parceria com Pankekas: tradicional bar de São Leopoldo",
+  link: "https://caedunisinos.com.br/noticias/caed-anuncia-nova-parceria-pankekas.html",
+  resumo: "É com muita alegria que o CAED anuncia sua nova parceria com o Pankekas, tradicional bar de São Leopoldo. Em breve, teremos vários eventos e novidades para os estudantes!",
+  data: "27/08/2026",
+  horario: "14:00",
+  categoria: "parcerias",
+  categoriaLabel: "🤝 Parcerias",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/parceria-caed-pankekas-destaque.jpg",
+  destaque: false,
+  futuro: false
 }
 
 ];
