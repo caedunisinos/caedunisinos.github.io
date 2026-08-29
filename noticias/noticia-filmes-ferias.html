@@ -717,5 +717,7 @@ footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);paddin
   const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('visible')}),{threshold:.08});
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+<!-- ===== CONTADOR GLOBAL DE VISITAS ===== -->
+<script src="/js/contador-loader.js"></script>
 </body>
 </html>
