@@ -540,6 +540,18 @@ const posts = [
   imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-post-senado.jpg",
   destaque: false,
   futuro: false
+},
+  {
+  titulo: "Curso de Direito da Unisinos no RUF 2025 — resultado divulgado pelo CAED no LinkedIn",
+  link: "https://caedunisinos.com.br/noticias/caed-linkedin-ruf-2025-direito-unisinos.html",
+  resumo: "O Curso de Direito da Unisinos alcançou 1º lugar entre as privadas do RS, 3º lugar geral no Estado e 6º lugar entre as privadas do Brasil no RUF 2025. O CAED celebra esse reconhecimento e convida a comunidade a acompanhar os resultados.",
+  data: "07/09/2026",
+  horario: "08:00",
+  categoria: "ranking",
+  categoriaLabel: "🏆 Ranking Universitário",
+  imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-post-ruf.jpg",
+  destaque: false,
+  futuro: false
 }
 ];
 
