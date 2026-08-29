@@ -465,7 +465,7 @@ const posts = [
   horario: "08:00",
   categoria: "representacao",
   categoriaLabel: "🏛️ Representação",
-  imagem: "https://caedunisinos.com.br/imagens/projeto-mulheres-no-direito.jpg",
+  imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/projeto-mulheres-no-direito.jpg",
   destaque: false,
   futuro: false
 }
