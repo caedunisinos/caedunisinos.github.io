@@ -453,7 +453,7 @@ const posts = [
   horario: "08:00",
   categoria: "representacao",
   categoriaLabel: "🏛️ Representação",
-  imagem: "https://caedunisinos.com.br/imagens/linkedin-caed-banner.jpg",
+  imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-caed-banner.jpg",
   destaque: false,
   futuro: false
 },
