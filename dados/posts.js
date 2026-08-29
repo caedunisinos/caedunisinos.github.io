@@ -552,6 +552,18 @@ const posts = [
   imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-post-ruf.jpg",
   destaque: false,
   futuro: false
+},
+  {
+  titulo: "CAED dá boas-vindas aos seguidores no LinkedIn — conteúdo exclusivo para sua carreira",
+  link: "https://caedunisinos.com.br/noticias/caed-linkedin-boas-vindas-conteudo-exclusivo.html",
+  resumo: "O perfil do CAED no LinkedIn foi lançado com uma mensagem de boas-vindas, convidando estudantes de Direito da UNISINOS em São Leopoldo e Porto Alegre a acompanharem conteúdos exclusivos para sua carreira jurídica. Siga o CAED no LinkedIn!",
+  data: "07/09/2026",
+  horario: "08:00",
+  categoria: "representacao",
+  categoriaLabel: "🏛️ Representação",
+  imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-post-boas-vindas.jpg",
+  destaque: false,
+  futuro: false
 }
 ];
 
