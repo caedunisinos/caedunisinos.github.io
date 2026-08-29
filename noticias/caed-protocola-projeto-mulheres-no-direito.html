@@ -32,7 +32,7 @@
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="CAED protocola projeto 'Mulheres no Direito' na Unisinos"/>
   <meta name="twitter:description" content="CAED protocola projeto 'Mulheres no Direito' na Unisinos para apoiar estudantes."/>
-  <meta name="twitter:image" content="https://caedunisinos.com.br/imagens/projeto-mulheres-no-direito.jpg"/>
+  <meta name="twitter:image" content="https://caedunisinos.com.br/noticias/noticias_imagens/projeto-mulheres-no-direito.jpg"/>
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
@@ -86,7 +86,7 @@
     a{color:inherit;text-decoration:none}
     body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
 
-    /* NAV */
+    /* NAV (mesmo estilo das outras páginas) */
     #nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(69,10,18,0.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,168,76,0.2);transition:box-shadow .3s}
     #nav.scrolled{box-shadow:0 4px 30px rgba(0,0,0,0.6)}
     .nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:68px;display:flex;align-items:center;justify-content:space-between}
@@ -196,7 +196,6 @@
     @keyframes pulse-whatsapp{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.5)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
     @media(max-width:600px){.whatsapp-float{width:50px;height:50px;font-size:1.8rem;bottom:100px;right:15px}}
 
-    /* BOTÕES DE COMPARTILHAMENTO */
     .share-buttons {
       display: flex;
       flex-wrap: wrap;
@@ -252,7 +251,6 @@
     .share-btn.telegram { background: #0088cc; }
     .share-btn.email { background: #6B0F1A; }
     .share-btn.copy { background: var(--gold); color: var(--brd-dk); }
-
     .share-btn i { font-size: .9rem; }
 
     .footer{background:var(--brd-dk);border-top:1px solid rgba(201,168,76,.15);padding:4rem 2rem 2rem}
@@ -494,6 +492,32 @@
         <button onclick="navigator.clipboard.writeText('CAED protocola projeto \"Mulheres no Direito\" na Unisinos! Confira: https://caedunisinos.com.br/noticias/caed-protocola-projeto-mulheres-no-direito.html'); alert('✅ Link copiado!');" class="share-btn copy">
           <i class="fas fa-link"></i> Copiar Link
         </button>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- ===== MEMBROS DA GESTÃO (CORRIGIDO) ===== -->
+      <!-- ============================================================ -->
+      <h2 style="margin-top:3rem;">👥 Conheça a equipe do CAED</h2>
+      <p style="color:var(--cream-dk);margin-bottom:1.5rem;">
+        O projeto "Mulheres no Direito" foi desenvolvido pela <strong>Secretaria da Mulher do CAED</strong>, com relatoria de <strong>Susane Almeida</strong> e correlatoria de <strong>Fábio Wlademir</strong>, ambos membros ativos da Gestão 2026/1. Conheça todos os integrantes da nossa equipe:
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.8rem;justify-content:center;margin:1.5rem 0;">
+        <a href="/gestao.html#bio-adalgiso" class="btn btn-ghost btn-sm" style="font-size:.55rem;padding:.4rem .8rem;">Adalgiso Augusto</a>
+        <a href="/gestao.html#bio-juliana" class="btn btn-ghost btn-sm" style="font-size:.55rem;padding:.4rem .8rem;">Juliana Reis</a>
+        <a href="/gestao.html#bio-lara" class="btn btn-ghost btn-sm" style="font-size:.55rem;padding:.4rem .8rem;">Lara Porto</a>
+        <a href="/gestao.html#bio-luis" class="btn btn-ghost btn-sm" style="font-size:.55rem;padding:.4rem .8rem;">Luís Lacerda</a>
+        <a href="/gestao.html#bio-fabio" class="btn btn-ghost btn-sm" style="font-size:.55rem;padding:.4rem .8rem;border-color:var(--gold);color:var(--gold);">Fábio Wlademir</a>
+        <a href="/gestao.html#bio-igor" class="btn btn-ghost btn-sm" style="font-size:.55rem;padding:.4rem .8rem;">Igor Tamiosso</a>
+        <a href="/gestao.html#bio-susane" class="btn btn-ghost btn-sm" style="font-size:.55rem;padding:.4rem .8rem;border-color:var(--gold);color:var(--gold);">Susane Almeida</a>
+        <a href="/gestao.html#bio-caio" class="btn btn-ghost btn-sm" style="font-size:.55rem;padding:.4rem .8rem;">Caio Teixeira</a>
+        <a href="/gestao.html#bio-laura" class="btn btn-ghost btn-sm" style="font-size:.55rem;padding:.4rem .8rem;">Laura Jacoby</a>
+        <a href="/gestao.html#bio-mariana" class="btn btn-ghost btn-sm" style="font-size:.55rem;padding:.4rem .8rem;">Mariana Hackmann</a>
+        <a href="/gestao.html#bio-raquel" class="btn btn-ghost btn-sm" style="font-size:.55rem;padding:.4rem .8rem;">Raquel Vitória</a>
+      </div>
+      <div style="text-align:center;">
+        <a href="/gestao.html" class="btn btn-gold" style="font-size:.65rem;padding:.6rem 1.5rem;">
+          <i class="fas fa-users"></i> Ver toda a equipe
+        </a>
       </div>
 
       <!-- ===== CTA LOJA E WHATSAPP ===== -->
