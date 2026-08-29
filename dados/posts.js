@@ -504,6 +504,18 @@ const posts = [
   imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-post-habilidades.jpg",
   destaque: false,
   futuro: false
+},
+  {
+  titulo: "Livros jurídicos que transformam o pensamento — indicações do CAED no LinkedIn",
+  link: "https://caedunisinos.com.br/noticias/caed-linkedin-livros-juridicos-transformam-pensamento.html",
+  resumo: "Estudar Direito também é entender o contexto social e as bases do pensamento jurídico. O CAED indica três obras fundamentais: 'A Sociedade dos Indivíduos' (Norbert Elias), 'Justiça' (Michael Sandel) e 'O Conceito de Direito' (H.L.A. Hart).",
+  data: "04/09/2026",
+  horario: "08:00",
+  categoria: "leitura",
+  categoriaLabel: "📖 Leitura Jurídica",
+  imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-post-livros.jpg",
+  destaque: false,
+  futuro: false
 }
 
 ];
