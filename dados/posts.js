@@ -444,6 +444,18 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/palestrante-juiz-alexandre-boeira-mes-academico-caed.jpg",
   destaque: false,
   futuro: false
+},
+  {
+  titulo: "CAED estreia no LinkedIn com conteúdo exclusivo para estudantes de Direito",
+  link: "https://caedunisinos.com.br/noticias/caed-estreia-no-linkedin-conteudo-exclusivo.html",
+  resumo: "O CAED acaba de estrear seu perfil oficial no LinkedIn, trazendo conteúdo exclusivo sobre carreira jurídica, formação acadêmica, decisões do STF, livros e muito mais. O perfil é administrado por Luís Lacerda, Secretário de Assuntos Acadêmicos e Marketing do CAED.",
+  data: "30/08/2026",
+  horario: "08:00",
+  categoria: "representacao",
+  categoriaLabel: "🏛️ Representação",
+  imagem: "https://caedunisinos.com.br/imagens/linkedin-caed-banner.jpg",
+  destaque: false,
+  futuro: false
 }
 
 ];
