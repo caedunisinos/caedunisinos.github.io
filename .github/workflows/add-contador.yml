@@ -1,0 +1,32 @@
+name: Adicionar Contador Global
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  add-contador:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Adicionar contador em todos os HTMLs
+        run: |
+          echo '<!-- ===== CONTADOR GLOBAL DE VISITAS ===== -->' > /tmp/tag.txt
+          echo '<script src="/js/contador-loader.js"></script>' >> /tmp/tag.txt
+          find . -name "*.html" -exec grep -l "contador-loader.js" {} \; | xargs -r echo "Já tem contador:"
+          find . -name "*.html" -exec grep -L "contador-loader.js" {} \; | while read file; do
+            echo "✅ Adicionando em: $file"
+            sed -i 's|</body>|<!-- ===== CONTADOR GLOBAL DE VISITAS ===== -->\n<script src="/js/contador-loader.js"></script>\n</body>|g' "$file"
+          done
+
+      - name: Commit e Push das alterações
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add .
+          git diff --staged --quiet || git commit -m "🔄 Adiciona contador global de visitas via GitHub Actions"
+          git push
