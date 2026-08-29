@@ -1,5 +1,9 @@
 name: Adicionar Contador Global
 
+# 👇 Permissões necessárias para o workflow fazer push
+permissions:
+  contents: write
+
 on:
   push:
     branches:
@@ -11,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # 👈 Atualizado para v4 (Node.js 24)
 
       - name: Adicionar contador em todos os HTMLs
         run: |
