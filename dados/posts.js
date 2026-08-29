@@ -492,8 +492,19 @@ const posts = [
   imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-post-carreira.jpg",
   destaque: false,
   futuro: false
+},
+  {
+  titulo: "Formação jurídica que vai além da sala de aula — conteúdo do CAED no LinkedIn",
+  link: "https://caedunisinos.com.br/noticias/caed-linkedin-formacao-juridica-alem-sala-aula.html",
+  resumo: "A formação em Direito ensina habilidades que vão além das leis: pensamento crítico, argumentação, comunicação, negociação e capacidade de solucionar problemas. Descubra como a graduação prepara você para o mercado.",
+  data: "03/09/2026",
+  horario: "08:00",
+  categoria: "formacao",
+  categoriaLabel: "📚 Formação Acadêmica",
+  imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-post-habilidades.jpg",
+  destaque: false,
+  futuro: false
 }
-  
 
 ];
 
