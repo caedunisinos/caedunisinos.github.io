@@ -516,8 +516,19 @@ const posts = [
   imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-post-livros.jpg",
   destaque: false,
   futuro: false
+},
+{
+  titulo: "Por que acompanhar as decisões do STF ainda na graduação? — CAED no LinkedIn",
+  link: "https://caedunisinos.com.br/noticias/caed-linkedin-acompanhar-decisoes-stf-graduacao.html",
+  resumo: "Acompanhar o Supremo Tribunal Federal não é apenas um hábito acadêmico, mas uma ferramenta essencial para a formação crítica de estudantes de Direito. Entenda como as decisões do STF impactam sua formação e carreira.",
+  data: "05/09/2026",
+  horario: "08:00",
+  categoria: "stf",
+  categoriaLabel: "🏛️ STF e Constituição",
+  imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-post-stf.jpg",
+  destaque: false,
+  futuro: false
 }
-
 ];
 
 // ==========================================================
