@@ -480,6 +480,18 @@ const posts = [
   imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/projeto-mulheres-no-direito.jpg",
   destaque: false,
   futuro: false
+},
+  {
+  titulo: "3 frentes de atuação além da advocacia tradicional — conteúdo do CAED no LinkedIn",
+  link: "https://caedunisinos.com.br/noticias/caed-linkedin-3-frentes-atuacao-advocacia.html",
+  resumo: "A graduação em Direito é uma das mais versáteis do mercado. A publicação do CAED no LinkedIn explora três grandes frentes de atuação: Advocacia Privada, Carreiras Públicas e Novas Fronteiras do Direito, como Direito Digital, Mediação e Arbitragem.",
+  data: "02/09/2026",
+  horario: "08:00",
+  categoria: "carreira",
+  categoriaLabel: "🧠 Carreira Jurídica",
+  imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-post-carreira.jpg",
+  destaque: false,
+  futuro: false
 }
   
 
