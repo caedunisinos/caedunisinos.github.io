@@ -446,10 +446,22 @@ const posts = [
   futuro: false
 },
   {
+  titulo: "CAED lança página exclusiva com vagas de estágio em Direito",
+  link: "https://caedunisinos.com.br/noticias/caed-lanca-pagina-vagas-estagio-direito.html",
+  resumo: "O CAED acaba de lançar uma página dedicada a reunir as melhores oportunidades de estágio em Direito para estudantes da UNISINOS em Porto Alegre, São Leopoldo, Canoas e Sapucaia do Sul. A página é atualizada semanalmente e traz informações completas sobre cada vaga.",
+  data: "29/08/2026",
+  horario: "18:00",
+  categoria: "oportunidades",
+  categoriaLabel: "💼 Oportunidades",
+  imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/vagas-estagio-banner.jpg",
+  destaque: true,
+  futuro: false
+},
+  {
   titulo: "CAED estreia no LinkedIn com conteúdo exclusivo para estudantes de Direito",
   link: "https://caedunisinos.com.br/noticias/caed-estreia-no-linkedin-conteudo-exclusivo.html",
   resumo: "O CAED acaba de estrear seu perfil oficial no LinkedIn, trazendo conteúdo exclusivo sobre carreira jurídica, formação acadêmica, decisões do STF, livros e muito mais. O perfil é administrado por Luís Lacerda, Secretário de Assuntos Acadêmicos e Marketing do CAED.",
-  data: "29/08/2026",
+  data: "30/08/2026",
   horario: "08:00",
   categoria: "representacao",
   categoriaLabel: "🏛️ Representação",
@@ -469,6 +481,7 @@ const posts = [
   destaque: false,
   futuro: false
 }
+  
 
 ];
 
