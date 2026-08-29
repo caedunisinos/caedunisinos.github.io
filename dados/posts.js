@@ -473,7 +473,7 @@ const posts = [
   titulo: "CAED protocola junto à Unisinos o projeto 'Mulheres no Direito'",
   link: "https://caedunisinos.com.br/noticias/caed-protocola-projeto-mulheres-no-direito.html",
   resumo: "O CAED protocolou na Unisinos o projeto 'Mulheres no Direito', iniciativa da Secretaria da Mulher para apoiar, orientar e proteger as estudantes do curso de Direito. O projeto, apresentado por Fábio Wlademir e Susane Almeida, segue para análise institucional.",
-  data: "31/08/2026",
+  data: "01/09/2026",
   horario: "08:00",
   categoria: "representacao",
   categoriaLabel: "🏛️ Representação",
