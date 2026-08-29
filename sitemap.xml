@@ -177,7 +177,8 @@
   <!-- ============================================================ -->
   <!--  NOTÍCIAS (pastas /noticias/)                                 -->
   <!-- ============================================================ -->
-  <!-- Institucionais -->
+
+  <!-- ===== INSTITUCIONAIS E REPRESENTAÇÃO ===== -->
   <url>
     <loc>https://caedunisinos.com.br/noticias/projeto-aluno-destaque.html</loc>
     <lastmod>2026-08-29</lastmod>
@@ -238,8 +239,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/caed-protocola-projeto-mulheres-no-direito.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-  <!-- Acadêmicas e Eventos -->
+  <!-- ===== ACADÊMICAS E EVENTOS ===== -->
   <url>
     <loc>https://caedunisinos.com.br/noticias/mes-academico-caed-unisinos-2026.html</loc>
     <lastmod>2026-08-29</lastmod>
@@ -282,8 +289,32 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/caed-linkedin-acompanhar-decisoes-stf-graduacao.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/caed-linkedin-formacao-juridica-alem-sala-aula.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/caed-linkedin-processo-legislativo-senado.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/caed-linkedin-ruf-2025-direito-unisinos.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
-  <!-- Guias e Recursos -->
+  <!-- ===== GUIAS E RECURSOS ===== -->
   <url>
     <loc>https://caedunisinos.com.br/noticias/guia-formatura-direito-unisinos-caed.html</loc>
     <lastmod>2026-08-29</lastmod>
@@ -332,8 +363,14 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/caed-linkedin-livros-juridicos-transformam-pensamento.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
-  <!-- Serviços e Novidades -->
+  <!-- ===== SERVIÇOS E NOVIDADES ===== -->
   <url>
     <loc>https://caedunisinos.com.br/noticias/carteirinha-estudantil-unisinos-como-solicitar.html</loc>
     <lastmod>2026-08-29</lastmod>
@@ -370,8 +407,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/caed-lanca-pagina-vagas-estagio-direito.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-  <!-- Notícias Antigas (menor prioridade) -->
+  <!-- ===== COMUNICAÇÃO / LINKEDIN ===== -->
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/caed-estreia-no-linkedin-conteudo-exclusivo.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/caed-linkedin-3-frentes-atuacao-advocacia.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/caed-linkedin-boas-vindas-conteudo-exclusivo.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/conecte-se-ao-caed-canais-comunicacao.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ===== NOTÍCIAS ANTIGAS (MENOR PRIORIDADE) ===== -->
   <url>
     <loc>https://caedunisinos.com.br/noticias/prestacao-contas-2025-2.html</loc>
     <lastmod>2026-05-13</lastmod>
