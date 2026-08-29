@@ -564,6 +564,30 @@ const posts = [
   imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-post-boas-vindas.jpg",
   destaque: false,
   futuro: false
+},
+  {
+  titulo: "CAED dá boas-vindas aos seguidores no LinkedIn — conteúdo exclusivo para sua carreira",
+  link: "https://caedunisinos.com.br/noticias/caed-linkedin-boas-vindas-conteudo-exclusivo.html",
+  resumo: "O perfil do CAED no LinkedIn foi lançado com uma mensagem de boas-vindas, convidando estudantes de Direito da UNISINOS em São Leopoldo e Porto Alegre a acompanharem conteúdos exclusivos para sua carreira jurídica. Siga o CAED no LinkedIn!",
+  data: "07/09/2026",
+  horario: "08:00",
+  categoria: "representacao",
+  categoriaLabel: "🏛️ Representação",
+  imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-post-boas-vindas.jpg",
+  destaque: false,
+  futuro: false
+},
+  {
+  titulo: "Conecte-se com o CAED — Todos os canais de comunicação",
+  link: "https://caedunisinos.com.br/noticias/conecte-se-ao-caed-canais-comunicacao.html",
+  resumo: "O CAED está em São Leopoldo e Porto Alegre! Conecte-se com a gente pelo WhatsApp, Instagram, LinkedIn, E-mail e Linktree. Fique por dentro de todas as novidades e participe da representação estudantil da UNISINOS.",
+  data: "08/09/2026",
+  horario: "08:00",
+  categoria: "contato",
+  categoriaLabel: "📱 Canais de Comunicação",
+  imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/caed-canais-comunicacao.jpg",
+  destaque: true,
+  futuro: false
 }
 ];
 
