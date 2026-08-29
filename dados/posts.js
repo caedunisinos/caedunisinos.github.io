@@ -528,6 +528,18 @@ const posts = [
   imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-post-stf.jpg",
   destaque: false,
   futuro: false
+},
+  {
+  titulo: "Acompanhe o processo legislativo no Senado Federal — dica do CAED no LinkedIn",
+  link: "https://caedunisinos.com.br/noticias/caed-linkedin-processo-legislativo-senado.html",
+  resumo: "Ficar atento ao Senado Federal é essencial para compreender o processo legislativo na prática e conectar teoria e realidade institucional. O CAED compartilha dicas para acompanhar a atividade legislativa.",
+  data: "06/09/2026",
+  horario: "08:00",
+  categoria: "legislativo",
+  categoriaLabel: "🏛️ Processo Legislativo",
+  imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/linkedin-post-senado.jpg",
+  destaque: false,
+  futuro: false
 }
 ];
 
