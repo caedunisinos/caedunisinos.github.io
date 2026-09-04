@@ -517,6 +517,18 @@ const posts = [
   destaque: false,
   futuro: false
 },
+  {
+  titulo: '"Além da punição: os caminhos da Justiça Restaurativa" — palestra com Marcos Rolim',
+  link: "https://caedunisinos.com.br/noticias/palestra-marcos-rolim-justica-restaurativa.html",
+  resumo: "No dia 08 de setembro, o CAED Unisinos recebe Marcos Rolim para a palestra 'Além da punição: os caminhos da Justiça Restaurativa'. Evento gratuito com certificado no Auditório Maurício Berni, Campus São Leopoldo.",
+  data: "04/09/2026",
+  horario: "20:00",
+  categoria: "eventos",
+  categoriaLabel: "🎓 Mês Acadêmico",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/palestra-marcos-rolim-justica-restaurativa-caed-unisinos.jpg",
+  destaque: true,
+  futuro: false
+},
 {
   titulo: "Por que acompanhar as decisões do STF ainda na graduação? — CAED no LinkedIn",
   link: "https://caedunisinos.com.br/noticias/caed-linkedin-acompanhar-decisoes-stf-graduacao.html",
