@@ -85,6 +85,72 @@
   </url>
 
   <!-- ============================================================ -->
+  <!--  PRODUTOS                                                     -->
+  <!-- ============================================================ -->
+  <url>
+    <loc>https://caedunisinos.com.br/produtos/camiseta-preta.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/produtos/camiseta-outubro-rosa.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/produtos/camiseta-baby-look.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/produtos/camiseta-oversized.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/produtos/moletom-preto.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/produtos/moletom-bordo.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/produtos/ecobag.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/produtos/carteirinha.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://caedunisinos.com.br/produtos/kit-cuia.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ============================================================ -->
   <!--  INSTITUCIONAL                                                -->
   <!-- ============================================================ -->
   <url>
@@ -244,6 +310,18 @@
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/caed-estreia-no-linkedin-conteudo-exclusivo.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://caedunisinos.com.br/noticias/conecte-se-ao-caed-canais-comunicacao.html</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- ===== ACADÊMICAS E EVENTOS ===== -->
@@ -416,12 +494,6 @@
 
   <!-- ===== COMUNICAÇÃO / LINKEDIN ===== -->
   <url>
-    <loc>https://caedunisinos.com.br/noticias/caed-estreia-no-linkedin-conteudo-exclusivo.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://caedunisinos.com.br/noticias/caed-linkedin-3-frentes-atuacao-advocacia.html</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
@@ -429,12 +501,6 @@
   </url>
   <url>
     <loc>https://caedunisinos.com.br/noticias/caed-linkedin-boas-vindas-conteudo-exclusivo.html</loc>
-    <lastmod>2026-08-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://caedunisinos.com.br/noticias/conecte-se-ao-caed-canais-comunicacao.html</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
