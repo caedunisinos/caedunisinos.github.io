@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ===== META TAGS SERÃO PREENCHIDAS POR JS ===== -->
+  <title>Produto – Loja CAED</title>
+  <meta name="description" content="">
+  <link rel="canonical" href="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="product">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Schema.org será injetado via JS -->
+  
+  <!-- CSS (reaproveite os estilos da loja) -->
+  <link rel="stylesheet" href="/css/loja.css">
+  <style>
+    /* Mesmos estilos do loja.html ou um arquivo separado */
+    /* ... (copie os estilos essenciais do loja.html) ... */
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVEGAÇÃO (idêntica à loja) ===== -->
+  <header id="nav"> ... </header>
+  
+  <!-- ===== BREADCRUMB ===== -->
+  <nav class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="/loja.html">Loja CAED</a>
+      <span>›</span>
+      <span id="produtoNomeBreadcrumb">Produto</span>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container" style="padding:2rem 1.5rem;">
+      <div class="produto-header" id="produtoHeader">
+        <div class="produto-imagem">
+          <img id="produtoImagem" src="" alt="">
+        </div>
+        <div class="produto-info">
+          <span id="produtoBadge" class="badge-status"></span>
+          <h1 id="produtoNome">Produto</h1>
+          <div id="produtoPreco" class="produto-preco"></div>
+          <p id="produtoDesc" class="produto-desc"></p>
+          <div id="produtoBotoes">
+            <!-- Botão de reserva ou indisponível será inserido aqui -->
+          </div>
+          <div class="compartilhar">
+            <a href="#" onclick="share('facebook')">📘 Facebook</a>
+            <a href="#" onclick="share('twitter')">🐦 Twitter</a>
+            <a href="#" onclick="share('whatsapp')">💬 WhatsApp</a>
+            <a href="#" onclick="share('linkedin')">🔗 LinkedIn</a>
+            <a href="#" onclick="copyLink()">📋 Copiar Link</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tabela de tamanhos (opcional) -->
+      <div id="tabelaTamanhos" class="tabela-tamanhos"></div>
+      
+      <a href="/loja.html" class="btn-voltar">← Voltar para a Loja CAED</a>
+    </div>
+  </main>
+  
+  <!-- ===== FOOTER (idêntico ao da loja) ===== -->
+  <footer> ... </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="/js/produtos.js"></script>
+  <script>
+    // Função para obter o slug a partir da URL
+    function getSlugFromUrl() {
+      const path = window.location.pathname;
+      const parts = path.split('/');
+      const fileName = parts[parts.length - 1];
+      return fileName.replace('.html', '');
+    }
+
+    // Preencher a página com os dados do produto
+    function carregarProduto() {
+      const slug = getSlugFromUrl();
+      const produto = PRODUTOS.find(p => p.slug === slug);
+      if (!produto) {
+        document.title = 'Produto não encontrado';
+        document.getElementById('produtoNome').textContent = 'Produto não encontrado';
+        return;
+      }
+
+      // Atualizar meta tags
+      document.title = `${produto.nome} – Loja CAED`;
+      document.querySelector('meta[name="description"]').content = produto.descricao;
+      document.querySelector('meta[property="og:title"]').content = produto.nome;
+      document.querySelector('meta[property="og:description"]').content = produto.descricao;
+      document.querySelector('meta[property="og:image"]').content = produto.imagem;
+      document.querySelector('link[rel="canonical"]').href = window.location.href;
+      
+      // Injetar Schema.org
+      const schemaScript = document.createElement('script');
+      schemaScript.type = 'application/ld+json';
+      schemaScript.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": produto.nome,
+        "image": produto.imagem,
+        "description": produto.descricao,
+        "offers": {
+          "@type": "Offer",
+          "price": produto.preco.replace('R$ ', '').replace(',', '.'),
+          "priceCurrency": "BRL",
+          "availability": produto.disponivel ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+        }
+      });
+      document.head.appendChild(schemaScript);
+
+      // Preencher elementos
+      document.getElementById('produtoNome').textContent = produto.nome;
+      document.getElementById('produtoNomeBreadcrumb').textContent = produto.nome;
+      document.getElementById('produtoPreco').textContent = produto.preco;
+      document.getElementById('produtoDesc').textContent = produto.descricao;
+      document.getElementById('produtoImagem').src = produto.imagem;
+      document.getElementById('produtoImagem').alt = produto.nome;
+
+      const badge = document.getElementById('produtoBadge');
+      if (produto.badge) {
+        badge.textContent = produto.badge;
+        badge.style.background = produto.badgeCor || '#2e7d32';
+        badge.style.display = 'inline-block';
+      } else {
+        badge.style.display = 'none';
+      }
+
+      // Botão de reserva ou indisponível
+      const botoesDiv = document.getElementById('produtoBotoes');
+      if (produto.disponivel) {
+        botoesDiv.innerHTML = `<a href="https://wa.me/5551997311502?text=Olá+CAED!+Quero+reservar+o+produto+${encodeURIComponent(produto.nome)}+(${produto.preco}).+Qual+o+tamanho+disponível?" target="_blank" class="btn-reservar">📦 RESERVAR AGORA</a>`;
+      } else {
+        botoesDiv.innerHTML = `<span style="background:#888;color:#fff;padding:.8rem 2rem;border-radius:4px;font-family:'Montserrat',sans-serif;font-size:.8rem;display:inline-block;">⏳ INDISPONÍVEL – Volta em breve</span>`;
+      }
+
+      // Tabela de tamanhos (se houver)
+      const tabelaDiv = document.getElementById('tabelaTamanhos');
+      if (produto.tabela === 'normal') {
+        tabelaDiv.innerHTML = `
+          <h3>📏 Guia de Tamanhos – Camiseta Normal</h3>
+          <table>
+            <tr><th>Tamanho</th><th>P</th><th>M</th><th>G</th><th>GG</th><th>XG</th></tr>
+            <tr><td>Largura (cm)</td><td>46</td><td>48</td><td>50</td><td>54</td><td>57</td></tr>
+            <tr><td>Comprimento (cm)</td><td>65</td><td>66</td><td>68</td><td>70</td><td>72</td></tr>
+          </table>
+        `;
+      } else if (produto.tabela === 'baby') {
+        tabelaDiv.innerHTML = `
+          <h3>📏 Guia de Tamanhos – Baby Look</h3>
+          <table>
+            <tr><th>Tamanho</th><th>M</th><th>G</th><th>GG</th><th>XG</th></tr>
+            <tr><td>Largura (cm)</td><td>35</td><td>40</td><td>43</td><td>46</td></tr>
+            <tr><td>Comprimento (cm)</td><td>54</td><td>59</td><td>63</td><td>68</td></tr>
+          </table>
+        `;
+      } else if (produto.tabela === 'moletom') {
+        tabelaDiv.innerHTML = `
+          <h3>📏 Guia de Tamanhos – Moletom</h3>
+          <table>
+            <tr><th>Tamanho</th><th>P</th><th>M</th><th>G</th><th>GG</th><th>XG</th><th>XXG</th></tr>
+            <tr><td>Largura (cm)</td><td>58</td><td>63</td><td>66</td><td>70</td><td>73</td><td>76</td></tr>
+            <tr><td>Comprimento (cm)</td><td>50</td><td>54</td><td>56</td><td>58</td><td>60</td><td>62</td></tr>
+          </table>
+        `;
+      } else if (produto.tabela === 'ecobag') {
+        tabelaDiv.innerHTML = `<p style="color:var(--cream-dk);">Medida única: 42 x 38 cm (altura x largura)</p>`;
+      } else {
+        tabelaDiv.innerHTML = `<p style="color:var(--cream-dk);">Medidas: ${produto.tamanhos}</p>`;
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', carregarProduto);
+
+    // Funções de share (copiadas da loja)
+    function share(rede) { /* ... */ }
+    function copyLink() { /* ... */ }
+  </script>
+  
+  <!-- VLibras e demais scripts -->
+</body>
+</html>
