@@ -600,6 +600,18 @@ const posts = [
   imagem: "https://caedunisinos.com.br/noticias/noticias_imagens/caed-canais-comunicacao.jpg",
   destaque: true,
   futuro: false
+},
+  {
+  titulo: 'Mês Acadêmico CAED: palestra "Vencendo através da educação" com Edgar Abreu',
+  link: "https://caedunisinos.com.br/noticias/mes-academico-caed-palestra-edgar-abreu.html",
+  resumo: "No dia 15 de setembro, o CAED Unisinos recebe Edgar Abreu para a palestra 'Vencendo através da educação: uma história de vida, escolhas e caminhos diferentes'. Uma noite de aprendizado e superação. Inscreva-se já!",
+  data: "10/09/2026",
+  horario: "08:00",
+  categoria: "eventos",
+  categoriaLabel: "🎓 Mês Acadêmico",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/imagens/logo_caed.jpeg",
+  destaque: true,
+  futuro: false
 }
 ];
 
