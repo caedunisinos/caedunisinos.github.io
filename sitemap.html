@@ -9,7 +9,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>🗺️ Sitemap | Mapa completo do site CAED Unisinos</title>
-  <meta name="description" content="Mapa completo do site do CAED Unisinos. Encontre todas as páginas, notícias, loja, guia do estudante e recursos organizados para facilitar sua navegação. Atualizado em 2026."/>
+  <meta name="description" content="Mapa completo do site do CAED Unisinos. Encontre todas as páginas, produtos, notícias, guia do estudante e recursos organizados para facilitar sua navegação. Atualizado em 2026."/>
   <meta name="keywords" content="sitemap CAED, mapa do site CAED, todas as páginas CAED, navegação CAED, guia estudante, loja CAED, notícias CAED"/>
   <meta name="author" content="CAED – Centro Acadêmico de Estudantes de Direito da UNISINOS"/>
   <meta name="robots" content="index, follow"/>
@@ -19,7 +19,7 @@
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://caedunisinos.com.br/sitemap.html"/>
   <meta property="og:title" content="🗺️ Sitemap | Mapa completo do site CAED Unisinos"/>
-  <meta property="og:description" content="Mapa completo do site do CAED Unisinos. Encontre todas as páginas e notícias."/>
+  <meta property="og:description" content="Mapa completo do site do CAED Unisinos. Encontre todas as páginas, produtos e notícias."/>
   <meta property="og:locale" content="pt_BR"/>
   <meta property="og:site_name" content="CAED Unisinos"/>
   <meta property="og:image" content="https://caedunisinos.com.br/imagens/logo_caed.jpeg"/>
@@ -180,7 +180,6 @@
     @media(max-width:600px){.footer-top{grid-template-columns:1fr}.page-hero{padding:6rem 1rem 2rem}.sitemap-grid{grid-template-columns:1fr}}
   </style>
 </head>
-
 <body>
 
 <a href="#main-content" class="skip-link" style="position:absolute;top:-999px;left:50%;transform:translateX(-50%);background:#0b251e;color:#c5a880;padding:12px 24px;border-radius:0 0 8px 8px;z-index:9999;font-weight:700;text-decoration:none;transition:top 0.3s;">♿ Pular para o conteúdo principal</a>
@@ -280,6 +279,10 @@
             <div class="label">Notícias</div>
           </div>
           <div>
+            <div class="number" id="totalProdutos">0</div>
+            <div class="label">Produtos</div>
+          </div>
+          <div>
             <div class="number" id="totalCategorias">0</div>
             <div class="label">Categorias</div>
           </div>
@@ -350,6 +353,36 @@
         </div>
       </div>
 
+      <!-- ===== PRODUTOS ===== -->
+      <h2>🛍️ Produtos da Loja CAED</h2>
+      <p style="margin-bottom:1.5rem;color:var(--cream-dk);">Todos os produtos disponíveis (ou em breve) na loja oficial do CAED.</p>
+      <div class="sitemap-grid">
+        <div class="sitemap-category">
+          <h3>👕 Camisetas</h3>
+          <ul class="sitemap-list">
+            <li><a href="/produtos/camiseta-preta.html"><i class="fas fa-tshirt"></i> Camiseta Preta Direito Unisinos</a></li>
+            <li><a href="/produtos/camiseta-outubro-rosa.html"><i class="fas fa-tshirt"></i> Camiseta Outubro Rosa Direito Unisinos</a></li>
+            <li><a href="/produtos/camiseta-baby-look.html"><i class="fas fa-tshirt"></i> Camiseta Baby Look Direito Unisinos</a></li>
+            <li><a href="/produtos/camiseta-oversized.html"><i class="fas fa-tshirt"></i> Camiseta Oversized Direito Unisinos</a></li>
+          </ul>
+        </div>
+        <div class="sitemap-category">
+          <h3>🧥 Moletons</h3>
+          <ul class="sitemap-list">
+            <li><a href="/produtos/moletom-preto.html"><i class="fas fa-tshirt"></i> Moletom Preto Direito Unisinos</a></li>
+            <li><a href="/produtos/moletom-bordo.html"><i class="fas fa-tshirt"></i> Moletom Bordô Direito Unisinos</a></li>
+          </ul>
+        </div>
+        <div class="sitemap-category">
+          <h3>🛍️ Acessórios</h3>
+          <ul class="sitemap-list">
+            <li><a href="/produtos/ecobag.html"><i class="fas fa-shopping-bag"></i> Ecobag Direito Unisinos</a></li>
+            <li><a href="/produtos/carteirinha.html"><i class="fas fa-id-card"></i> Carteirinha Estudantil CAED</a></li>
+            <li><a href="/produtos/kit-cuia.html"><i class="fas fa-mug-hot"></i> Kit Cuia de Chimarrão</a></li>
+          </ul>
+        </div>
+      </div>
+
       <!-- ===== NOTÍCIAS ===== -->
       <h2>📰 Notícias do CAED</h2>
       <p style="margin-bottom:1.5rem;color:var(--cream-dk);">Todas as notícias publicadas no site, organizadas por categoria.</p>
@@ -368,6 +401,8 @@
             <li><a href="/noticias/caed-notifica-dce-extrajudicialmente-descumprimento.html"><i class="fas fa-file-signature"></i> Notificação Extrajudicial DCE</a></li>
             <li><a href="/noticias/caed-porto-alegre-como-encontrar-participar.html"><i class="fas fa-map-pin"></i> CAED em Porto Alegre</a></li>
             <li><a href="/noticias/caed-protocola-projeto-mulheres-no-direito.html"><i class="fas fa-female"></i> Projeto Mulheres no Direito</a></li>
+            <li><a href="/noticias/caed-estreia-no-linkedin-conteudo-exclusivo.html"><i class="fab fa-linkedin"></i> CAED estreia no LinkedIn</a></li>
+            <li><a href="/noticias/conecte-se-ao-caed-canais-comunicacao.html"><i class="fas fa-plug"></i> Conecte-se ao CAED</a></li>
           </ul>
         </div>
         <div class="sitemap-category">
@@ -429,6 +464,7 @@
             <li><a href="/noticias/encerramento-gestao-2025-2-1.html"><i class="fas fa-check-circle"></i> Encerramento Gestão 2025/2 (antiga)</a></li>
             <li><a href="/noticias/carteirinha-estudantil-aergs-1.html"><i class="fas fa-id-card"></i> Carteirinha AERGS (antiga)</a></li>
             <li><a href="/noticias/colecao-inverno-2026-1.html"><i class="fas fa-tshirt"></i> Coleção Inverno 2026 (antiga)</a></li>
+            <li><a href="/noticias/Carta%20aberta.html"><i class="fas fa-envelope"></i> Carta Aberta</a></li>
           </ul>
         </div>
       </div>
@@ -598,10 +634,12 @@
 document.addEventListener('DOMContentLoaded', function() {
   const totalPages = document.querySelectorAll('.sitemap-list a').length;
   const totalNoticias = document.querySelectorAll('.sitemap-category .sitemap-list a').length;
+  const totalProdutos = document.querySelectorAll('.sitemap-category .sitemap-list a[href*="/produtos/"]').length;
   const totalCategorias = document.querySelectorAll('.sitemap-category').length;
   
   document.getElementById('totalPages').textContent = totalPages;
-  document.getElementById('totalNoticias').textContent = totalNoticias;
+  document.getElementById('totalNoticias').textContent = totalNoticias - totalProdutos;
+  document.getElementById('totalProdutos').textContent = totalProdutos;
   document.getElementById('totalCategorias').textContent = totalCategorias;
 });
 
