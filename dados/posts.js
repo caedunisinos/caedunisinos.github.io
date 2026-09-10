@@ -612,6 +612,18 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/imagens/logo_caed.jpeg",
   destaque: true,
   futuro: false
+},
+  {
+  titulo: '"Além da punição: os caminhos da Justiça Restaurativa" — palestra com Marcos Rolim e Adalgiso Dutra em Porto Alegre',
+  link: "https://caedunisinos.com.br/noticias/palestra-marcos-rolim-justica-restaurativa-poa.html",
+  resumo: "No dia 23 de setembro, em Porto Alegre, o CAED Unisinos recebe Marcos Rolim e Adalgiso Augusto Silva Dutra para a palestra 'Além da punição: os caminhos da Justiça Restaurativa'. Evento gratuito com certificado no TEDU 311 — Unisinos Campus Porto Alegre.",
+  data: "18/09/2026",
+  horario: "20:00",
+  categoria: "eventos",
+  categoriaLabel: "🎓 Mês Acadêmico · POA",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/palestra-marcos-rolim-justica-restaurativa-poa-caed-unisinos.jpg",
+  destaque: true,
+  futuro: false
 }
 ];
 
