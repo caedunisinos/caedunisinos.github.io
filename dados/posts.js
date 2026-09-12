@@ -636,7 +636,7 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/caed-nota-oficial-eleicoes-2026-capa.jpg",
   destaque: true,
   futuro: false
-},
+}
 ];
 
 // ==========================================================
