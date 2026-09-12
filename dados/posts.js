@@ -624,7 +624,19 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/palestra-marcos-rolim-justica-restaurativa-poa-caed-unisinos.jpg",
   destaque: true,
   futuro: false
-}
+},
+  {
+  titulo: 'Eleiências 2026: CAED reafirma neutralidade institucional e lista candidatos',
+  link: "https://caedunisinos.com.br/noticias/nota-oficial-caed-eleicoes-2026.html",
+  resumo: "Em meio às Eleições 2026, o CAED reafirma sua neutralidade institucional: não manifestará apoio a candidatos, partidos ou coligações. A Gestão 'A mudança precisa continuar' garante representação de TODOS os estudantes de Direito da Unisinos — em São Leopoldo e Porto Alegre. Confira a nota oficial na íntegra e a lista de candidatos à Presidência por ordem de registro no TSE.",
+  data: "11/09/2026",
+  horario: "18:00",
+  categoria: "institucional",
+  categoriaLabel: "📢 Nota Oficial · Eleições 2026",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/caed-nota-oficial-eleicoes-2026-capa.jpg",
+  destaque: true,
+  futuro: false
+},
 ];
 
 // ==========================================================
