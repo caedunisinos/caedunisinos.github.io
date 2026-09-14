@@ -636,6 +636,18 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/caed-nota-oficial-eleicoes-2026-capa.jpg",
   destaque: true,
   futuro: false
+},
+  {
+  titulo: 'Direito Médico: Do atestado ao Tribunal — palestra com a Dra. Audri Castro',
+  link: "https://caedunisinos.com.br/noticias/palestra-direito-medico-audri-castro-caed-unisinos.html",
+  resumo: "No dia 15 de setembro, às 19h45, o CAED Unisinos recebe a Dra. Audri Castro para a palestra 'Direito Médico: Do atestado ao Tribunal'. Evento gratuito com certificado no Auditório Maurício Berni, Campus São Leopoldo. Inscrições abrem em 14/09.",
+  data: "14/09/2026",
+  horario: "10:00",
+  categoria: "eventos",
+  categoriaLabel: "🎓 Mês Acadêmico · Direito Médico",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/audri-castro-direito-medico-do-atestado-ao-tribunal-caed-unisinos.jpg",
+  destaque: true,
+  futuro: false
 }
 ];
 
