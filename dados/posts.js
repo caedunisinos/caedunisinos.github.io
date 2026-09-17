@@ -648,6 +648,18 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/audri-castro-direito-medico-do-atestado-ao-tribunal-caed-unisinos.jpg",
   destaque: true,
   futuro: false
+},
+  {
+  titulo: 'Vem aí a Pesquisa de Satisfação CAED 2026/2 — sua opinião define os próximos rumos',
+  link: "https://caedunisinos.com.br/noticias/pesquisa-satisfacao-caed-2026-2.html",
+  resumo: "Espaço totalmente anônimo para estudantes de Direito da Unisinos opinarem, elogiarem, criticarem e sugerirem melhorias. Sua participação orienta as decisões do CAED e pode se transformar no próximo projeto da gestão. Fique ligado nos nossos canais!",
+  data: "17/09/2026",
+  horario: "10:00",
+  categoria: "institucional",
+  categoriaLabel: "📊 Representação Estudantil",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/caed-pesquisa-satisfacao-2026-2-participacao-estudantes.jpg",
+  destaque: true,
+  futuro: true
 }
 ];
 
