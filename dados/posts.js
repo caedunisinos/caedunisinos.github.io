@@ -672,7 +672,7 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/caed-comunicado-atividades-remotas-unisinos-21-setembro-2026.jpg",
   destaque: true,
   futuro: false
-},
+}
 ];
 
 // ==========================================================
