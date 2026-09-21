@@ -660,7 +660,19 @@ const posts = [
   imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/caed-pesquisa-satisfacao-2026-2-participacao-estudantes.jpg",
   destaque: true,
   futuro: true
-}
+},
+  {
+  titulo: 'UNISINOS: atividades do Campus São Leopoldo serão remotas nesta segunda (21/09)',
+  link: "https://caedunisinos.com.br/noticias/caed-informa-atividades-remotas-unisinos-21-setembro-2026.html",
+  resumo: "Devido à tempestade da madrugada, a UNISINOS informou que as atividades acadêmicas e administrativas do Campus São Leopoldo ocorrerão de forma remota nesta segunda-feira, 21 de setembro. O Campus Porto Alegre funciona normalmente.",
+  data: "21/09/2026",
+  horario: "10:30",
+  categoria: "institucional",
+  categoriaLabel: "⚠️ Comunicado Institucional",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/caed-comunicado-atividades-remotas-unisinos-21-setembro-2026.jpg",
+  destaque: true,
+  futuro: false
+},
 ];
 
 // ==========================================================
