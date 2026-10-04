@@ -72,6 +72,18 @@ const posts = [
     futuro: true
   },
   {
+  titulo: "Véspera da Corrida: como se preparar para os 5 km da Unisinos",
+  link: "https://caedunisinos.com.br/noticias/vespera-corrida-como-se-preparar-unisinos.html",
+  resumo: "Faltam 5 dias para a 1ª Corrida da Unisinos! Confira o guia completo do CAED com checklist, hidratação, alimentação e dicas para chegar preparado no dia da prova.",
+  data: "13/10/2026",
+  horario: "08:00",
+  categoria: "eventos",
+  categoriaLabel: "🏃 Véspera da Corrida",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/vespera-corrida-preparacao-unisinos-caed.jpg",
+  destaque: true,
+  futuro: true
+},
+  {
     titulo: "Faltam 4 dias para a 1ª Corrida da Unisinos: como participar",
     link: "https://caedunisinos.com.br/noticias/countdown-corrida-unisinos-2026.html",
     resumo: "Contagem regressiva para a 1ª Corrida da Unisinos! Faltam 4 dias para o evento que vai marcar a história esportiva da universidade. Confira tudo o que você precisa saber.",
