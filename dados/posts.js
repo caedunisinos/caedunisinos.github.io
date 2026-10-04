@@ -10,6 +10,18 @@ const posts = [
   // ============ ⭐ OUTUBRO 2026 — PUBLICADOS ============
 
   {
+  titulo: "Como se destacar em estágios de Direito: guia completo do CAED",
+  link: "https://caedunisinos.com.br/noticias/como-se-destacar-estagios-direito-2026.html",
+  resumo: "Guia prático do CAED para conquistar e se destacar em estágios jurídicos: currículo, LinkedIn, entrevistas, postura profissional e primeiros passos na carreira.",
+  data: "09/10/2026",
+  horario: "08:00",
+  categoria: "carreira",
+  categoriaLabel: "💼 Carreira Jurídica",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/como-se-destacar-estagios-direito-caed-unisinos.jpg",
+  destaque: true,
+  futuro: false
+},
+  {
     titulo: "Direito ao Esquecimento: Case Acadêmico Premiado da UNISINOS",
     link: "https://caedunisinos.com.br/noticias/direito-ao-esquecimento-case-academico-premiado-caed-unisinos.html",
     resumo: "Alunos da UNISINOS alcançam nota máxima com trabalho interdisciplinar sobre o RE 1.010.606/STF. Análise com Kelsen, Dworkin e Bobbio, site interativo, QR Code e homenagem a Carolina Willmann.",
