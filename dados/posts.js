@@ -95,18 +95,18 @@ const posts = [
     destaque: true,
     futuro: true
   },
-  {
-    titulo: "Dia do Professor: homenagem do CAED aos mestres do Direito",
-    link: "https://caedunisinos.com.br/noticias.html",
-    resumo: "Neste 15 de outubro, o CAED presta homenagem a todos os professores que constroem o futuro do Direito com dedicação e sabedoria.",
-    data: "15/10/2026",
-    horario: "08:00",
-    categoria: "variedades",
-    categoriaLabel: "👨‍🏫 Dia do Professor",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dia-do-professor-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
+ {
+  titulo: "Dia do Professor: CAED homenageia os mestres do Direito",
+  link: "https://caedunisinos.com.br/noticias/dia-do-professor-caed-homenagem-2026.html",
+  resumo: "Neste 15 de outubro, o CAED presta homenagem a todos os professores que constroem o futuro do Direito com dedicação e sabedoria. Confira mensagens, depoimentos e agradecimentos.",
+  data: "15/10/2026",
+  horario: "08:00",
+  categoria: "variedades",
+  categoriaLabel: "👨‍🏫 Dia do Professor",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dia-do-professor-caed-homenagem-2026.jpg",
+  destaque: true,
+  futuro: true
+},
   {
     titulo: "Últimos dias para se inscrever na 1ª Corrida da Unisinos",
     link: "https://caedunisinos.com.br/noticias/primeira-corrida-unisinos-2026.html",
