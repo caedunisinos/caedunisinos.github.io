@@ -72,6 +72,18 @@ const posts = [
     futuro: true
   },
   {
+  titulo: "Dia das Crianças: sonhar é ser criança — homenagem do CAED",
+  link: "https://caedunisinos.com.br/noticias/dia-das-criancas-caed-homenagem-2026.html",
+  resumo: "Uma homenagem do CAED a todas as crianças, aos pais que sonham com seus filhos e a todos os adultos que nunca deixaram de sonhar. Poesia, gratidão e esperança.",
+  data: "12/10/2026",
+  horario: "09:00",
+  categoria: "variedades",
+  categoriaLabel: "🧒 Dia das Crianças",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dia-das-criancas-caed-homenagem-2026.jpg",
+  destaque: true,
+  futuro: true
+},
+  {
   titulo: "Véspera da Corrida: como se preparar para os 5 km da Unisinos",
   link: "https://caedunisinos.com.br/noticias/vespera-corrida-como-se-preparar-unisinos.html",
   resumo: "Faltam 5 dias para a 1ª Corrida da Unisinos! Confira o guia completo do CAED com checklist, hidratação, alimentação e dicas para chegar preparado no dia da prova.",
