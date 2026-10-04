@@ -1,6 +1,6 @@
 // js/produtos.js
 const PRODUTOS = [
-  // ===== PRODUTOS DISPONÍVEIS =====
+  // ===== PRODUTOS DISPONÍVEIS (2) =====
   {
     slug: 'ecobag',
     nome: 'Ecobag Direito Unisinos',
@@ -27,7 +27,8 @@ const PRODUTOS = [
     tabela: null,
     destaque: true
   },
-  // ===== PRODUTOS ESGOTADOS (mantidos para SEO) =====
+
+  // ===== PRODUTOS ESGOTADOS (7) =====
   {
     slug: 'camiseta-preta',
     nome: 'Camiseta Preta Direito Unisinos',
@@ -35,7 +36,7 @@ const PRODUTOS = [
     descricao: 'Camiseta preta com estampa "DIREITO UNISINOS". Modelo tradicional, 100% algodão. Tamanhos P a XG.',
     imagem: '/imagens/camiseta-preta-direito-unisinos.jpg',
     disponivel: false,
-    badge: '⏳ ESGOTADO – VOLTA EM BREVE',
+    badge: '⏳ VOLTA EM BREVE',
     badgeCor: '#888',
     tamanhos: 'P, M, G, GG, XG',
     tabela: 'normal'
@@ -47,7 +48,7 @@ const PRODUTOS = [
     descricao: 'Camiseta rosa com estampa "DIREITO UNISINOS". Modelo tradicional, 100% algodão. Tamanhos P a XG.',
     imagem: '/imagens/camiseta-outubro-rosa-direito-unisinos.jpg',
     disponivel: false,
-    badge: '⏳ ESGOTADO – VOLTA EM BREVE',
+    badge: '⏳ VOLTA EM BREVE',
     badgeCor: '#888',
     tamanhos: 'P, M, G, GG, XG',
     tabela: 'normal'
@@ -59,10 +60,22 @@ const PRODUTOS = [
     descricao: 'Camiseta Baby Look com estampa "DIREITO UNISINOS". Modelo feminino, 100% algodão. Tamanhos M a XG.',
     imagem: '/imagens/camiseta-baby-look-direito-unisinos.jpg',
     disponivel: false,
-    badge: '⏳ ESGOTADO – VOLTA EM BREVE',
+    badge: '⏳ VOLTA EM BREVE',
     badgeCor: '#888',
     tamanhos: 'M, G, GG, XG',
     tabela: 'baby'
+  },
+  {
+    slug: 'moletom-bordo',
+    nome: 'Moletom Bordô Direito Unisinos',
+    preco: 'R$ 155,00',
+    descricao: 'Moletom bordô com estampa "DIREITO UNISINOS". Conforto e estilo para os dias frios. Tamanhos P a XXG.',
+    imagem: '/imagens/moletom-bordo-direito-unisinos.jpg',
+    disponivel: false,
+    badge: '⏳ VOLTA EM BREVE',
+    badgeCor: '#888',
+    tamanhos: 'P, M, G, GG, XG, XXG',
+    tabela: 'moletom'
   },
   {
     slug: 'camiseta-oversized',
@@ -71,7 +84,7 @@ const PRODUTOS = [
     descricao: 'Modelo oversized preto com estampa "Direito Unisinos" na frente e logotipo Unisinos na manga.',
     imagem: '/imagens/camiseta-preta-direito-unisinos.jpg',
     disponivel: false,
-    badge: '⏳ ESGOTADO – VOLTA EM BREVE',
+    badge: '⏳ VOLTA EM BREVE',
     badgeCor: '#888',
     tamanhos: 'P, M, G, GG, XG',
     tabela: 'normal'
@@ -83,19 +96,7 @@ const PRODUTOS = [
     descricao: 'Moletom preto com "Direito Unisinos" frontal e arte exclusiva da deusa Themis nas costas.',
     imagem: '/imagens/moletom-preto-direito-unisinos.jpg',
     disponivel: false,
-    badge: '⏳ ESGOTADO – VOLTA EM BREVE',
-    badgeCor: '#888',
-    tamanhos: 'P, M, G, GG, XG, XXG',
-    tabela: 'moletom'
-  },
-  {
-    slug: 'moletom-bordo',
-    nome: 'Moletom Bordô Direito Unisinos',
-    preco: 'R$ 155,00',
-    descricao: 'Moletom bordô com estampa "DIREITO UNISINOS". Conforto e estilo para os dias frios.',
-    imagem: '/imagens/moletom-bordo-direito-unisinos.jpg',
-    disponivel: false,
-    badge: '⏳ ESGOTADO – VOLTA EM BREVE',
+    badge: '⏳ VOLTA EM BREVE',
     badgeCor: '#888',
     tamanhos: 'P, M, G, GG, XG, XXG',
     tabela: 'moletom'
@@ -107,7 +108,7 @@ const PRODUTOS = [
     descricao: 'Kit completo com cuia e bomba de chimarrão totalmente personalizados com a identidade "Direito Unisinos".',
     imagem: '/imagens/kit-cuia-caed.jpg',
     disponivel: false,
-    badge: '⏳ ESGOTADO – VOLTA EM BREVE',
+    badge: '⏳ VOLTA EM BREVE',
     badgeCor: '#888',
     tamanhos: 'Único',
     tabela: null
