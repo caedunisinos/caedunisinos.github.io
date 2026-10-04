@@ -6,15 +6,15 @@
 //   titulo          → Título da notícia
 //   link            → URL completa da notícia
 //   resumo          → Resumo curto (usado em cards)
-//   data            → DD/MM/AAAA (formato brasileiro)
+//   data            → DD/MM/AAAA
 //   horario         → HH:MM
-//   categoria       → slug (usado nos filtros)
-//   categoriaLabel  → Rótulo com emoji (exibido no card)
+//   categoria       → slug (usado nos filtros do arquivo.html)
+//   categoriaLabel  → Rótulo com emoji
 //   imagem          → URL da imagem de capa
 //   destaque        → true = aparece em destaque na home
 //   futuro          → true = post agendado (badge "Em breve")
 // ------------------------------------------------------------
-// Categorias disponíveis (para arquivo.html / filtros):
+// Categorias válidas:
 //   institucional · eventos · academico · carreira
 //   direito-digital · variedades · representacao
 //   servicos · loja · transparencia · comunidade
@@ -23,60 +23,95 @@
 const posts = [
 
   // ============================================================
-  // OUTUBRO 2026
+  // AGENDADOS — OUTUBRO 2026 (ainda não publicados)
   // ============================================================
 
   {
-    titulo: "Eleições 2026: o guia completo do eleitor — sua voz transforma o futuro",
-    link: "https://caedunisinos.com.br/noticias/eleicoes-2026-guia-completo-eleitor.html",
-    resumo: "Guia completo do CAED para o dia da votação: por que o voto importa, como descobrir sua sessão eleitoral, documentos necessários, FAQ, justificativa de ausência e muito mais. Sua voz transforma o futuro!",
-    data: "04/10/2026",
-    horario: "07:00",
-    categoria: "institucional",
-    categoriaLabel: "🗳️ Eleições 2026 · Guia do Eleitor",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/eleicoes-2026-guia-completo-eleitor-caed.jpg",
-    destaque: true,
-    futuro: false
-  },
-
-  {
-    titulo: "Mês Acadêmico CAED 2026: um mês de conhecimento, coletividade e conexões que transformam",
-    link: "https://caedunisinos.com.br/noticias/mes-academico-caed-2026-balanco-encerramento.html",
-    resumo: "Balanço completo do Mês Acadêmico CAED Unisinos 2026: palestras, gratidão a palestrantes e participantes, destaques, 1ª Corrida da Unisinos e próximos passos.",
-    data: "05/10/2026",
+    titulo: "Dia do Servidor Público: como se preparar para carreiras públicas",
+    link: "https://caedunisinos.com.br/noticias.html",
+    resumo: "Guia completo do CAED sobre como se preparar para concursos públicos na área jurídica: estudo, disciplinas essenciais e dicas práticas.",
+    data: "28/10/2026",
     horario: "08:00",
-    categoria: "institucional",
-    categoriaLabel: "🎓 Mês Acadêmico · Balanço",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/mes-academico-caed-2026-balanco-gratidao-coletividade.jpg",
-    destaque: true,
-    futuro: false
+    categoria: "carreira",
+    categoriaLabel: "🏛️ Carreiras Públicas",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dia-servidor-publico-caed-unisinos.jpg",
+    destaque: false,
+    futuro: true
   },
 
   {
-    titulo: "Direito ao Esquecimento: o que o STF decidiu e seus impactos no Direito Digital",
-    link: "https://caedunisinos.com.br/noticias/direito-ao-esquecimento-stf-impactos-direito-digital-2026.html",
-    resumo: "Análise do julgamento do RE 1.010.606/RJ pelo STF: o que é o direito ao esquecimento, por que foi considerado incompatível com a Constituição e como se relaciona com a LGPD.",
-    data: "07/10/2026",
+    titulo: "Halloween Jurídico: 7 casos curiosos do Direito",
+    link: "https://caedunisinos.com.br/noticias.html",
+    resumo: "Neste Halloween, o CAED traz uma seleção de casos jurídicos bizarros e curiosos que marcaram a história do Direito.",
+    data: "26/10/2026",
+    horario: "08:00",
+    categoria: "variedades",
+    categoriaLabel: "🎃 Halloween Jurídico",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/halloween-juridico-caed-unisinos.jpg",
+    destaque: false,
+    futuro: true
+  },
+
+  {
+    titulo: "Outubro Rosa: o Direito e a Saúde da Mulher",
+    link: "https://caedunisinos.com.br/noticias.html",
+    resumo: "O CAED apoia o Outubro Rosa. Uma reflexão sobre o papel do Direito na proteção da saúde da mulher e no combate ao câncer de mama.",
+    data: "25/10/2026",
+    horario: "10:00",
+    categoria: "variedades",
+    categoriaLabel: "🎀 Outubro Rosa",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/outubro-rosa-caed-unisinos.jpg",
+    destaque: false,
+    futuro: true
+  },
+
+  {
+    titulo: "Nova data da palestra com Edgar Abreu: vencendo através da educação",
+    link: "https://caedunisinos.com.br/noticias/mes-academico-caed-palestra-edgar-abreu.html",
+    resumo: "Em razão de viagem internacional do palestrante, a palestra com Edgar Abreu foi remarcada. Confira a nova data e garanta seu lugar!",
+    data: "22/10/2026",
+    horario: "08:00",
+    categoria: "academico",
+    categoriaLabel: "⚖️ Palestra Edgar Abreu",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/palestra-edgar-abreu-caed-unisinos.jpg",
+    destaque: false,
+    futuro: true
+  },
+
+  {
+    titulo: "Direito Digital no Cinema: 7 filmes e séries para estudantes de Direito",
+    link: "https://caedunisinos.com.br/noticias.html",
+    resumo: "Snowden, O Jogo da Imitação, A Rede Social, Mr. Robot, Black Mirror e mais: uma seleção de filmes e séries que todo estudante de Direito Digital deveria assistir.",
+    data: "21/10/2026",
     horario: "08:00",
     categoria: "direito-digital",
-    categoriaLabel: "💻 Direito Digital · STF",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/direito-ao-esquecimento-stf-impactos-caed-unisinos.jpg",
+    categoriaLabel: "🎬 Direito Digital no Cinema",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/direito-digital-cinema-caed-unisinos.jpg",
     destaque: false,
-    futuro: false
+    futuro: true
   },
 
-  // ============================================================
-  // AGENDADOS — OUTUBRO E NOVEMBRO 2026
-  // ============================================================
-
   {
-    titulo: "Countdown Corrida: faltam 4 dias para a 1ª Corrida da Unisinos",
+    titulo: "Balanço da 1ª Corrida da Unisinos: um marco na história esportiva da universidade",
     link: "https://caedunisinos.com.br/noticias/primeira-corrida-unisinos-2026.html",
-    resumo: "Faltam apenas 4 dias para a 1ª Corrida da Unisinos! Prepare o tênis, a hidratação e venha fazer parte deste marco esportivo no Campus São Leopoldo.",
-    data: "14/10/2026",
+    resumo: "Confira o balanço completo da 1ª Corrida da Unisinos: números, destaques, agradecimentos e os melhores momentos de um dia histórico.",
+    data: "19/10/2026",
     horario: "08:00",
     categoria: "eventos",
-    categoriaLabel: "🏃 Corrida Unisinos",
+    categoriaLabel: "🏆 Balanço Corrida",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/primeira-corrida-unisinos-2026-caed.jpg",
+    destaque: false,
+    futuro: true
+  },
+
+  {
+    titulo: "Últimos dias para se inscrever na 1ª Corrida da Unisinos",
+    link: "https://caedunisinos.com.br/noticias/primeira-corrida-unisinos-2026.html",
+    resumo: "As inscrições estão se encerrando! Garanta já a sua vaga na 1ª Corrida da Unisinos. Alunos têm 10% de desconto.",
+    data: "16/10/2026",
+    horario: "18:00",
+    categoria: "eventos",
+    categoriaLabel: "🏃 Últimos Dias",
     imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/primeira-corrida-unisinos-2026-caed.jpg",
     destaque: false,
     futuro: true
@@ -96,262 +131,63 @@ const posts = [
   },
 
   {
-    titulo: "Últimos dias para se inscrever na 1ª Corrida da Unisinos",
+    titulo: "Countdown Corrida: faltam 4 dias para a 1ª Corrida da Unisinos",
     link: "https://caedunisinos.com.br/noticias/primeira-corrida-unisinos-2026.html",
-    resumo: "As inscrições estão se encerrando! Garanta já a sua vaga na 1ª Corrida da Unisinos. Alunos têm 10% de desconto.",
-    data: "16/10/2026",
-    horario: "18:00",
+    resumo: "Faltam apenas 4 dias para a 1ª Corrida da Unisinos! Prepare o tênis, a hidratação e venha fazer parte deste marco esportivo no Campus São Leopoldo.",
+    data: "14/10/2026",
+    horario: "08:00",
     categoria: "eventos",
-    categoriaLabel: "🏃 Últimos Dias",
+    categoriaLabel: "🏃 Corrida Unisinos",
     imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/primeira-corrida-unisinos-2026-caed.jpg",
     destaque: false,
     futuro: true
   },
 
-  {
-    titulo: "Balanço da 1ª Corrida da Unisinos: um marco na história esportiva da universidade",
-    link: "https://caedunisinos.com.br/noticias/primeira-corrida-unisinos-2026.html",
-    resumo: "Confira o balanço completo da 1ª Corrida da Unisinos: números, destaques, agradecimentos e os melhores momentos de um dia histórico.",
-    data: "19/10/2026",
-    horario: "08:00",
-    categoria: "eventos",
-    categoriaLabel: "🏆 Balanço Corrida",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/primeira-corrida-unisinos-2026-caed.jpg",
-    destaque: false,
-    futuro: true
-  },
+  // ============================================================
+  // PUBLICADOS — OUTUBRO 2026
+  // ============================================================
 
   {
-    titulo: "Direito Digital no Cinema: 7 filmes e séries para estudantes de Direito",
-    link: "https://caedunisinos.com.br/noticias.html",
-    resumo: "Snowden, O Jogo da Imitação, A Rede Social, Mr. Robot, Black Mirror e mais: uma seleção de filmes e séries que todo estudante de Direito Digital deveria assistir.",
-    data: "21/10/2026",
+    titulo: "Direito ao Esquecimento: Case Acadêmico Premiado da UNISINOS",
+    link: "https://caedunisinos.com.br/noticias/direito-ao-esquecimento-case-academico-premiado-caed-unisinos.html",
+    resumo: "Alunos da UNISINOS alcançam nota máxima com trabalho interdisciplinar sobre o RE 1.010.606/STF. Análise com Kelsen, Dworkin e Bobbio, site interativo, QR Code e homenagem a Carolina Willmann.",
+    data: "07/10/2026",
     horario: "08:00",
     categoria: "direito-digital",
-    categoriaLabel: "🎬 Direito Digital no Cinema",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/direito-digital-cinema-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
+    categoriaLabel: "💻 Direito Digital · Case Premiado",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/direito-ao-esquecimento-case-academico-premiado-caed-unisinos.jpg",
+    destaque: true,
+    futuro: false
   },
 
   {
-    titulo: "Nova data da palestra com Edgar Abreu: vencendo através da educação",
-    link: "https://caedunisinos.com.br/noticias/mes-academico-caed-palestra-edgar-abreu.html",
-    resumo: "Em razão de viagem internacional do palestrante, a palestra com Edgar Abreu foi remarcada. Confira a nova data e garanta seu lugar!",
-    data: "22/10/2026",
-    horario: "08:00",
-    categoria: "academico",
-    categoriaLabel: "⚖️ Palestra Edgar Abreu",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/palestra-edgar-abreu-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
-
-  {
-    titulo: "Outubro Rosa: o Direito e a Saúde da Mulher",
-    link: "https://caedunisinos.com.br/noticias.html",
-    resumo: "O CAED apoia o Outubro Rosa. Uma reflexão sobre o papel do Direito na proteção da saúde da mulher e no combate ao câncer de mama.",
-    data: "25/10/2026",
-    horario: "10:00",
-    categoria: "variedades",
-    categoriaLabel: "🎀 Outubro Rosa",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/outubro-rosa-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
-
-  {
-    titulo: "Halloween Jurídico: 7 casos curiosos do Direito",
-    link: "https://caedunisinos.com.br/noticias.html",
-    resumo: "Neste Halloween, o CAED traz uma seleção de casos jurídicos bizarros e curiosos que marcaram a história do Direito.",
-    data: "26/10/2026",
-    horario: "08:00",
-    categoria: "variedades",
-    categoriaLabel: "🎃 Halloween Jurídico",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/halloween-juridico-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
-
-  {
-    titulo: "Dia do Servidor Público: como se preparar para carreiras públicas",
-    link: "https://caedunisinos.com.br/noticias.html",
-    resumo: "Guia completo do CAED sobre como se preparar para concursos públicos na área jurídica: estudo, disciplinas essenciais e dicas práticas.",
-    data: "28/10/2026",
-    horario: "08:00",
-    categoria: "carreira",
-    categoriaLabel: "🏛️ Carreiras Públicas",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dia-servidor-publico-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
-
-  // ============================================================
-  // NOVEMBRO 2026
-  // ============================================================
-
-  {
-    titulo: "Preparação OAB 2026/2: guia completo do CAED",
-    link: "https://caedunisinos.com.br/noticias.html",
-    resumo: "Guia completo de preparação para o Exame da OAB 2026/2: cronograma de estudos, disciplinas prioritárias, simulados e dicas do CAED.",
-    data: "02/11/2026",
-    horario: "08:00",
-    categoria: "academico",
-    categoriaLabel: "📚 Preparação OAB",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/preparacao-oab-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
-
-  {
-    titulo: "LGPD na Prática: guia para o estudante de Direito",
-    link: "https://caedunisinos.com.br/noticias.html",
-    resumo: "Guia prático da LGPD para estudantes de Direito: fundamentos, direitos dos titulares, obrigações dos controladores e como aplicar na advocacia.",
-    data: "04/11/2026",
-    horario: "08:00",
-    categoria: "direito-digital",
-    categoriaLabel: "🔒 LGPD na Prática",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/lgpd-pratica-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
-
-  {
-    titulo: "Guia do Calouro 2027/1: tudo que você precisa saber",
-    link: "https://caedunisinos.com.br/guia-do-estudante.html",
-    resumo: "Guia completo do CAED para os calouros de Direito da UNISINOS: o que levar, como se organizar, grupos de WhatsApp e dicas essenciais.",
-    data: "09/11/2026",
-    horario: "08:00",
-    categoria: "academico",
-    categoriaLabel: "🎓 Guia do Calouro",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/guia-calouro-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
-
-  {
-    titulo: "Dia do Estudante: reflexões e dicas do CAED",
-    link: "https://caedunisinos.com.br/noticias.html",
-    resumo: "Neste 11 de agosto, o CAED celebra o Dia do Estudante com reflexões sobre a vida acadêmica e dicas práticas para os estudantes de Direito.",
-    data: "11/11/2026",
-    horario: "08:00",
-    categoria: "variedades",
-    categoriaLabel: "📖 Dia do Estudante",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dia-estudante-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
-
-  {
-    titulo: "Proclamação da República: o Direito e a história do Brasil",
-    link: "https://caedunisinos.com.br/noticias.html",
-    resumo: "Reflexão sobre os 137 anos da Proclamação da República e o papel do Direito na construção da democracia brasileira.",
-    data: "15/11/2026",
-    horario: "10:00",
-    categoria: "institucional",
-    categoriaLabel: "🏛️ Proclamação da República",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/proclamacao-republica-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
-
-  {
-    titulo: "Carreiras em Direito Digital: oportunidades em 2026",
-    link: "https://caedunisinos.com.br/noticias.html",
-    resumo: "Panorama das carreiras em Direito Digital: compliance, proteção de dados, perícia forense, crimes cibernéticos e muito mais. Como se preparar?",
-    data: "16/11/2026",
-    horario: "08:00",
-    categoria: "carreira",
-    categoriaLabel: "💼 Carreiras Direito Digital",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/carreiras-direito-digital-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
-
-  {
-    titulo: "Direito Digital na Prática: como aplicar o conhecimento jurídico no mundo tech",
-    link: "https://caedunisinos.com.br/noticias.html",
-    resumo: "Do compliance à perícia digital: como o estudante de Direito pode aplicar seus conhecimentos no mercado de tecnologia.",
-    data: "18/11/2026",
-    horario: "08:00",
-    categoria: "direito-digital",
-    categoriaLabel: "🚀 Direito Digital na Prática",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/direito-digital-pratica-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
-
-  {
-    titulo: "Consciência Negra: Direito, Igualdade e Justiça Racial",
-    link: "https://caedunisinos.com.br/noticias.html",
-    resumo: "Reflexão do CAED sobre a Consciência Negra e o papel do Direito na promoção da igualdade racial e no combate ao racismo estrutural.",
-    data: "20/11/2026",
+    titulo: "Mês Acadêmico CAED 2026: um mês de conhecimento, coletividade e conexões que transformam",
+    link: "https://caedunisinos.com.br/noticias/mes-academico-caed-2026-balanco-encerramento.html",
+    resumo: "Balanço completo do Mês Acadêmico CAED Unisinos 2026: palestras, gratidão a palestrantes e participantes, destaques, 1ª Corrida da Unisinos e próximos passos.",
+    data: "05/10/2026",
     horario: "08:00",
     categoria: "institucional",
-    categoriaLabel: "✊ Consciência Negra",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/consciencia-negra-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
+    categoriaLabel: "🎓 Mês Acadêmico · Balanço",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/mes-academico-caed-2026-balanco-gratidao-coletividade.jpg",
+    destaque: true,
+    futuro: false
   },
 
   {
-    titulo: "Black Friday CAED: descontos especiais na loja oficial",
-    link: "https://caedunisinos.com.br/loja.html",
-    resumo: "Aproveite os descontos da Black Friday na Loja Oficial CAED! Produtos com identidade Direito Unisinos por tempo limitado.",
-    data: "23/11/2026",
-    horario: "08:00",
-    categoria: "loja",
-    categoriaLabel: "🛍️ Black Friday CAED",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/black-friday-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
-
-  {
-    titulo: "Cyber Monday: últimas ofertas digitais do CAED em 2026",
-    link: "https://caedunisinos.com.br/loja.html",
-    resumo: "A Cyber Monday chegou! Últimas ofertas do ano na Loja Oficial CAED — aproveite antes que acabe!",
-    data: "25/11/2026",
-    horario: "08:00",
-    categoria: "loja",
-    categoriaLabel: "🖤 Cyber Monday",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/cyber-monday-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
-
-  {
-    titulo: "Retrospectiva CAED 2026: um ano de conquistas e transformações",
-    link: "https://caedunisinos.com.br/noticias.html",
-    resumo: "Relembre os principais momentos de 2026 no CAED: eventos, conquistas, projetos e tudo que marcou o ano da Gestão A Mudança Precisa Continuar.",
-    data: "30/11/2026",
-    horario: "08:00",
+    titulo: "Eleições 2026: o guia completo do eleitor — sua voz transforma o futuro",
+    link: "https://caedunisinos.com.br/noticias/eleicoes-2026-guia-completo-eleitor.html",
+    resumo: "Guia completo do CAED para o dia da votação: por que o voto importa, como descobrir sua sessão eleitoral, documentos necessários, FAQ, justificativa de ausência e muito mais. Sua voz transforma o futuro!",
+    data: "04/10/2026",
+    horario: "07:00",
     categoria: "institucional",
-    categoriaLabel: "🎄 Retrospectiva CAED",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/retrospectiva-caed-2026.jpg",
-    destaque: false,
-    futuro: true
+    categoriaLabel: "🗳️ Eleições 2026 · Guia do Eleitor",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/eleicoes-2026-guia-completo-eleitor-caed.jpg",
+    destaque: true,
+    futuro: false
   },
 
   // ============================================================
-  // DEZEMBRO 2026
-  // ============================================================
-
-  {
-    titulo: "Direitos Humanos: 78 anos da Declaração Universal da ONU",
-    link: "https://caedunisinos.com.br/noticias.html",
-    resumo: "Reflexão sobre os 78 anos da Declaração Universal dos Direitos Humanos e sua importância para o Direito contemporâneo.",
-    data: "10/12/2026",
-    horario: "08:00",
-    categoria: "academico",
-    categoriaLabel: "⚖️ Direitos Humanos",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/direitos-humanos-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
-
-  // ============================================================
-  // NOTÍCIAS RECENTES (setembro–agosto 2026)
+  // PUBLICADOS — SETEMBRO 2026
   // ============================================================
 
   {
@@ -458,6 +294,10 @@ const posts = [
     futuro: false
   },
 
+  // ============================================================
+  // PUBLICADOS — AGOSTO 2026
+  // ============================================================
+
   {
     titulo: "Mês Acadêmico CAED: palestra com Juiz Alexandre Kosby Boeira",
     link: "https://caedunisinos.com.br/noticias/mes-academico-caed-primeiro-palestrante-juiz-alexandre-boeira.html",
@@ -537,19 +377,6 @@ const posts = [
   },
 
   {
-    titulo: "Acolhida CAED 2026/2: recepção aos calouros de Direito",
-    link: "https://caedunisinos.com.br/noticias/acolhida-caed-2026-2.html",
-    resumo: "O CAED dá boas-vindas aos calouros de Direito no semestre 2026/2. Conheça as atividades de acolhida e integração.",
-    data: "08/08/2026",
-    horario: "08:00",
-    categoria: "variedades",
-    categoriaLabel: "🎓 Acolhida 2026/2",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/acolhida-caed-2026-2.jpg",
-    destaque: false,
-    futuro: false
-  },
-
-  {
     titulo: "Dia do Advogado: homenagem do CAED aos profissionais do Direito",
     link: "https://caedunisinos.com.br/noticias/dia-do-advogado-caed-homenagem.html",
     resumo: "Neste 11 de agosto, o CAED presta homenagem a todos os advogados e advogadas que constroem a justiça brasileira.",
@@ -562,8 +389,21 @@ const posts = [
     futuro: false
   },
 
+  {
+    titulo: "Acolhida CAED 2026/2: recepção aos calouros de Direito",
+    link: "https://caedunisinos.com.br/noticias/acolhida-caed-2026-2.html",
+    resumo: "O CAED dá boas-vindas aos calouros de Direito no semestre 2026/2. Conheça as atividades de acolhida e integração.",
+    data: "08/08/2026",
+    horario: "08:00",
+    categoria: "variedades",
+    categoriaLabel: "🎓 Acolhida 2026/2",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/acolhida-caed-2026-2.jpg",
+    destaque: false,
+    futuro: false
+  },
+
   // ============================================================
-  // NOTÍCIAS ANTERIORES (julho e anteriores)
+  // PUBLICADOS — JULHO 2026
   // ============================================================
 
   {
@@ -644,6 +484,10 @@ const posts = [
     futuro: false
   },
 
+  // ============================================================
+  // PUBLICADOS — JUNHO 2026
+  // ============================================================
+
   {
     titulo: "CAED em Porto Alegre: como encontrar e participar",
     link: "https://caedunisinos.com.br/noticias/caed-porto-alegre-como-encontrar-participar.html",
@@ -722,6 +566,10 @@ const posts = [
     futuro: false
   },
 
+  // ============================================================
+  // PUBLICADOS — MAIO 2026
+  // ============================================================
+
   {
     titulo: "Carteirinha Estudantil Unisinos: como solicitar a sua",
     link: "https://caedunisinos.com.br/noticias/carteirinha-estudantil-unisinos-como-solicitar.html",
@@ -786,6 +634,10 @@ const posts = [
     destaque: false,
     futuro: false
   },
+
+  // ============================================================
+  // PUBLICADOS — ABRIL 2026
+  // ============================================================
 
   {
     titulo: "Simulados OAB: prepare-se com o CAED",
@@ -864,6 +716,10 @@ const posts = [
     destaque: false,
     futuro: false
   },
+
+  // ============================================================
+  // PUBLICADOS — MARÇO 2026 E ANTERIORES
+  // ============================================================
 
   {
     titulo: "Encontro 25 anos de Teoria do Direito na Unisinos",
@@ -998,7 +854,7 @@ const posts = [
 ];
 
 // ============================================================
-// Exportação (compatível com módulos ES6 / CommonJS / global)
+// Exportação (compatível com ES6 / CommonJS / global)
 // ============================================================
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = { posts };
