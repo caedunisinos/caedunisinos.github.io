@@ -8,7 +8,18 @@
 const posts = [
 
   // ============ ⭐ OUTUBRO 2026 — PUBLICADOS ============
-
+{
+  titulo: "Faltam 4 dias para a 1ª Corrida da Unisinos: como participar",
+  link: "https://caedunisinos.com.br/noticias/countdown-corrida-unisinos-2026.html",
+  resumo: "Contagem regressiva para a 1ª Corrida da Unisinos! Faltam 4 dias para o evento que vai marcar a história esportiva da universidade. Confira tudo o que você precisa saber.",
+  data: "14/10/2026",
+  horario: "08:00",
+  categoria: "eventos",
+  categoriaLabel: "🏃 1ª Corrida da Unisinos",
+  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/countdown-4-dias-corrida-unisinos-caed.jpg",
+  destaque: true,
+  futuro: false
+},
   {
   titulo: "Como se destacar em estágios de Direito: guia completo do CAED",
   link: "https://caedunisinos.com.br/noticias/como-se-destacar-estagios-direito-2026.html",
