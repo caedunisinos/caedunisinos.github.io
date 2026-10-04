@@ -72,29 +72,29 @@ const posts = [
     futuro: true
   },
   {
-  titulo: "Dia das Crianças: sonhar é ser criança — homenagem do CAED",
-  link: "https://caedunisinos.com.br/noticias/dia-das-criancas-caed-homenagem-2026.html",
-  resumo: "Uma homenagem do CAED a todas as crianças, aos pais que sonham com seus filhos e a todos os adultos que nunca deixaram de sonhar. Poesia, gratidão e esperança.",
-  data: "12/10/2026",
-  horario: "09:00",
-  categoria: "variedades",
-  categoriaLabel: "🧒 Dia das Crianças",
-  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dia-das-criancas-caed-homenagem-2026.jpg",
-  destaque: true,
-  futuro: true
-},
+    titulo: "Dia das Crianças: sonhar é ser criança — homenagem do CAED",
+    link: "https://caedunisinos.com.br/noticias/dia-das-criancas-caed-homenagem-2026.html",
+    resumo: "Uma homenagem do CAED a todas as crianças, aos pais que sonham com seus filhos e a todos os adultos que nunca deixaram de sonhar. Poesia, gratidão e esperança.",
+    data: "12/10/2026",
+    horario: "09:00",
+    categoria: "variedades",
+    categoriaLabel: "🧒 Dia das Crianças",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dia-das-criancas-caed-homenagem-2026.jpg",
+    destaque: true,
+    futuro: true
+  },
   {
-  titulo: "Véspera da Corrida: como se preparar para os 5 km da Unisinos",
-  link: "https://caedunisinos.com.br/noticias/vespera-corrida-como-se-preparar-unisinos.html",
-  resumo: "Faltam 5 dias para a 1ª Corrida da Unisinos! Confira o guia completo do CAED com checklist, hidratação, alimentação e dicas para chegar preparado no dia da prova.",
-  data: "13/10/2026",
-  horario: "08:00",
-  categoria: "eventos",
-  categoriaLabel: "🏃 Véspera da Corrida",
-  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/vespera-corrida-preparacao-unisinos-caed.jpg",
-  destaque: true,
-  futuro: true
-},
+    titulo: "Véspera da Corrida: como se preparar para os 5 km da Unisinos",
+    link: "https://caedunisinos.com.br/noticias/vespera-corrida-como-se-preparar-unisinos.html",
+    resumo: "Faltam 5 dias para a 1ª Corrida da Unisinos! Confira o guia completo do CAED com checklist, hidratação, alimentação e dicas para chegar preparado no dia da prova.",
+    data: "13/10/2026",
+    horario: "08:00",
+    categoria: "eventos",
+    categoriaLabel: "🏃 Véspera da Corrida",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/vespera-corrida-preparacao-unisinos-caed.jpg",
+    destaque: true,
+    futuro: true
+  },
   {
     titulo: "Faltam 4 dias para a 1ª Corrida da Unisinos: como participar",
     link: "https://caedunisinos.com.br/noticias/countdown-corrida-unisinos-2026.html",
@@ -107,33 +107,33 @@ const posts = [
     destaque: true,
     futuro: true
   },
- {
-  titulo: "Dia do Professor: CAED homenageia os mestres do Direito",
-  link: "https://caedunisinos.com.br/noticias/dia-do-professor-caed-homenagem-2026.html",
-  resumo: "Neste 15 de outubro, o CAED presta homenagem a todos os professores que constroem o futuro do Direito com dedicação e sabedoria. Confira mensagens, depoimentos e agradecimentos.",
-  data: "15/10/2026",
-  horario: "08:00",
-  categoria: "variedades",
-  categoriaLabel: "👨‍🏫 Dia do Professor",
-  imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dia-do-professor-caed-homenagem-2026.jpg",
-  destaque: true,
-  futuro: true
-},
+  {
+    titulo: "Dia do Professor: CAED homenageia os mestres do Direito",
+    link: "https://caedunisinos.com.br/noticias/dia-do-professor-caed-homenagem-2026.html",
+    resumo: "Neste 15 de outubro, o CAED presta homenagem a todos os professores que constroem o futuro do Direito com dedicação e sabedoria. Confira mensagens, depoimentos e agradecimentos.",
+    data: "15/10/2026",
+    horario: "08:00",
+    categoria: "variedades",
+    categoriaLabel: "👨‍🏫 Dia do Professor",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dia-do-professor-caed-homenagem-2026.jpg",
+    destaque: true,
+    futuro: true
+  },
   {
     titulo: "Últimos dias para se inscrever na 1ª Corrida da Unisinos",
-    link: "https://caedunisinos.com.br/noticias/primeira-corrida-unisinos-2026.html",
+    link: "https://caedunisinos.com.br/noticias/ultimos-dias-corrida-unisinos-2026.html",
     resumo: "As inscrições estão se encerrando! Garanta já a sua vaga na 1ª Corrida da Unisinos. Alunos têm 10% de desconto.",
     data: "16/10/2026",
     horario: "18:00",
     categoria: "eventos",
     categoriaLabel: "🏃 Últimos Dias",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/primeira-corrida-unisinos-2026-caed.jpg",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/ultimos-dias-inscricao-corrida-unisinos-caed.jpg",
     destaque: false,
     futuro: true
   },
   {
     titulo: "Balanço da 1ª Corrida da Unisinos: um marco na história esportiva da universidade",
-    link: "https://caedunisinos.com.br/noticias/primeira-corrida-unisinos-2026.html",
+    link: "https://caedunisinos.com.br/noticias/balanco-primeira-corrida-unisinos-2026.html",
     resumo: "Confira o balanço completo da 1ª Corrida da Unisinos: números, destaques, agradecimentos e os melhores momentos de um dia histórico.",
     data: "19/10/2026",
     horario: "08:00",
@@ -145,7 +145,7 @@ const posts = [
   },
   {
     titulo: "Direito Digital no Cinema: 7 filmes e séries para estudantes de Direito",
-    link: "https://caedunisinos.com.br/noticias.html",
+    link: "https://caedunisinos.com.br/noticias/direito-digital-cinema-caed-unisinos.html",
     resumo: "Snowden, O Jogo da Imitação, A Rede Social, Mr. Robot, Black Mirror e mais: uma seleção de filmes e séries que todo estudante de Direito Digital deveria assistir.",
     data: "21/10/2026",
     horario: "08:00",
@@ -169,7 +169,7 @@ const posts = [
   },
   {
     titulo: "Outubro Rosa: o Direito e a Saúde da Mulher",
-    link: "https://caedunisinos.com.br/noticias.html",
+    link: "https://caedunisinos.com.br/noticias/outubro-rosa-direito-saude-mulher-2026.html",
     resumo: "O CAED apoia o Outubro Rosa. Uma reflexão sobre o papel do Direito na proteção da saúde da mulher e no combate ao câncer de mama.",
     data: "25/10/2026",
     horario: "10:00",
@@ -181,7 +181,7 @@ const posts = [
   },
   {
     titulo: "Halloween Jurídico: 7 casos curiosos do Direito",
-    link: "https://caedunisinos.com.br/noticias.html",
+    link: "https://caedunisinos.com.br/noticias/halloween-juridico-caed-unisinos.html",
     resumo: "Neste Halloween, o CAED traz uma seleção de casos jurídicos bizarros e curiosos que marcaram a história do Direito.",
     data: "26/10/2026",
     horario: "08:00",
@@ -193,7 +193,7 @@ const posts = [
   },
   {
     titulo: "Dia do Servidor Público: como se preparar para carreiras públicas",
-    link: "https://caedunisinos.com.br/noticias.html",
+    link: "https://caedunisinos.com.br/noticias/dia-servidor-publico-carreiras-publicas.html",
     resumo: "Guia completo do CAED sobre como se preparar para concursos públicos na área jurídica: estudo, disciplinas essenciais e dicas práticas.",
     data: "28/10/2026",
     horario: "08:00",
@@ -210,7 +210,7 @@ const posts = [
 
   {
     titulo: "Preparação OAB 2026/2: guia completo do CAED",
-    link: "https://caedunisinos.com.br/noticias.html",
+    link: "https://caedunisinos.com.br/noticias/preparacao-oab-2026-2-caed.html",
     resumo: "Guia completo de preparação para o Exame da OAB 2026/2: cronograma de estudos, disciplinas prioritárias, simulados e dicas do CAED.",
     data: "02/11/2026",
     horario: "08:00",
@@ -222,7 +222,7 @@ const posts = [
   },
   {
     titulo: "LGPD na Prática: guia para o estudante de Direito",
-    link: "https://caedunisinos.com.br/noticias.html",
+    link: "https://caedunisinos.com.br/noticias/lgpd-pratica-estudante-direito.html",
     resumo: "Guia prático da LGPD para estudantes de Direito: fundamentos, direitos dos titulares, obrigações dos controladores e como aplicar na advocacia.",
     data: "04/11/2026",
     horario: "08:00",
@@ -246,7 +246,7 @@ const posts = [
   },
   {
     titulo: "Dia do Estudante: reflexões e dicas do CAED",
-    link: "https://caedunisinos.com.br/noticias.html",
+    link: "https://caedunisinos.com.br/noticias/dia-do-estudante-reflexoes-caed.html",
     resumo: "Neste 11 de agosto, o CAED celebra o Dia do Estudante com reflexões sobre a vida acadêmica e dicas práticas para os estudantes de Direito.",
     data: "11/11/2026",
     horario: "08:00",
@@ -258,7 +258,7 @@ const posts = [
   },
   {
     titulo: "Proclamação da República: o Direito e a história do Brasil",
-    link: "https://caedunisinos.com.br/noticias.html",
+    link: "https://caedunisinos.com.br/noticias/proclamacao-republica-direito-historia.html",
     resumo: "Reflexão sobre os 137 anos da Proclamação da República e o papel do Direito na construção da democracia brasileira.",
     data: "15/11/2026",
     horario: "10:00",
@@ -270,7 +270,7 @@ const posts = [
   },
   {
     titulo: "Carreiras em Direito Digital: oportunidades em 2026",
-    link: "https://caedunisinos.com.br/noticias.html",
+    link: "https://caedunisinos.com.br/noticias/carreiras-direito-digital-2026.html",
     resumo: "Panorama das carreiras em Direito Digital: compliance, proteção de dados, perícia forense, crimes cibernéticos e muito mais. Como se preparar?",
     data: "16/11/2026",
     horario: "08:00",
@@ -282,7 +282,7 @@ const posts = [
   },
   {
     titulo: "Direito Digital na Prática: como aplicar o conhecimento jurídico no mundo tech",
-    link: "https://caedunisinos.com.br/noticias.html",
+    link: "https://caedunisinos.com.br/noticias/direito-digital-pratica-mundo-tech.html",
     resumo: "Do compliance à perícia digital: como o estudante de Direito pode aplicar seus conhecimentos no mercado de tecnologia.",
     data: "18/11/2026",
     horario: "08:00",
@@ -294,7 +294,7 @@ const posts = [
   },
   {
     titulo: "Consciência Negra: Direito, Igualdade e Justiça Racial",
-    link: "https://caedunisinos.com.br/noticias.html",
+    link: "https://caedunisinos.com.br/noticias/consciencia-negra-direito-igualdade.html",
     resumo: "Reflexão do CAED sobre a Consciência Negra e o papel do Direito na promoção da igualdade racial e no combate ao racismo estrutural.",
     data: "20/11/2026",
     horario: "08:00",
@@ -330,7 +330,7 @@ const posts = [
   },
   {
     titulo: "Retrospectiva CAED 2026: um ano de conquistas e transformações",
-    link: "https://caedunisinos.com.br/noticias.html",
+    link: "https://caedunisinos.com.br/noticias/retrospectiva-caed-2026.html",
     resumo: "Relembre os principais momentos de 2026 no CAED: eventos, conquistas, projetos e tudo que marcou o ano da Gestão A Mudança Precisa Continuar.",
     data: "30/11/2026",
     horario: "08:00",
@@ -347,7 +347,7 @@ const posts = [
 
   {
     titulo: "Direitos Humanos: 78 anos da Declaração Universal da ONU",
-    link: "https://caedunisinos.com.br/noticias.html",
+    link: "https://caedunisinos.com.br/noticias/direitos-humanos-78-anos-dudh.html",
     resumo: "Reflexão sobre os 78 anos da Declaração Universal dos Direitos Humanos e sua importância para o Direito contemporâneo.",
     data: "10/12/2026",
     horario: "08:00",
@@ -1017,11 +1017,6 @@ const posts = [
 //  Nada precisa ser editado manualmente no futuro.
 // ==========================================================
 
-/**
- * Verifica se um post já foi publicado (data + horário <= agora).
- * @param {Object} post
- * @returns {boolean}
- */
 function postPublicado(post) {
   if (!post || !post.data) return false;
   try {
@@ -1036,10 +1031,6 @@ function postPublicado(post) {
   }
 }
 
-/**
- * Retorna apenas os posts JÁ PUBLICADOS, ordenados por data desc.
- * Use em noticias.html e index.html.
- */
 function getPostsPublicados() {
   return posts
     .filter(postPublicado)
@@ -1050,9 +1041,6 @@ function getPostsPublicados() {
     });
 }
 
-/**
- * Retorna apenas os posts FUTUROS, ordenados por data asc.
- */
 function getPostsFuturos() {
   return posts
     .filter(p => !postPublicado(p))
@@ -1063,10 +1051,6 @@ function getPostsFuturos() {
     });
 }
 
-/**
- * Retorna TODOS os posts, ordenados por data desc.
- * Use em arquivo.html (índice completo, com badge "Em breve").
- */
 function getTodosPosts() {
   return [...posts].sort((a, b) => {
     const da = a.data.split('/').reverse().join('');
