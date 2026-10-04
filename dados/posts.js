@@ -46,7 +46,7 @@ const posts = [
     categoriaLabel: "🎓 Mês Acadêmico · Balanço",
     imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/mes-academico-caed-2026-balanco-gratidao-coletividade.jpg",
     destaque: true,
-    futuro: false
+    futuro: true
   },
   {
     titulo: "UNISINOS: atividades do Campus São Leopoldo serão remotas nesta segunda (21/09)",
@@ -73,7 +73,7 @@ const posts = [
     futuro: true
   },
   {
-    titulo: "Eleiências 2026: CAED reafirma neutralidade institucional e lista candidatos",
+    titulo: "Eleições 2026: CAED reafirma neutralidade institucional e lista candidatos",
     link: "https://caedunisinos.com.br/noticias/nota-oficial-caed-eleicoes-2026.html",
     resumo: "Em meio às Eleições 2026, o CAED reafirma sua neutralidade institucional: não manifestará apoio a candidatos, partidos ou coligações. A Gestão 'A mudança precisa continuar' garante representação de TODOS os estudantes de Direito da Unisinos — em São Leopoldo e Porto Alegre. Confira a nota oficial na íntegra e a lista de candidatos à Presidência por ordem de registro no TSE.",
     data: "11/09/2026",
