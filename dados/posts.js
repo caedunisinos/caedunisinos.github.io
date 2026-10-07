@@ -65,7 +65,7 @@ const posts = [
     titulo: "Direito ao Esquecimento: Case Acadêmico Premiado da UNISINOS",
     link: "https://caedunisinos.com.br/noticias/direito-ao-esquecimento-case-academico-premiado-caed-unisinos.html",
     resumo: "Alunos da UNISINOS alcançam nota máxima com trabalho interdisciplinar sobre o RE 1.010.606/STF. Análise com Kelsen, Dworkin e Bobbio, site interativo, QR Code e homenagem a Carolina Willmann.",
-    data: "07/10/2026",
+    data: "08/10/2026",
     horario: "08:00",
     categoria: "direito-digital",
     categoriaLabel: "💻 Direito Digital · Case Premiado",
