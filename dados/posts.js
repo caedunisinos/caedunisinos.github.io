@@ -47,6 +47,20 @@ const posts = [
     destaque: true,
     futuro: true
   },
+   // ▼▼▼ NOVO POST — NOTA DE REPÚDIO ▼▼▼
+  {
+    titulo: "Nota de Repúdio: CAED defende representatividade estudantil e rejeita partidarização do DCE",
+    link: "https://caedunisinos.com.br/noticias/nota-repudio-caed-representatividade-estudantil-dce.html",
+    resumo: "O CAED manifesta repúdio à conduta do DCE Unisinos por usar a entidade como palanque político-partidário. Reafirmamos: o CAED é plural — tem direita, esquerda, ricos e pobres. Todos têm voz. Não aceitamos que a sigla seja usada como máscara para pretensões político-partidárias.",
+    data: "07/10/2026",
+    horario: "08:00",
+    categoria: "representacao",
+    categoriaLabel: "📢 Nota de Repúdio · DCE",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/1_caed-nota-repudio-dce-unisinos-2026.jpg",
+    destaque: true,
+    futuro: true
+  },
+  // ▲▲▲ FIM DO NOVO POST ▲▲▲
   {
     titulo: "Direito ao Esquecimento: Case Acadêmico Premiado da UNISINOS",
     link: "https://caedunisinos.com.br/noticias/direito-ao-esquecimento-case-academico-premiado-caed-unisinos.html",
