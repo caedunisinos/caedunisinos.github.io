@@ -259,14 +259,45 @@
     .plural-tags{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.2rem}
     .plural-tag{background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.35);border-radius:50px;padding:.5rem 1.1rem;font-family:'Montserrat',sans-serif;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-lt);font-weight:600}
 
-    .article-figure{margin:2rem 0;text-align:center}
-    .article-figure img{max-width:100%;width:100%;height:auto;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.4);display:block;margin:0 auto}
-    .article-figure figcaption{font-size:.82rem;color:var(--cream-dk);margin-top:10px;font-style:italic;line-height:1.5}
-    .article-figure figcaption i{color:var(--gold);margin-right:4px}
+    /* ===== IMAGENS DO ARTIGO — AJUSTADAS ===== */
+    .article-figure{
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .article-figure img{
+      max-width: 720px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      display: block;
+      margin: 0 auto;
+    }
+
+    .article-figure.capa img{
+      max-width: 840px;
+    }
+
+    .article-figure figcaption{
+      font-size: .82rem;
+      color: var(--cream-dk);
+      margin-top: 10px;
+      font-style: italic;
+      line-height: 1.5;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .article-figure figcaption i{
+      color: var(--gold);
+      margin-right: 4px;
+    }
 
     @media(max-width:1024px){.footer-top{grid-template-columns:1fr 1fr}}
     @media(max-width:900px){.nav-links,.nav-loja-btn{display:none}.nav-toggle{display:flex}}
-    @media(max-width:600px){.footer-top{grid-template-columns:1fr}.page-hero{padding:6rem 1rem 2rem}.share-buttons{gap:.4rem}.share-btn{font-size:.5rem;padding:.4rem .8rem}.share-btn i{font-size:.7rem}.stat-number{font-size:2rem}.plural-box{padding:1.5rem 1rem}}
+    @media(max-width:600px){.footer-top{grid-template-columns:1fr}.page-hero{padding:6rem 1rem 2rem}.share-buttons{gap:.4rem}.share-btn{font-size:.5rem;padding:.4rem .8rem}.share-btn i{font-size:.7rem}.stat-number{font-size:2rem}.plural-box{padding:1.5rem 1rem}.article-figure img{max-width:100%}}
   </style>
 </head>
 
@@ -348,7 +379,7 @@
     <div class="container">
 
       <!-- IMAGEM DE CAPA — ILUSTRAÇÃO PLURALIDADE CAED -->
-      <figure class="article-figure" style="margin-top:0;">
+      <figure class="article-figure capa" style="margin-top:0;">
         <img src="/noticias/noticias_imagens/caed-unisinos-estudantes-todas-areas-todos-tem-voz.jpg"
              alt="Ilustração de estudantes universitários de todas as áreas, classes sociais e posições políticas unidos pelo CAED Unisinos; todos têm voz."
              title="O CAED tem direita, tem esquerda, tem pobres e tem ricos, todos têm voz"
@@ -379,7 +410,7 @@
 
       <p>O <strong>Centro Acadêmico de Estudantes de Direito da Unisinos (CAED)</strong>, por meio de sua gestão <strong>"A Mudança Precisa Continuar"</strong>, vem a público manifestar seu <strong>repúdio à conduta adotada pelo DCE Unisinos</strong> ao utilizar a entidade como espaço de manifestação político-partidária. Esta nota não é um ataque a pessoas, a partidos ou a posições políticas individuais — é uma defesa intransigente do <strong>papel institucional das entidades estudantis</strong>.</p>
 
-      <p>Antes de qualquer coisa, é preciso dizer com todas as letras: <strong>o CAED é plural</strong>. Aqui os estudantes de direita, de esquerda, de centro, apartidários, ricos, pobres, bolsistas, cotistas, trabalhadores, LGBTQIA+, pessoas com deficiência, mães e pais, estudantes de todas as áreas do conhecimento. Essa diversidade não é um problema — é a nossa força. <strong>Todos têm voz</strong>. Todos são bem-vindos ao debate e à participação.</p>
+      <p>Antes de qualquer coisa, é preciso dizer com todas as letras: <strong>o CAED é plural</strong>. Aqui há estudantes de direita, de esquerda, de centro, apartidários, ricos, pobres, bolsistas, cotistas, trabalhadores, LGBTQIA+, pessoas com deficiência, mães e pais, estudantes de todas as áreas do conhecimento. Essa diversidade não é um problema — é a nossa força. <strong>Todos têm voz</strong>. Todos são bem-vindos ao debate e à participação.</p>
 
       <p>Justamente por isso, <strong>não aceitamos que a sigla do CAED — ou de qualquer entidade estudantil — seja usada como máscara para pretensões político-partidárias</strong>. Quem deseja apoiar um candidato, um partido ou uma causa político-eleitoral pode e deve fazê-lo em <strong>caráter pessoal, individual e identificado</strong>. O que não se pode é arrastar uma instituição que representa centenas de estudantes para um lado do tabuleiro político.</p>
 
