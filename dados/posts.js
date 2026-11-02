@@ -146,18 +146,6 @@ const posts = [
     futuro: true
   },
   {
-    titulo: "Balanço da 1ª Corrida da Unisinos: um marco na história esportiva da universidade",
-    link: "https://caedunisinos.com.br/noticias/balanco-primeira-corrida-unisinos-2026.html",
-    resumo: "Confira o balanço completo da 1ª Corrida da Unisinos: números, destaques, agradecimentos e os melhores momentos de um dia histórico.",
-    data: "19/10/2026",
-    horario: "08:00",
-    categoria: "eventos",
-    categoriaLabel: "🏆 Balanço Corrida",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/primeira-corrida-unisinos-2026-caed.jpg",
-    destaque: false,
-    futuro: true
-  },
-  {
     titulo: "Direito Digital no Cinema: 7 filmes e séries para estudantes de Direito",
     link: "https://caedunisinos.com.br/noticias/direito-digital-cinema-caed-unisinos.html",
     resumo: "Snowden, O Jogo da Imitação, A Rede Social, Mr. Robot, Black Mirror e mais: uma seleção de filmes e séries que todo estudante de Direito Digital deveria assistir.",
