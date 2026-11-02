@@ -221,7 +221,18 @@ const posts = [
   // ==========================================================
   //  📅 NOVEMBRO 2026 — PROGRAMADOS
   // ==========================================================
-
+  {
+    titulo: "1ª Corrida na Unisinos 2026: um marco de esporte, integração e superação",
+    link: "https://caedunisinos.com.br/noticias/1-corrida-unisinos-2026-balanco.html",
+    resumo: "Foi incrível, São Leopoldo! A Corrida na Unisinos 2026 foi um sucesso absoluto. Confira o balanço, as fotos e os agradecimentos a todos os atletas e apoiadores.",
+    data: "02/11/2026",
+    horario: "10:00",
+    categoria: "eventos",
+    categoriaLabel: "🏃 1ª Corrida da Unisinos · Balanço",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/1-corrida-unisinos-2026-largada-geral.jpg",
+    destaque: true,
+    futuro: false
+  },
   {
     titulo: "Preparação OAB 2026/2: guia completo do CAED",
     link: "https://caedunisinos.com.br/noticias/preparacao-oab-2026-2-caed.html",
