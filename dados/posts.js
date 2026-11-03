@@ -209,6 +209,7 @@ const posts = [
   // ==========================================================
   //  📅 NOVEMBRO 2026 — PROGRAMADOS
   // ==========================================================
+  
   {
     titulo: "1ª Corrida na Unisinos 2026: um marco de esporte, integração e superação",
     link: "https://caedunisinos.com.br/noticias/1-corrida-unisinos-2026-balanco.html",
@@ -221,11 +222,27 @@ const posts = [
     destaque: true,
     futuro: false
   },
+  
+  // ▼▼▼ NOVO POST — NOTA SOBRE CRÍTICA E OFENSA ▼▼▼
+  {
+    titulo: "Sobre crítica, ofensa e responsabilidade: uma nota do CAED Unisinos",
+    link: "https://caedunisinos.com.br/noticias/nota-caed-critica-ofensa-responsabilidade.html",
+    resumo: "O CAED reafirma seu compromisso com o debate e a pluralidade, mas não aceitará ofensas nominais e imputações sem prova como crítica. Uma reflexão sobre a liberdade de expressão e a defesa do trabalho voluntário.",
+    data: "03/11/2026",
+    horario: "10:00",
+    categoria: "representacao",
+    categoriaLabel: "📢 Nota Oficial · CAED",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/nota-caed-critica-ofensa-responsabilidade.jpg",
+    destaque: true,
+    futuro: false
+  },
+  // ▲▲▲ FIM DO NOVO POST ▲▲▲
+
   {
     titulo: "Preparação OAB 2026/2: guia completo do CAED",
     link: "https://caedunisinos.com.br/noticias/preparacao-oab-2026-2-caed.html",
     resumo: "Guia completo de preparação para o Exame da OAB 2026/2: cronograma de estudos, disciplinas prioritárias, simulados e dicas do CAED.",
-    data: "02/11/2026",
+    data: "04/11/2026",
     horario: "08:00",
     categoria: "academico",
     categoriaLabel: "📚 Preparação OAB",
@@ -237,7 +254,7 @@ const posts = [
     titulo: "LGPD na Prática: guia para o estudante de Direito",
     link: "https://caedunisinos.com.br/noticias/lgpd-pratica-estudante-direito.html",
     resumo: "Guia prático da LGPD para estudantes de Direito: fundamentos, direitos dos titulares, obrigações dos controladores e como aplicar na advocacia.",
-    data: "04/11/2026",
+    data: "05/11/2026",
     horario: "08:00",
     categoria: "direito-digital",
     categoriaLabel: "🔒 LGPD na Prática",
