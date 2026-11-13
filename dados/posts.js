@@ -274,18 +274,7 @@ const posts = [
     destaque: false,
     futuro: true
   },
-  {
-    titulo: "Dia do Estudante: reflexões e dicas do CAED",
-    link: "https://caedunisinos.com.br/noticias/dia-do-estudante-reflexoes-caed.html",
-    resumo: "Neste 11 de agosto, o CAED celebra o Dia do Estudante com reflexões sobre a vida acadêmica e dicas práticas para os estudantes de Direito.",
-    data: "11/11/2026",
-    horario: "08:00",
-    categoria: "variedades",
-    categoriaLabel: "📖 Dia do Estudante",
-    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dia-estudante-caed-unisinos.jpg",
-    destaque: false,
-    futuro: true
-  },
+
   {
     titulo: "Proclamação da República: o Direito e a história do Brasil",
     link: "https://caedunisinos.com.br/noticias/proclamacao-republica-direito-historia.html",
@@ -404,7 +393,18 @@ const posts = [
     destaque: false,
     futuro: true
   },
-
+  {
+    titulo: "Dia do Estudante: reflexões e dicas do CAED",
+    link: "https://caedunisinos.com.br/noticias/dia-do-estudante-reflexoes-caed.html",
+    resumo: "Uma reflexão atemporal do CAED sobre a vida acadêmica e dicas práticas para os estudantes de Direito. Celebramos a jornada de quem constrói o futuro.",
+    data: "11/08/2027",
+    horario: "08:00",
+    categoria: "variedades",
+    categoriaLabel: "📖 Dia do Estudante",
+    imagem: "https://raw.githubusercontent.com/caedunisinos/caedunisinos.github.io/main/noticias/noticias_imagens/dia-estudante-caed-unisinos.jpg",
+    destaque: false,
+    futuro: true
+  },
   // ==========================================================
   //  ⭐ SETEMBRO 2026 — PUBLICADOS
   // ==========================================================
